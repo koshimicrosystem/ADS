@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @yield('style1')
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
+<script src="https://kit.fontawesome.com/ce564b7b65.js" crossorigin="anonymous"></script>
 @yield('style2')
 </head>
 <body>

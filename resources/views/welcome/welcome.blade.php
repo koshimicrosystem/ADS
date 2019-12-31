@@ -16,6 +16,7 @@
 <script src="{{asset('unicat/plugins/easing/easing.js')}}"></script>
 <script src="{{asset('unicat/plugins/parallax-js-master/parallax.min.js')}}"></script>
 <script src="{{asset('unicat/js/custom.js')}}"></script>
+
 @endsection
 @section('style1')
 	

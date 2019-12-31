@@ -19,8 +19,22 @@
                                 </li>
                             </ul>
                             <div class="top_bar_login ml-auto">
-                                <div class="login_button"><a href="#">Register or Login</a></div>
+                                <div class="login_button">
+                                    @auth
+                                    <a href="{{route('home')}}"> User - Name </a>
+                                    @else
+                                    <a href="{{route('login')}}"> Login </a>
+                                    @endauth
+                                </div>
                             </div>
+                            @auth
+                            <ul class="top_bar_contact_list">
+                                <li>
+                                    @include('components.common.logout')
+                                </li>
+                            </ul>
+                            @endauth
+
                         </div>
                     </div>
                 </div>
@@ -36,7 +50,8 @@
                     <div class="header_content d-flex flex-row align-items-center justify-content-start">
                         <div class="logo_container">
                             <a href="#">
-                                <div class="logo_text">Unic<span>at</span></div>
+                                {{-- <div class="logo_text">Unic<span>at</span></div> --}}
+                                <img src="{{asset('media/logo/logo100.png')}}" alt="logo">
                             </a>
                         </div>
                         <nav class="main_nav_contaner ml-auto">

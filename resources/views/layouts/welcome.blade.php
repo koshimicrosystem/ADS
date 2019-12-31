@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="ADS Public School">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="{{asset('media/logo/favicon.png')}}" />
 @yield('style1')
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
 <script src="https://kit.fontawesome.com/ce564b7b65.js" crossorigin="anonymous"></script>
@@ -17,11 +18,11 @@
 
 	<!-- Header -->
 
-	@include('components.header')
+	@include('components.pre.header')
 	
 	<!-- Home -->
 
-	@include('components.crousal')
+	@include('components.pre.crousal')
 	<!-- Features -->
 
 	<div class="features">
@@ -550,11 +551,16 @@
 	</div>
 
 	<!-- Footer -->
-    @include('components.footer')
+    @include('components.pre.footer')
 
 </div>
 @yield('script1')
 <script src="{{asset('js/app.js')}}"></script>
+<script>
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+	</script>
 @yield('script2')
 </body>
 </html>

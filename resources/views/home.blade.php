@@ -1,3 +1,26 @@
+@extends('layouts.home')
+@section('title','')
+
+@section('meta')
+    
+@endsection
+@section('style1')
+    
+@endsection
+@section('style2')
+    
+@endsection
+@section('script1')
+    
+@endsection
+@section('script2')
+    
+@endsection
+@section('body')
+    
+@endsection
+
+
 @extends('layouts.app')
 
 @section('content')

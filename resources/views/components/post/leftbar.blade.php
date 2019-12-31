@@ -270,22 +270,22 @@
           </li>
           <li class="nav-header">LABELS</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/home" class="nav-link">
               <i class="nav-icon fa fa-circle-o text-danger"></i>
-              <p class="text">Important</p>
-            </a>
+              <p class="text">Example</p>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/dashboard-component" class="nav-link">
               <i class="nav-icon fa fa-circle-o text-warning"></i>
-              <p>Warning</p>
-            </a>
+              <p>Dashboard</p>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/profile-component" class="nav-link">
               <i class="nav-icon fa fa-circle-o text-info"></i>
-              <p>Informational</p>
-            </a>
+              <p>Profile</p>
+            </router-link>
           </li>
         </ul>
       </nav>

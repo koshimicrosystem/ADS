@@ -2023,6 +2023,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -2031,8 +2033,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       contact: {},
-      id: '',
-      errored: '',
+      errors: false,
       loading: false
     };
   },
@@ -2040,21 +2041,74 @@ __webpack_require__.r(__webpack_exports__);
     store: function store() {
       var _this = this;
 
-      this.loading = true;
-      axios.post("/contactus/store", this.contact).then(function (response) {
-        _this.contact.id = response.data.id;
-        _this.loading = false;
+      this.errors = false;
+      this.validation();
 
-        _this.$bvToast.toast('Your request is submitted successfully.', {
-          title: 'Success !',
-          variant: 'success'
+      if (!this.errors) {
+        this.loading = true;
+        axios.post("/contactus/store", this.contact).then(function (response) {
+          _this.loading = false;
+
+          _this.$bvToast.toast("Your request is submitted successfully.", {
+            title: "Success !",
+            variant: "success"
+          });
+
+          _this.resetcontact();
+        })["catch"](function (error) {
+          _this.errormessage("Something went wrong try again !");
+        })["finally"](function () {
+          return _this.loading = false;
         });
-      })["catch"](function (error) {
-        console.log(error);
-        _this.errored = true;
-      })["finally"](function () {
-        return _this.loading = false;
+      }
+    },
+    resetcontact: function resetcontact() {
+      this.contact = {};
+    },
+    validation: function validation() {
+      if (this.contact.email) {
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(this.contact.email) == false) {
+          this.errormessage("Email is not valid.");
+          this.errors = true;
+        }
+      }
+
+      if (!this.contact.name) {
+        this.errormessage("Name is mandatory field.");
+        this.errors = true;
+      }
+
+      if (!this.contact.phone) {
+        this.errormessage("Phone is mandatory field.");
+        this.errors = true;
+      }
+
+      if (this.contact.message) {
+        if (this.contact.message.length < 50) {
+          this.errormessage("Min char for message is 50.");
+          this.errors = true;
+        }
+      } else {
+        this.errormessage("Message is mandatory field.");
+        this.errors = true;
+      }
+    },
+    errormessage: function errormessage($msg) {
+      this.$bvToast.toast($msg, {
+        title: "Error !",
+        variant: "danger"
       });
+    }
+  },
+  computed: {
+    message_length: function message_length() {
+      if (this.contact.message) {
+        return this.contact.message.length;
+      } else {
+        return 0;
+      }
     }
   },
   components: {
@@ -67622,7 +67676,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "comment_input",
-                attrs: { type: "text", required: "required" },
+                attrs: { type: "number", required: "required" },
                 domProps: { value: _vm.contact.phone },
                 on: {
                   input: function($event) {
@@ -67663,7 +67717,20 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", [
-            _vm._m(2),
+            _c("div", { staticClass: "form_title" }, [
+              _vm._v("\n          Message "),
+              _c("b", [_vm._v("(Min : 50)")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "mandatory_field" }, [_vm._v("*")]),
+              _vm._v(" "),
+              _vm.message_length < 50
+                ? _c("span", { staticClass: "badge badge-danger right" }, [
+                    _vm._v("Char " + _vm._s(_vm.message_length))
+                  ])
+                : _c("span", { staticClass: "badge badge-success right" }, [
+                    _vm._v("Char " + _vm._s(_vm.message_length))
+                  ])
+            ]),
             _vm._v(" "),
             _c("textarea", {
               directives: [
@@ -67727,15 +67794,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form_title" }, [
       _vm._v("\n            Phone\n            "),
-      _c("span", { staticClass: "mandatory_field" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form_title" }, [
-      _vm._v("\n          Message\n          "),
       _c("span", { staticClass: "mandatory_field" }, [_vm._v("*")])
     ])
   }

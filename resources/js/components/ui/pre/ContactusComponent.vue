@@ -38,10 +38,12 @@
           <button @click.prevent="store()" class="comment_button trans_200">submit now</button>
         </div>
       </form>
+      <overlay-component :loading = "this.loading"></overlay-component>
     </div>
   </div>
 </template>
 <script>
+import OverlayComponent from '../common/OverlayComponent'
 export default {
   mounted() {
     console.log("Component mounted.");
@@ -56,11 +58,12 @@ export default {
   },
   methods: {
     store() {
+      this.loading=true;
       axios
         .post("/contactus/store",this.contact)
         .then(response => {
         this.contact.id = response.data.id;
-
+        this.loading = false;
         this.$bvToast.toast('Your request is submitted successfully.', {
           title: 'Success !',
           variant: 'success',
@@ -73,6 +76,9 @@ export default {
         })
         .finally(() => (this.loading = false));
     }
+  },
+  components: {
+    OverlayComponent
   }
 };
 </script>

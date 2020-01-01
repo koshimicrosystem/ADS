@@ -56,7 +56,7 @@
                         </div>
                         <nav class="main_nav_contaner ml-auto">
                             <ul class="main_nav">
-                                <li class="active"><a href="#">Home</a></li>
+                                <li ><a href="{{route('welcome')}}">ADS</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="courses.html">Courses</a></li>
                                 <li><a href="blog.html">Blog</a></li>
@@ -112,7 +112,7 @@
     </div>
     <nav class="menu_nav">
         <ul class="menu_mm">
-            <li class="menu_mm"><a href="index.html">Home</a></li>
+            <li class="menu_mm"><a href="{{route('welcome')}}">ADS</a></li>
             <li class="menu_mm"><a href="#">About</a></li>
             <li class="menu_mm"><a href="#">Courses</a></li>
             <li class="menu_mm"><a href="#">Blog</a></li>

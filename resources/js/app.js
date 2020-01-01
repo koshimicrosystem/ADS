@@ -8,6 +8,10 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+// Bvue
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 

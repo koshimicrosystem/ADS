@@ -59,7 +59,13 @@ export default {
       axios
         .post("/contactus/store",this.contact)
         .then(response => {
-        //   this.id = response.data.id;
+        this.contact.id = response.data.id;
+
+        this.$bvToast.toast('Your request is submitted successfully.', {
+          title: 'Success !',
+          variant: 'success',
+        });
+        
         })
         .catch(error => {
           console.log(error);

@@ -21,7 +21,7 @@
                             <div class="top_bar_login ml-auto">
                                 <div class="login_button">
                                     @auth
-                                    <a href="{{route('home')}}"> User - Name </a>
+                                    <a href="{{route('home')}}">{{Auth::User()->f_name}} {{Auth::User()->m_name}} {{Auth::User()->l_name}}</a>
                                     @else
                                     <a href="{{route('login')}}"> Login </a>
                                     @endauth

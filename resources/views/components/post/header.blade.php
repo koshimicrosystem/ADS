@@ -32,7 +32,7 @@
               <img src="{{asset('media/profile/boy.png')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-              <a href="#" class="d-block">Alexander Pierce</a>
+              <a href="#" class="d-block">{{Auth::User()->f_name}} {{Auth::User()->m_name}} {{Auth::User()->l_name}}</a>
             </div>
           </div>
       </li>

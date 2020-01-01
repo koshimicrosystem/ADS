@@ -8,3 +8,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~admin-lte/dist/css/adminlte.css';
 @import '~bootstrap-vue/src/index.scss';
+
+.router-link-exact-active{
+    background-color: #0984e3;
+    color: #f8fafc;
+}

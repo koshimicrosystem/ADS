@@ -18,7 +18,11 @@ Vue.use(VueRouter)
 const routes = [
     { path: '/home', component: require('./components/ExampleComponent.vue').default },
     { path: '/dashboard-component', component: require('./components/DashComponent.vue').default },
-    { path: '/profile-component', component: require('./components/ProfileComponent.vue').default }
+    { path: '/profile-component', component: require('./components/ProfileComponent.vue').default },
+
+    // Student
+    { path: '/student-list', component: require('./components/student/StudentList.vue').default },
+
 ]
 
 const router = new VueRouter({
@@ -39,6 +43,8 @@ const router = new VueRouter({
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('contactus-component', require('./components/ui/pre/ContactusComponent.vue').default);
 Vue.component('overlay-component', require('./components/ui/common/OverlayComponent.vue').default);
+
+// Student
 
 
 const app = new Vue({

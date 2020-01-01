@@ -27283,3 +27283,8 @@ input[type=color].form-control:disabled {
   background-color: #343a40;
 }
 
+.router-link-exact-active {
+  background-color: #0984e3;
+  color: #f8fafc;
+}
+

@@ -26,6 +26,10 @@ const routes = [
     // Student
     { path: '/student-list', component: require('./components/student/StudentList.vue').default },
 
+    // Faculty
+    { path: '/new-faculty', component: require('./components/faculty/NewFaculty.vue').default },
+    { path: '/faculty-list', component: require('./components/faculty/FacultyList.vue').default },
+    { path: '/faculty-profile/:id', name: 'faculty-profile', component: require('./components/faculty/FacultyProfile.vue').default },
 ]
 
 const router = new VueRouter({
@@ -46,6 +50,7 @@ const router = new VueRouter({
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('contactus-component', require('./components/ui/pre/ContactusComponent.vue').default);
 Vue.component('overlay-component', require('./components/ui/common/OverlayComponent.vue').default);
+Vue.component('user-count', require('./components/ui/post/UserCount.vue').default);
 
 // Student
 

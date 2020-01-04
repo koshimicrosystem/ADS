@@ -1,7 +1,7 @@
 <template>
   <div v-if="loading" id="overlay">
     <!-- <div id="text">Overlay Text</div> -->
-    <img id="text" src="media/spinner/loading.gif" alt="loading">
+    <img id="text" src="/media/spinner/loading.gif" alt="loading">
   </div>
 </template>
 <script>

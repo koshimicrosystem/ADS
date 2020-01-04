@@ -11,11 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(RoleSeeder::class);
         $this->call(userseeder::class);
         $users = factory(App\User::class, 350)
-           ->create();
-        //    ->each(function ($user) {
-        //         $user->posts()->save(factory(App\Post::class)->make());
-        //     });
+           ->create()
+           ->each(function ($user) {
+                $user->assignRole('Student');
+            });
     }
 }

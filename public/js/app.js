@@ -1945,6 +1945,4730 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyList.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/faculty/FacultyList.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var _mounted$data$compute;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = (_mounted$data$compute = {
+  mounted: function mounted() {
+    console.log("Component mounted.");
+  },
+  data: function data() {
+    return {
+      items: [{
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Dickerson",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 21,
+        name: {
+          first: "Larsen",
+          last: "Shaw"
+        }
+      }, {
+        isActive: false,
+        age: 9,
+        name: {
+          first: "Mini",
+          last: "Navarro"
+        },
+        _rowVariant: "success"
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: false,
+        age: 89,
+        name: {
+          first: "Geneva",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "Jami",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 27,
+        name: {
+          first: "Essie",
+          last: "Dunlap"
+        }
+      }, {
+        isActive: true,
+        age: 40,
+        name: {
+          first: "Thor",
+          last: "Macdonald"
+        }
+      }, {
+        isActive: true,
+        age: 87,
+        name: {
+          first: "Larsen",
+          last: "Shaw"
+        },
+        _cellVariants: {
+          age: "danger",
+          isActive: "warning"
+        }
+      }, {
+        isActive: false,
+        age: 26,
+        name: {
+          first: "Mitzi",
+          last: "Navarro"
+        }
+      }, {
+        isActive: false,
+        age: 22,
+        name: {
+          first: "Genevieve",
+          last: "Wilson"
+        }
+      }, {
+        isActive: true,
+        age: 38,
+        name: {
+          first: "John",
+          last: "Carney"
+        }
+      }, {
+        isActive: false,
+        age: 29,
+        name: {
+          first: "Dick",
+          last: "Dunlap"
+        }
+      }],
+      fields: [{
+        key: "name",
+        label: "Person Full name",
+        sortable: true,
+        sortDirection: "desc"
+      }, {
+        key: "age",
+        label: "Person age",
+        sortable: true,
+        "class": "text-center"
+      }, {
+        key: "isActive",
+        label: "is Active",
+        formatter: function formatter(value, key, item) {
+          return value ? "Yes" : "No";
+        },
+        sortable: true,
+        sortByFormatted: true,
+        filterByFormatted: true
+      }, {
+        key: "actions",
+        label: "Actions"
+      }],
+      totalRows: 1,
+      currentPage: 1,
+      perPage: 10,
+      pageOptions: [10, 15, 20],
+      sortBy: "",
+      sortDesc: false,
+      sortDirection: "asc",
+      filter: null,
+      filterOn: [],
+      infoModal: {
+        id: "info-modal",
+        title: "",
+        content: ""
+      }
+    };
+  },
+  computed: {
+    sortOptions: function sortOptions() {
+      // Create an options list from our fields
+      return this.fields.filter(function (f) {
+        return f.sortable;
+      }).map(function (f) {
+        return {
+          text: f.label,
+          value: f.key
+        };
+      });
+    }
+  }
+}, _defineProperty(_mounted$data$compute, "mounted", function mounted() {
+  // Set the initial number of items
+  this.totalRows = this.items.length;
+}), _defineProperty(_mounted$data$compute, "methods", {
+  info: function info(item, index, button) {
+    this.infoModal.title = "Row index: ".concat(index);
+    this.infoModal.content = JSON.stringify(item, null, 2);
+    this.$root.$emit("bv::show::modal", this.infoModal.id, button);
+  },
+  resetInfoModal: function resetInfoModal() {
+    this.infoModal.title = "";
+    this.infoModal.content = "";
+  },
+  onFiltered: function onFiltered(filteredItems) {
+    // Trigger pagination to update the number of buttons/pages due to filtering
+    this.totalRows = filteredItems.length;
+    this.currentPage = 1;
+  }
+}), _mounted$data$compute);
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyProfile.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/faculty/FacultyProfile.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/common/OverlayComponent */ "./resources/js/components/ui/common/OverlayComponent.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.get_user();
+  },
+  data: function data() {
+    return {
+      user: {},
+      // contact
+      name: "",
+      email_number: "",
+      status: "not_default",
+      contacttype: "",
+      // contact end
+      loading: false,
+      modelcontact: false,
+      contacterrored: false,
+      modeladdress: false
+    };
+  },
+  methods: {
+    get_user: function get_user() {
+      var _this = this;
+
+      axios.get("/faculty/show/" + this.$route.params.id).then(function (response) {
+        return _this.user = response.data;
+      })["catch"]();
+    },
+    contactOk: function contactOk(bvModalEvt) {
+      var _this2 = this;
+
+      bvModalEvt.preventDefault();
+      this.contacterrored = false;
+      this.loading = false;
+      this.contactvalidation();
+
+      if (!this.contacterrored) {
+        this.loading = true;
+        axios.post("/contact/store", {
+          name: this.name,
+          email_number: this.email_number,
+          status: this.status,
+          user_id: this.user.id,
+          contacttype: this.contacttype
+        }).then(function (response) {
+          _this2.user.contacts = response.data;
+          _this2.loading = false;
+
+          _this2.$bvToast.toast("Contact added successfully.", {
+            title: "Success !",
+            variant: "success"
+          });
+
+          _this2.reset_contact();
+
+          _this2.$bvModal.hide("modelcontact");
+        })["catch"](function (error) {
+          _this2.errormessage("Email id already exists. Try again !");
+        })["finally"](function () {
+          return _this2.loading = false;
+        });
+      }
+    },
+    contactdestroy: function contactdestroy($id) {
+      var _this3 = this;
+
+      this.loading = true;
+      axios.get("/contact/destroy/" + this.user.id + "/" + $id).then(function (response) {
+        _this3.user.contacts = response.data;
+        _this3.loading = false;
+
+        _this3.$bvToast.toast("Contact Deleted successfully.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this3.errormessage("Something went wrong. Try again !");
+      });
+    },
+    contactdefault: function contactdefault($id) {
+      var _this4 = this;
+
+      this.loading = true;
+      axios.get("/contact/default/" + this.user.id + "/" + $id).then(function (response) {
+        _this4.user.contacts = response.data;
+        _this4.loading = false;
+
+        _this4.$bvToast.toast("Successful.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this4.errormessage("Something went wrong. Try again !");
+      });
+    },
+    addressOk: function addressOk(bvModalEvt) {
+      // Prevent modal from closing
+      bvModalEvt.preventDefault(); // Trigger submit handler
+    },
+    errormessage: function errormessage($msg) {
+      this.$bvToast.toast($msg, {
+        title: "Error !",
+        variant: "danger"
+      });
+    },
+    reset_contact: function reset_contact() {
+      this.name = "";
+      this.email_number = "";
+      this.status = "not_default";
+      this.loading = false;
+      this.errored = false;
+      this.contacttype = "";
+    },
+    contactvalidation: function contactvalidation() {
+      this.$v.$touch();
+
+      if (!this.$v.name.required) {
+        this.errormessage("Name: required.");
+        this.contacterrored = true;
+      } else {
+        if (!this.$v.name.minLength) {
+          this.errormessage("Name: Minimum 3 char is required.");
+          this.contacterrored = true;
+        }
+      }
+
+      if (!this.$v.email_number.required) {
+        this.errormessage("Email / Number: required.");
+        this.contacterrored = true;
+      } else {
+        if (!this.$v.email_number.email) {
+          if (!this.$v.email_number.between) {
+            this.errormessage("Email / Number: Email / Number is not valid.");
+            this.contacterrored = true;
+          } else {
+            this.contacttype = "Number";
+          }
+        } else {
+          this.contacttype = "Email";
+        }
+      }
+    }
+  },
+  validations: {
+    name: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["minLength"])(3)
+    },
+    email_number: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["email"],
+      between: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["between"])(6000000000, 9999999999)
+    }
+  },
+  components: {
+    OverlayComponent: _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/NewFaculty.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/faculty/NewFaculty.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/common/OverlayComponent */ "./resources/js/components/ui/common/OverlayComponent.vue");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      f_name: "",
+      m_name: "",
+      l_name: "",
+      dob: "",
+      gender: "",
+      email: "",
+      phone_number: "",
+      doj: "",
+      loading: false,
+      errored: false,
+      user: {}
+    };
+  },
+  methods: {
+    reset_form: function reset_form() {
+      this.f_name = "";
+      this.m_name = "";
+      this.l_name = "";
+      this.dob = "";
+      this.gender = "";
+      this.email = "";
+      this.phone_number = "";
+      this.loading = false;
+      this.errored = false;
+      this.doj = "";
+    },
+    submit: function submit() {
+      var _this = this;
+
+      this.errored = false;
+      this.validation();
+
+      if (!this.errored) {
+        this.loading = true;
+        axios.post("/faculty/store", {
+          f_name: this.f_name,
+          m_name: this.m_name,
+          l_name: this.l_name,
+          dob: this.dob,
+          doj: this.doj,
+          gender: this.gender,
+          email: this.email,
+          phone_number: this.phone_number
+        }).then(function (response) {
+          _this.user = response.data;
+          _this.loading = false;
+
+          _this.$bvToast.toast("Your request is submitted successfully.", {
+            title: "Success !",
+            variant: "success"
+          });
+
+          _this.reset_form();
+        })["catch"](function (error) {
+          _this.errormessage("Email id already exists. Try again !");
+        })["finally"](function () {
+          return _this.loading = false;
+        });
+      }
+    },
+    errormessage: function errormessage($msg) {
+      this.$bvToast.toast($msg, {
+        title: "Error !",
+        variant: "danger"
+      });
+    },
+    validation: function validation() {
+      this.$v.$touch();
+
+      if (!this.$v.f_name.required) {
+        this.errormessage("First Name: required.");
+        this.errored = true;
+      } else {
+        if (!this.$v.f_name.minLength) {
+          this.errormessage("First Name: Minimum 3 char is required.");
+          this.errored = true;
+        }
+      }
+
+      if (!this.$v.phone_number.required) {
+        this.errormessage("Phone Number : required.");
+        this.errored = true;
+      } else {
+        if (!this.$v.phone_number.between) {
+          this.errormessage("Not a valid phone number.");
+          this.errored = true;
+        }
+      }
+
+      if (!this.$v.m_name.minLength) {
+        this.errormessage("Middle Name : Minimum 3 char is required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.l_name.minLength) {
+        this.errormessage("Last Name : Minimum 3 char is required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.doj.required) {
+        this.errormessage("Date of Joining : Required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.gender.required) {
+        this.errormessage("Gender : Required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.dob.required) {
+        this.errormessage("Date of Birth : Required");
+        this.errored = true;
+      }
+
+      if (!this.$v.email.required) {
+        this.errormessage("Email : required.");
+        this.errored = true;
+      } else {
+        if (!this.$v.email.email) {
+          this.errormessage("Not a valid mail");
+          this.errored = true;
+        }
+      }
+    }
+  },
+  validations: {
+    f_name: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"],
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
+    },
+    m_name: {
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
+    },
+    l_name: {
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
+    },
+    phone_number: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"],
+      between: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["between"])(6000000000, 9999999999)
+    },
+    dob: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    email: {
+      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["email"],
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    gender: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    doj: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    }
+  },
+  components: {
+    OverlayComponent: _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentList.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentList.vue?vue&type=script&lang=js& ***!
@@ -71226,6 +75950,2006 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyList.vue?vue&type=template&id=1344d85c&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/faculty/FacultyList.vue?vue&type=template&id=1344d85c& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container mt-2" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card-header " },
+            [
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    { staticClass: "my-1", attrs: { lg: "6" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        {
+                          staticClass: "mb-0",
+                          attrs: {
+                            "label-align-sm": "right",
+                            "label-size": "sm"
+                          }
+                        },
+                        [
+                          _c(
+                            "b-form-checkbox-group",
+                            {
+                              staticClass: "mt-1",
+                              model: {
+                                value: _vm.filterOn,
+                                callback: function($$v) {
+                                  _vm.filterOn = $$v
+                                },
+                                expression: "filterOn"
+                              }
+                            },
+                            [
+                              _c(
+                                "b-form-checkbox",
+                                { attrs: { value: "name" } },
+                                [_vm._v("Name")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-form-checkbox",
+                                { attrs: { value: "age" } },
+                                [_vm._v("Age")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-form-checkbox",
+                                { attrs: { value: "isActive" } },
+                                [_vm._v("Active")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-form-checkbox",
+                                { attrs: { value: "name" } },
+                                [_vm._v("Name")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-form-checkbox",
+                                { attrs: { value: "age" } },
+                                [_vm._v("Age")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-form-checkbox",
+                                { attrs: { value: "isActive" } },
+                                [_vm._v("Active")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { staticClass: "my-1", attrs: { lg: "4" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        {
+                          staticClass: "mb-0",
+                          attrs: {
+                            label: "Filter",
+                            "label-cols-sm": "2",
+                            "label-align-sm": "right",
+                            "label-size": "sm",
+                            "label-for": "filterInput"
+                          }
+                        },
+                        [
+                          _c(
+                            "b-input-group",
+                            { attrs: { size: "sm" } },
+                            [
+                              _c("b-form-input", {
+                                attrs: {
+                                  type: "search",
+                                  id: "filterInput",
+                                  placeholder: "Type to Search"
+                                },
+                                model: {
+                                  value: _vm.filter,
+                                  callback: function($$v) {
+                                    _vm.filter = $$v
+                                  },
+                                  expression: "filter"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "b-input-group-append",
+                                [
+                                  _c(
+                                    "b-button",
+                                    {
+                                      attrs: { disabled: !_vm.filter },
+                                      on: {
+                                        click: function($event) {
+                                          _vm.filter = ""
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Clear")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { staticClass: "my-1", attrs: { lg: "2" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        {
+                          staticClass: "mb-0",
+                          attrs: {
+                            "label-cols-sm": "6",
+                            "label-cols-md": "4",
+                            "label-cols-lg": "3",
+                            "label-align-sm": "right",
+                            "label-size": "sm",
+                            "label-for": "perPageSelect"
+                          }
+                        },
+                        [
+                          _c("b-form-select", {
+                            attrs: {
+                              id: "perPageSelect",
+                              size: "sm",
+                              options: _vm.pageOptions
+                            },
+                            model: {
+                              value: _vm.perPage,
+                              callback: function($$v) {
+                                _vm.perPage = $$v
+                              },
+                              expression: "perPage"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card-body" },
+            [
+              _c(
+                "b-container",
+                { attrs: { fluid: "" } },
+                [
+                  _c("b-table", {
+                    attrs: {
+                      "show-empty": "",
+                      stacked: "md",
+                      items: _vm.items,
+                      fields: _vm.fields,
+                      "current-page": _vm.currentPage,
+                      "per-page": _vm.perPage,
+                      filter: _vm.filter,
+                      filterIncludedFields: _vm.filterOn,
+                      "sort-by": _vm.sortBy,
+                      "sort-desc": _vm.sortDesc,
+                      "sort-direction": _vm.sortDirection
+                    },
+                    on: {
+                      "update:sortBy": function($event) {
+                        _vm.sortBy = $event
+                      },
+                      "update:sort-by": function($event) {
+                        _vm.sortBy = $event
+                      },
+                      "update:sortDesc": function($event) {
+                        _vm.sortDesc = $event
+                      },
+                      "update:sort-desc": function($event) {
+                        _vm.sortDesc = $event
+                      },
+                      filtered: _vm.onFiltered
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "cell(name)",
+                        fn: function(row) {
+                          return [
+                            _vm._v(
+                              _vm._s(row.value.first) +
+                                " " +
+                                _vm._s(row.value.last)
+                            )
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(actions)",
+                        fn: function(row) {
+                          return [
+                            _c(
+                              "b-button",
+                              {
+                                staticClass: "mr-1",
+                                attrs: { size: "sm" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.info(
+                                      row.item,
+                                      row.index,
+                                      $event.target
+                                    )
+                                  }
+                                }
+                              },
+                              [_vm._v("Info modal")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-button",
+                              {
+                                attrs: { size: "sm" },
+                                on: { click: row.toggleDetails }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(row.detailsShowing ? "Hide" : "Show") +
+                                    " Details"
+                                )
+                              ]
+                            )
+                          ]
+                        }
+                      },
+                      {
+                        key: "row-details",
+                        fn: function(row) {
+                          return [
+                            _c("b-card", [
+                              _c(
+                                "ul",
+                                _vm._l(row.item, function(value, key) {
+                                  return _c("li", { key: key }, [
+                                    _vm._v(_vm._s(key) + ": " + _vm._s(value))
+                                  ])
+                                }),
+                                0
+                              )
+                            ])
+                          ]
+                        }
+                      }
+                    ])
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "b-row",
+                    [
+                      _c(
+                        "b-col",
+                        { staticClass: "my-1", attrs: { sm: "12" } },
+                        [
+                          _c("b-pagination", {
+                            staticClass: "my-0",
+                            attrs: {
+                              "total-rows": _vm.totalRows,
+                              "per-page": _vm.perPage,
+                              align: "fill"
+                            },
+                            model: {
+                              value: _vm.currentPage,
+                              callback: function($$v) {
+                                _vm.currentPage = $$v
+                              },
+                              expression: "currentPage"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-modal",
+                    {
+                      attrs: {
+                        id: _vm.infoModal.id,
+                        title: _vm.infoModal.title,
+                        "ok-only": ""
+                      },
+                      on: { hide: _vm.resetInfoModal }
+                    },
+                    [_c("pre", [_vm._v(_vm._s(_vm.infoModal.content))])]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-secondary" }, [
+      _c("h4", [_vm._v("Faculty List")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyProfile.vue?vue&type=template&id=626211db&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/faculty/FacultyProfile.vue?vue&type=template&id=626211db& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container mt-2" }, [
+    _c(
+      "div",
+      { staticClass: "row justify-content-center" },
+      [
+        _c("overlay-component", { attrs: { loading: this.loading } }),
+        _vm._v(" "),
+        _c(
+          "b-modal",
+          {
+            attrs: { id: "modeladdress" },
+            on: { ok: _vm.addressOk },
+            model: {
+              value: _vm.modeladdress,
+              callback: function($$v) {
+                _vm.modeladdress = $$v
+              },
+              expression: "modeladdress"
+            }
+          },
+          [_vm._v("Hello From Modal!")]
+        ),
+        _vm._v(" "),
+        _c(
+          "b-modal",
+          {
+            attrs: {
+              id: "modelcontact",
+              title: "Contact",
+              "header-bg-variant": "dark",
+              "header-text-variant": "light"
+            },
+            on: { ok: _vm.contactOk },
+            model: {
+              value: _vm.modelcontact,
+              callback: function($$v) {
+                _vm.modelcontact = $$v
+              },
+              expression: "modelcontact"
+            }
+          },
+          [
+            _c(
+              "b-form",
+              { on: { submit: _vm.contactOk } },
+              [
+                _c(
+                  "b-form-group",
+                  { attrs: { label: "Name :", "label-for": "name" } },
+                  [
+                    _c("b-form-input", {
+                      attrs: {
+                        id: "name",
+                        type: "text",
+                        placeholder: "Enter name"
+                      },
+                      model: {
+                        value: _vm.name,
+                        callback: function($$v) {
+                          _vm.name = $$v
+                        },
+                        expression: "name"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-form-group",
+                  {
+                    attrs: {
+                      label: "Email / Number:",
+                      "label-for": "email_phone"
+                    }
+                  },
+                  [
+                    _c("b-form-input", {
+                      attrs: {
+                        id: "email_phone",
+                        type: "text",
+                        required: "",
+                        placeholder: "Enter email / number"
+                      },
+                      model: {
+                        value: _vm.email_number,
+                        callback: function($$v) {
+                          _vm.email_number = $$v
+                        },
+                        expression: "email_number"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-form-checkbox",
+                  {
+                    attrs: {
+                      id: "checkbox-1",
+                      name: "checkbox-1",
+                      value: "default",
+                      "unchecked-value": "not_default"
+                    },
+                    model: {
+                      value: _vm.status,
+                      callback: function($$v) {
+                        _vm.status = $$v
+                      },
+                      expression: "status"
+                    }
+                  },
+                  [_vm._v("Make it default.")]
+                )
+              ],
+              1
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c(
+                      "div",
+                      { staticClass: "card card-primary card-outline" },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "card-body box-profile" },
+                          [
+                            _c("div", { staticClass: "text-center" }, [
+                              _c("img", {
+                                staticClass:
+                                  "profile-user-img img-fluid img-circle",
+                                attrs: {
+                                  src: "/media/profile/boy.png",
+                                  alt: "User profile picture"
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "h3",
+                              { staticClass: "profile-username text-center" },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.user.f_name) +
+                                    " " +
+                                    _vm._s(_vm.user.m_name) +
+                                    " " +
+                                    _vm._s(_vm.user.l_name)
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._l(_vm.user.roles, function(item, index) {
+                              return _c(
+                                "p",
+                                {
+                                  key: index,
+                                  staticClass: "text-muted text-center"
+                                },
+                                [_vm._v(_vm._s(item.name))]
+                              )
+                            }),
+                            _vm._v(" "),
+                            _vm._m(1),
+                            _vm._v(" "),
+                            _vm._m(2)
+                          ],
+                          2
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-9" }, [
+                    _c("div", { staticClass: "card" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("div", { staticClass: "tab-content" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "active tab-pane",
+                              attrs: { id: "activity" }
+                            },
+                            [
+                              _c("div", { staticClass: "post" }, [
+                                _c("div", { staticClass: "user-block" }, [
+                                  _c("img", {
+                                    staticClass: "img-circle img-bordered-sm",
+                                    attrs: {
+                                      src: "/media/profile/boy.png",
+                                      alt: "user image"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(4),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "description" }, [
+                                    _vm._v("Shared publicly - 7:30 PM today")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                            Lorem ipsum represents a long-held tradition for designers,\n                            typographers and the like. Some people hate it and argue for\n                            its demise, but others ignore the hate as they create awesome\n                            tools to help create filler text for everyone from bacon lovers\n                            to Charlie Sheen fans.\n                          "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(5),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control form-control-sm",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Type a comment"
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "post clearfix" }, [
+                                _c("div", { staticClass: "user-block" }, [
+                                  _c("img", {
+                                    staticClass: "img-circle img-bordered-sm",
+                                    attrs: {
+                                      src: "/media/profile/boy.png",
+                                      alt: "User Image"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(6),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "description" }, [
+                                    _vm._v("Sent you a message - 3 days ago")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                            Lorem ipsum represents a long-held tradition for designers,\n                            typographers and the like. Some people hate it and argue for\n                            its demise, but others ignore the hate as they create awesome\n                            tools to help create filler text for everyone from bacon lovers\n                            to Charlie Sheen fans.\n                          "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(7)
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "post" }, [
+                                _c("div", { staticClass: "user-block" }, [
+                                  _c("img", {
+                                    staticClass: "img-circle img-bordered-sm",
+                                    attrs: {
+                                      src: "/media/profile/boy.png",
+                                      alt: "User Image"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(8),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "description" }, [
+                                    _vm._v("Posted 5 photos - 5 days ago")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row mb-3" }, [
+                                  _c("div", { staticClass: "col-sm-6" }, [
+                                    _c("img", {
+                                      staticClass: "img-fluid",
+                                      attrs: {
+                                        src: "/media/profile/boy.png",
+                                        alt: "Photo"
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-sm-6" }, [
+                                    _c("div", { staticClass: "row" }, [
+                                      _c("div", { staticClass: "col-sm-6" }, [
+                                        _c("img", {
+                                          staticClass: "img-fluid mb-3",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "img-fluid",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        })
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-sm-6" }, [
+                                        _c("img", {
+                                          staticClass: "img-fluid mb-3",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "img-fluid",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        })
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(9),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control form-control-sm",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Type a comment"
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "tab-pane",
+                              attrs: { id: "timeline" }
+                            },
+                            [
+                              _c(
+                                "ul",
+                                { staticClass: "timeline timeline-inverse" },
+                                [
+                                  _vm._m(10),
+                                  _vm._v(" "),
+                                  _vm._m(11),
+                                  _vm._v(" "),
+                                  _vm._m(12),
+                                  _vm._v(" "),
+                                  _vm._m(13),
+                                  _vm._v(" "),
+                                  _vm._m(14),
+                                  _vm._v(" "),
+                                  _c("li", [
+                                    _c("i", {
+                                      staticClass: "fa fa-camera bg-purple"
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "timeline-item" },
+                                      [
+                                        _vm._m(15),
+                                        _vm._v(" "),
+                                        _vm._m(16),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "timeline-body" },
+                                          [
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm._m(17)
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm._m(18),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "tab-pane",
+                              attrs: { id: "contact" }
+                            },
+                            [
+                              _c("table", { staticClass: "table" }, [
+                                _c("thead", [
+                                  _c("tr", [
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Name")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Email/Number")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Updated")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "th",
+                                      { attrs: { scope: "col" } },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            staticClass: "btn btn-primary",
+                                            on: {
+                                              click: function($event) {
+                                                _vm.modelcontact = !_vm.modelcontact
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                  ADD\n                                  "
+                                            ),
+                                            _c("i", {
+                                              staticClass: "fas fa-plus"
+                                            })
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "tbody",
+                                  _vm._l(_vm.user.contacts, function(
+                                    item,
+                                    index
+                                  ) {
+                                    return _c("tr", { key: index }, [
+                                      _c("th", { attrs: { scope: "row" } }, [
+                                        _vm._v(_vm._s(item.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _vm._v(_vm._s(item.email_number))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _vm._v(_vm._s(item.updated_at))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _c(
+                                          "a",
+                                          {
+                                            on: {
+                                              click: function($event) {
+                                                $event.preventDefault()
+                                                return _vm.contactdefault(
+                                                  item.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            item.default
+                                              ? _c("i", {
+                                                  staticClass:
+                                                    "fas fa-star text-success"
+                                                })
+                                              : _c("i", {
+                                                  staticClass:
+                                                    "fas fa-star text-secondary"
+                                                })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            on: {
+                                              click: function($event) {
+                                                $event.preventDefault()
+                                                return _vm.contactdestroy(
+                                                  item.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass:
+                                                "fas fa-trash-alt text-danger"
+                                            })
+                                          ]
+                                        )
+                                      ])
+                                    ])
+                                  }),
+                                  0
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "tab-pane",
+                              attrs: { id: "address" }
+                            },
+                            [
+                              _c("table", { staticClass: "table" }, [
+                                _c("thead", [
+                                  _c("tr", [
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("State")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Distric")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Pin")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Address")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "th",
+                                      { attrs: { scope: "col" } },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            staticClass: "btn btn-primary",
+                                            on: {
+                                              click: function($event) {
+                                                _vm.modeladdress = !_vm.modeladdress
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                  ADD\n                                  "
+                                            ),
+                                            _c("i", {
+                                              staticClass: "fas fa-plus"
+                                            })
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "tbody",
+                                  _vm._l(_vm.user.addresses, function(
+                                    item,
+                                    index
+                                  ) {
+                                    return _c("tr", { key: index }, [
+                                      _c("th", { attrs: { scope: "row" } }, [
+                                        _vm._v(_vm._s(item.state))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [_vm._v(_vm._s(item.distric))]),
+                                      _vm._v(" "),
+                                      _c("td", [_vm._v(_vm._s(item.pin))]),
+                                      _vm._v(" "),
+                                      _c("td", [_vm._v(_vm._s(item.address))]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        item.default
+                                          ? _c("i", {
+                                              staticClass:
+                                                "fas fa-star text-success"
+                                            })
+                                          : _c("i", {
+                                              staticClass:
+                                                "fas fa-star text-secondary"
+                                            }),
+                                        _vm._v(" "),
+                                        _c("i", {
+                                          staticClass:
+                                            "fas fa-trash-alt text-danger"
+                                        })
+                                      ])
+                                    ])
+                                  }),
+                                  0
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-secondary" }, [
+      _c("h4", [_vm._v("Faculty Profile")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "list-group list-group-unbordered mb-3" }, [
+      _c("li", { staticClass: "list-group-item" }, [
+        _c("b", [_vm._v("Followers")]),
+        _vm._v(" "),
+        _c("a", { staticClass: "float-right" }, [_vm._v("1,322")])
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "list-group-item" }, [
+        _c("b", [_vm._v("Following")]),
+        _vm._v(" "),
+        _c("a", { staticClass: "float-right" }, [_vm._v("543")])
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "list-group-item" }, [
+        _c("b", [_vm._v("Friends")]),
+        _vm._v(" "),
+        _c("a", { staticClass: "float-right" }, [_vm._v("13,287")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "btn btn-primary btn-block", attrs: { href: "#" } },
+      [_c("b", [_vm._v("Follow")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header p-2" }, [
+      _c("ul", { staticClass: "nav nav-pills" }, [
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link active",
+              attrs: { href: "#activity", "data-toggle": "tab" }
+            },
+            [_vm._v("Activity")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#timeline", "data-toggle": "tab" }
+            },
+            [_vm._v("Timeline")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#settings", "data-toggle": "tab" }
+            },
+            [_vm._v("Settings")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#contact", "data-toggle": "tab" }
+            },
+            [_vm._v("Contact")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#address", "data-toggle": "tab" }
+            },
+            [_vm._v("Address")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "username" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Jonathan Burke Jr.")]),
+      _vm._v(" "),
+      _c("a", { staticClass: "float-right btn-tool", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-times" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c(
+        "a",
+        { staticClass: "link-black text-sm mr-2", attrs: { href: "#" } },
+        [
+          _c("i", { staticClass: "fa fa-share mr-1" }),
+          _vm._v(" Share\n                            ")
+        ]
+      ),
+      _vm._v(" "),
+      _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-thumbs-o-up mr-1" }),
+        _vm._v(" Like\n                            ")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "float-right" }, [
+        _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-comments-o mr-1" }),
+          _vm._v(" Comments (5)\n                              ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "username" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Sarah Ross")]),
+      _vm._v(" "),
+      _c("a", { staticClass: "float-right btn-tool", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-times" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { staticClass: "form-horizontal" }, [
+      _c("div", { staticClass: "input-group input-group-sm mb-0" }, [
+        _c("input", {
+          staticClass: "form-control form-control-sm",
+          attrs: { placeholder: "Response" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group-append" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-danger", attrs: { type: "submit" } },
+            [_vm._v("Send")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "username" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Adam Jones")]),
+      _vm._v(" "),
+      _c("a", { staticClass: "float-right btn-tool", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-times" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c(
+        "a",
+        { staticClass: "link-black text-sm mr-2", attrs: { href: "#" } },
+        [
+          _c("i", { staticClass: "fa fa-share mr-1" }),
+          _vm._v(" Share\n                            ")
+        ]
+      ),
+      _vm._v(" "),
+      _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-thumbs-o-up mr-1" }),
+        _vm._v(" Like\n                            ")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "float-right" }, [
+        _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-comments-o mr-1" }),
+          _vm._v(" Comments (5)\n                              ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "time-label" }, [
+      _c("span", { staticClass: "bg-danger" }, [_vm._v("10 Feb. 2014")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("i", { staticClass: "fa fa-envelope bg-primary" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-item" }, [
+        _c("span", { staticClass: "time" }, [
+          _c("i", { staticClass: "fa fa-clock-o" }),
+          _vm._v(" 12:05\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("h3", { staticClass: "timeline-header" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Support Team")]),
+          _vm._v(" sent you an email\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-body" }, [
+          _vm._v(
+            "\n                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,\n                                weebly ning heekya handango imeem plugg dopplr jibjab, movity\n                                jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle\n                                quora plaxo ideeli hulu weebly balihoo...\n                              "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-footer" }, [
+          _c(
+            "a",
+            { staticClass: "btn btn-primary btn-sm", attrs: { href: "#" } },
+            [_vm._v("Read more")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "btn btn-danger btn-sm", attrs: { href: "#" } },
+            [_vm._v("Delete")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("i", { staticClass: "fa fa-user bg-info" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-item" }, [
+        _c("span", { staticClass: "time" }, [
+          _c("i", { staticClass: "fa fa-clock-o" }),
+          _vm._v(" 5 mins ago\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("h3", { staticClass: "timeline-header no-border" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Sarah Young")]),
+          _vm._v(
+            " accepted your friend request\n                              "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("i", { staticClass: "fa fa-comments bg-warning" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-item" }, [
+        _c("span", { staticClass: "time" }, [
+          _c("i", { staticClass: "fa fa-clock-o" }),
+          _vm._v(" 27 mins ago\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("h3", { staticClass: "timeline-header" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Jay White")]),
+          _vm._v(" commented on your post\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-body" }, [
+          _vm._v(
+            "\n                                Take me to your leader!\n                                Switzerland is small and neutral!\n                                We are more like Germany, ambitious and misunderstood!\n                              "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-footer" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-warning btn-flat btn-sm",
+              attrs: { href: "#" }
+            },
+            [_vm._v("View comment")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "time-label" }, [
+      _c("span", { staticClass: "bg-success" }, [_vm._v("3 Jan. 2014")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "time" }, [
+      _c("i", { staticClass: "fa fa-clock-o" }),
+      _vm._v(" 2 days ago\n                              ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", { staticClass: "timeline-header" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Mina Lee")]),
+      _vm._v(" uploaded new photos\n                              ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("i", { staticClass: "fa fa-clock-o bg-gray" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tab-pane", attrs: { id: "settings" } }, [
+      _c("form", { staticClass: "form-horizontal" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputName" }
+            },
+            [_vm._v("Name")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "email", id: "inputName", placeholder: "Name" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputEmail" }
+            },
+            [_vm._v("Email")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "email", id: "inputEmail", placeholder: "Email" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputName2" }
+            },
+            [_vm._v("Name")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", id: "inputName2", placeholder: "Name" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputExperience" }
+            },
+            [_vm._v("Experience")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("textarea", {
+              staticClass: "form-control",
+              attrs: { id: "inputExperience", placeholder: "Experience" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputSkills" }
+            },
+            [_vm._v("Skills")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", id: "inputSkills", placeholder: "Skills" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
+            _c("div", { staticClass: "checkbox" }, [
+              _c("label", [
+                _c("input", { attrs: { type: "checkbox" } }),
+                _vm._v(" I agree to the\n                                  "),
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v("terms and conditions")
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
+            _c(
+              "button",
+              { staticClass: "btn btn-danger", attrs: { type: "submit" } },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/NewFaculty.vue?vue&type=template&id=c684414c&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/faculty/NewFaculty.vue?vue&type=template&id=c684414c& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container mt-2" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "container" }, [
+              _c(
+                "div",
+                { staticClass: "row" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4 order-md-2 mb-4" },
+                    [
+                      _vm.user.id
+                        ? _c(
+                            "b-alert",
+                            {
+                              attrs: {
+                                show: "",
+                                dismissible: "",
+                                variant: "success"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                  New Faculty added with username : " +
+                                  _vm._s(_vm.user.email) +
+                                  ", Password : Phone Number. Click\n                  "
+                              ),
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "alert-link",
+                                  attrs: {
+                                    to: {
+                                      name: "faculty-profile",
+                                      params: { id: _vm.user.id }
+                                    }
+                                  }
+                                },
+                                [_vm._v("here")]
+                              ),
+                              _vm._v("to see details.\n                ")
+                            ],
+                            1
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("user-count")
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-8 order-md-1" }, [
+                    _c(
+                      "form",
+                      {
+                        staticClass: "needs-validation",
+                        attrs: { novalidate: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "f_name" } }, [
+                              _vm._v("First name")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.f_name,
+                                  expression: "f_name"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                id: "f_name",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.f_name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.f_name = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "m_name" } }, [
+                              _vm._v("Middle name")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "text-muted" }, [
+                              _vm._v("(Optional)")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.m_name,
+                                  expression: "m_name"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                id: "m_name",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.m_name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.m_name = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "l_name" } }, [
+                              _vm._v("Last name")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "text-muted" }, [
+                              _vm._v("(Optional)")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.l_name,
+                                  expression: "l_name"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                id: "l_name",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.l_name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.l_name = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "dob" } }, [
+                              _vm._v("Date of Birth")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.dob,
+                                  expression: "dob"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "date",
+                                id: "dob",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.dob },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.dob = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "phone_number" } }, [
+                              _vm._v("Phone Number")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.phone_number,
+                                  expression: "phone_number"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "number",
+                                id: "phone_number",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.phone_number },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.phone_number = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "doj" } }, [
+                              _vm._v("Date of Joining")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.doj,
+                                  expression: "doj"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "date",
+                                id: "doj",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.doj },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.doj = $event.target.value
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mb-3" }, [
+                          _c("label", { attrs: { for: "email" } }, [
+                            _vm._v("Email")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.email,
+                                expression: "email"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "email",
+                              id: "email",
+                              placeholder: "you@example.com"
+                            },
+                            domProps: { value: _vm.email },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.email = $event.target.value
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("h4", { staticClass: "mb-3" }, [_vm._v("Gender")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "d-block my-3" }, [
+                          _c(
+                            "div",
+                            { staticClass: "custom-control custom-radio" },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.gender,
+                                    expression: "gender"
+                                  }
+                                ],
+                                staticClass: "custom-control-input",
+                                attrs: {
+                                  id: "credit",
+                                  name: "paymentMethod",
+                                  type: "radio",
+                                  value: "Male",
+                                  required: ""
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.gender, "Male")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    _vm.gender = "Male"
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "custom-control-label",
+                                  attrs: { for: "credit" }
+                                },
+                                [_vm._v("Male")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "custom-control custom-radio" },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.gender,
+                                    expression: "gender"
+                                  }
+                                ],
+                                staticClass: "custom-control-input",
+                                attrs: {
+                                  id: "debit",
+                                  name: "paymentMethod",
+                                  type: "radio",
+                                  value: "Female",
+                                  required: ""
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.gender, "Female")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    _vm.gender = "Female"
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "custom-control-label",
+                                  attrs: { for: "debit" }
+                                },
+                                [_vm._v("Female")]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "mb-4" }),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary btn-lg btn-block",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.submit()
+                              }
+                            }
+                          },
+                          [_vm._v("Continue to Save")]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("overlay-component", { attrs: { loading: this.loading } })
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-secondary" }, [
+      _c("h4", [_vm._v("New Faculty")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentList.vue?vue&type=template&id=6b08530a&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentList.vue?vue&type=template&id=6b08530a& ***!
@@ -71621,7 +78345,7 @@ var render = function() {
         _c("img", {
           attrs: {
             id: "text",
-            src: "media/spinner/loading.gif",
+            src: "/media/spinner/loading.gif",
             alt: "loading"
           }
         })
@@ -71629,6 +78353,154 @@ var render = function() {
     : _vm._e()
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ui/post/UserCount.vue?vue&type=template&id=6e9b3f55&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ui/post/UserCount.vue?vue&type=template&id=6e9b3f55& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "h4",
+        {
+          staticClass: "d-flex justify-content-between align-items-center mb-3"
+        },
+        [
+          _c("span", { staticClass: "text-muted" }, [_vm._v("Your cart")]),
+          _vm._v(" "),
+          _c("span", { staticClass: "badge badge-secondary badge-pill" }, [
+            _vm._v("3")
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-group mb-3" }, [
+        _c(
+          "li",
+          {
+            staticClass:
+              "list-group-item d-flex justify-content-between lh-condensed"
+          },
+          [
+            _c("div", [
+              _c("h6", { staticClass: "my-0" }, [_vm._v("Product name")]),
+              _vm._v(" "),
+              _c("small", { staticClass: "text-muted" }, [
+                _vm._v("Brief description")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-muted" }, [_vm._v("$12")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass:
+              "list-group-item d-flex justify-content-between lh-condensed"
+          },
+          [
+            _c("div", [
+              _c("h6", { staticClass: "my-0" }, [_vm._v("Second product")]),
+              _vm._v(" "),
+              _c("small", { staticClass: "text-muted" }, [
+                _vm._v("Brief description")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-muted" }, [_vm._v("$8")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass:
+              "list-group-item d-flex justify-content-between lh-condensed"
+          },
+          [
+            _c("div", [
+              _c("h6", { staticClass: "my-0" }, [_vm._v("Third item")]),
+              _vm._v(" "),
+              _c("small", { staticClass: "text-muted" }, [
+                _vm._v("Brief description")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-muted" }, [_vm._v("$5")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass:
+              "list-group-item d-flex justify-content-between bg-light"
+          },
+          [
+            _c("div", { staticClass: "text-success" }, [
+              _c("h6", { staticClass: "my-0" }, [_vm._v("Promo code")]),
+              _vm._v(" "),
+              _c("small", [_vm._v("EXAMPLECODE")])
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-success" }, [_vm._v("-$5")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          { staticClass: "list-group-item d-flex justify-content-between" },
+          [
+            _c("span", [_vm._v("Total (USD)")]),
+            _vm._v(" "),
+            _c("strong", [_vm._v("$20")])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("form", { staticClass: "card p-2" }, [
+        _c("div", { staticClass: "input-group" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", placeholder: "Promo code" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-group-append" }, [
+            _c(
+              "button",
+              { staticClass: "btn btn-secondary", attrs: { type: "submit" } },
+              [_vm._v("Redeem")]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -86816,6 +93688,1932 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/vuelidate/lib/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/vuelidate/lib/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Vuelidate = Vuelidate;
+Object.defineProperty(exports, "withParams", {
+  enumerable: true,
+  get: function get() {
+    return _params.withParams;
+  }
+});
+exports.default = exports.validationMixin = void 0;
+
+var _vval = __webpack_require__(/*! ./vval */ "./node_modules/vuelidate/lib/vval.js");
+
+var _params = __webpack_require__(/*! ./params */ "./node_modules/vuelidate/lib/params.js");
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var NIL = function NIL() {
+  return null;
+};
+
+var buildFromKeys = function buildFromKeys(keys, fn, keyFn) {
+  return keys.reduce(function (build, key) {
+    build[keyFn ? keyFn(key) : key] = fn(key);
+    return build;
+  }, {});
+};
+
+function isFunction(val) {
+  return typeof val === 'function';
+}
+
+function isObject(val) {
+  return val !== null && (_typeof(val) === 'object' || isFunction(val));
+}
+
+function isPromise(object) {
+  return isObject(object) && isFunction(object.then);
+}
+
+var getPath = function getPath(ctx, obj, path, fallback) {
+  if (typeof path === 'function') {
+    return path.call(ctx, obj, fallback);
+  }
+
+  path = Array.isArray(path) ? path : path.split('.');
+
+  for (var i = 0; i < path.length; i++) {
+    if (obj && _typeof(obj) === 'object') {
+      obj = obj[path[i]];
+    } else {
+      return fallback;
+    }
+  }
+
+  return typeof obj === 'undefined' ? fallback : obj;
+};
+
+var __isVuelidateAsyncVm = '__isVuelidateAsyncVm';
+
+function makePendingAsyncVm(Vue, promise) {
+  var asyncVm = new Vue({
+    data: {
+      p: true,
+      v: false
+    }
+  });
+  promise.then(function (value) {
+    asyncVm.p = false;
+    asyncVm.v = value;
+  }, function (error) {
+    asyncVm.p = false;
+    asyncVm.v = false;
+    throw error;
+  });
+  asyncVm[__isVuelidateAsyncVm] = true;
+  return asyncVm;
+}
+
+var validationGetters = {
+  $invalid: function $invalid() {
+    var _this = this;
+
+    var proxy = this.proxy;
+    return this.nestedKeys.some(function (nested) {
+      return _this.refProxy(nested).$invalid;
+    }) || this.ruleKeys.some(function (rule) {
+      return !proxy[rule];
+    });
+  },
+  $dirty: function $dirty() {
+    var _this2 = this;
+
+    if (this.dirty) {
+      return true;
+    }
+
+    if (this.nestedKeys.length === 0) {
+      return false;
+    }
+
+    return this.nestedKeys.every(function (key) {
+      return _this2.refProxy(key).$dirty;
+    });
+  },
+  $anyDirty: function $anyDirty() {
+    var _this3 = this;
+
+    if (this.dirty) {
+      return true;
+    }
+
+    if (this.nestedKeys.length === 0) {
+      return false;
+    }
+
+    return this.nestedKeys.some(function (key) {
+      return _this3.refProxy(key).$anyDirty;
+    });
+  },
+  $error: function $error() {
+    return this.$dirty && !this.$pending && this.$invalid;
+  },
+  $anyError: function $anyError() {
+    return this.$anyDirty && !this.$pending && this.$invalid;
+  },
+  $pending: function $pending() {
+    var _this4 = this;
+
+    return this.ruleKeys.some(function (key) {
+      return _this4.getRef(key).$pending;
+    }) || this.nestedKeys.some(function (key) {
+      return _this4.refProxy(key).$pending;
+    });
+  },
+  $params: function $params() {
+    var _this5 = this;
+
+    var vals = this.validations;
+    return _objectSpread({}, buildFromKeys(this.nestedKeys, function (key) {
+      return vals[key] && vals[key].$params || null;
+    }), buildFromKeys(this.ruleKeys, function (key) {
+      return _this5.getRef(key).$params;
+    }));
+  }
+};
+
+function setDirtyRecursive(newState) {
+  this.dirty = newState;
+  var proxy = this.proxy;
+  var method = newState ? '$touch' : '$reset';
+  this.nestedKeys.forEach(function (key) {
+    proxy[key][method]();
+  });
+}
+
+var validationMethods = {
+  $touch: function $touch() {
+    setDirtyRecursive.call(this, true);
+  },
+  $reset: function $reset() {
+    setDirtyRecursive.call(this, false);
+  },
+  $flattenParams: function $flattenParams() {
+    var proxy = this.proxy;
+    var params = [];
+
+    for (var key in this.$params) {
+      if (this.isNested(key)) {
+        var childParams = proxy[key].$flattenParams();
+
+        for (var j = 0; j < childParams.length; j++) {
+          childParams[j].path.unshift(key);
+        }
+
+        params = params.concat(childParams);
+      } else {
+        params.push({
+          path: [],
+          name: key,
+          params: this.$params[key]
+        });
+      }
+    }
+
+    return params;
+  }
+};
+var getterNames = Object.keys(validationGetters);
+var methodNames = Object.keys(validationMethods);
+var _cachedComponent = null;
+
+var getComponent = function getComponent(Vue) {
+  if (_cachedComponent) {
+    return _cachedComponent;
+  }
+
+  var VBase = Vue.extend({
+    computed: {
+      refs: function refs() {
+        var oldVval = this._vval;
+        this._vval = this.children;
+        (0, _vval.patchChildren)(oldVval, this._vval);
+        var refs = {};
+
+        this._vval.forEach(function (c) {
+          refs[c.key] = c.vm;
+        });
+
+        return refs;
+      }
+    },
+    beforeCreate: function beforeCreate() {
+      this._vval = null;
+    },
+    beforeDestroy: function beforeDestroy() {
+      if (this._vval) {
+        (0, _vval.patchChildren)(this._vval);
+        this._vval = null;
+      }
+    },
+    methods: {
+      getModel: function getModel() {
+        return this.lazyModel ? this.lazyModel(this.prop) : this.model;
+      },
+      getModelKey: function getModelKey(key) {
+        var model = this.getModel();
+
+        if (model) {
+          return model[key];
+        }
+      },
+      hasIter: function hasIter() {
+        return false;
+      }
+    }
+  });
+  var ValidationRule = VBase.extend({
+    data: function data() {
+      return {
+        rule: null,
+        lazyModel: null,
+        model: null,
+        lazyParentModel: null,
+        rootModel: null
+      };
+    },
+    methods: {
+      runRule: function runRule(parent) {
+        var model = this.getModel();
+        (0, _params.pushParams)();
+        var rawOutput = this.rule.call(this.rootModel, model, parent);
+        var output = isPromise(rawOutput) ? makePendingAsyncVm(Vue, rawOutput) : rawOutput;
+        var rawParams = (0, _params.popParams)();
+        var params = rawParams && rawParams.$sub ? rawParams.$sub.length > 1 ? rawParams : rawParams.$sub[0] : null;
+        return {
+          output: output,
+          params: params
+        };
+      }
+    },
+    computed: {
+      run: function run() {
+        var _this6 = this;
+
+        var parent = this.lazyParentModel();
+
+        var isArrayDependant = Array.isArray(parent) && parent.__ob__;
+
+        if (isArrayDependant) {
+          var arrayDep = parent.__ob__.dep;
+          arrayDep.depend();
+          var target = arrayDep.constructor.target;
+
+          if (!this._indirectWatcher) {
+            var Watcher = target.constructor;
+            this._indirectWatcher = new Watcher(this, function () {
+              return _this6.runRule(parent);
+            }, null, {
+              lazy: true
+            });
+          }
+
+          var model = this.getModel();
+
+          if (!this._indirectWatcher.dirty && this._lastModel === model) {
+            this._indirectWatcher.depend();
+
+            return target.value;
+          }
+
+          this._lastModel = model;
+
+          this._indirectWatcher.evaluate();
+
+          this._indirectWatcher.depend();
+        } else if (this._indirectWatcher) {
+          this._indirectWatcher.teardown();
+
+          this._indirectWatcher = null;
+        }
+
+        return this._indirectWatcher ? this._indirectWatcher.value : this.runRule(parent);
+      },
+      $params: function $params() {
+        return this.run.params;
+      },
+      proxy: function proxy() {
+        var output = this.run.output;
+
+        if (output[__isVuelidateAsyncVm]) {
+          return !!output.v;
+        }
+
+        return !!output;
+      },
+      $pending: function $pending() {
+        var output = this.run.output;
+
+        if (output[__isVuelidateAsyncVm]) {
+          return output.p;
+        }
+
+        return false;
+      }
+    },
+    destroyed: function destroyed() {
+      if (this._indirectWatcher) {
+        this._indirectWatcher.teardown();
+
+        this._indirectWatcher = null;
+      }
+    }
+  });
+  var Validation = VBase.extend({
+    data: function data() {
+      return {
+        dirty: false,
+        validations: null,
+        lazyModel: null,
+        model: null,
+        prop: null,
+        lazyParentModel: null,
+        rootModel: null
+      };
+    },
+    methods: _objectSpread({}, validationMethods, {
+      refProxy: function refProxy(key) {
+        return this.getRef(key).proxy;
+      },
+      getRef: function getRef(key) {
+        return this.refs[key];
+      },
+      isNested: function isNested(key) {
+        return typeof this.validations[key] !== 'function';
+      }
+    }),
+    computed: _objectSpread({}, validationGetters, {
+      nestedKeys: function nestedKeys() {
+        return this.keys.filter(this.isNested);
+      },
+      ruleKeys: function ruleKeys() {
+        var _this7 = this;
+
+        return this.keys.filter(function (k) {
+          return !_this7.isNested(k);
+        });
+      },
+      keys: function keys() {
+        return Object.keys(this.validations).filter(function (k) {
+          return k !== '$params';
+        });
+      },
+      proxy: function proxy() {
+        var _this8 = this;
+
+        var keyDefs = buildFromKeys(this.keys, function (key) {
+          return {
+            enumerable: true,
+            configurable: true,
+            get: function get() {
+              return _this8.refProxy(key);
+            }
+          };
+        });
+        var getterDefs = buildFromKeys(getterNames, function (key) {
+          return {
+            enumerable: true,
+            configurable: true,
+            get: function get() {
+              return _this8[key];
+            }
+          };
+        });
+        var methodDefs = buildFromKeys(methodNames, function (key) {
+          return {
+            enumerable: false,
+            configurable: true,
+            get: function get() {
+              return _this8[key];
+            }
+          };
+        });
+        var iterDefs = this.hasIter() ? {
+          $iter: {
+            enumerable: true,
+            value: Object.defineProperties({}, _objectSpread({}, keyDefs))
+          }
+        } : {};
+        return Object.defineProperties({}, _objectSpread({}, keyDefs, iterDefs, {
+          $model: {
+            enumerable: true,
+            get: function get() {
+              var parent = _this8.lazyParentModel();
+
+              if (parent != null) {
+                return parent[_this8.prop];
+              } else {
+                return null;
+              }
+            },
+            set: function set(value) {
+              var parent = _this8.lazyParentModel();
+
+              if (parent != null) {
+                parent[_this8.prop] = value;
+
+                _this8.$touch();
+              }
+            }
+          }
+        }, getterDefs, methodDefs));
+      },
+      children: function children() {
+        var _this9 = this;
+
+        return _toConsumableArray(this.nestedKeys.map(function (key) {
+          return renderNested(_this9, key);
+        })).concat(_toConsumableArray(this.ruleKeys.map(function (key) {
+          return renderRule(_this9, key);
+        }))).filter(Boolean);
+      }
+    })
+  });
+  var GroupValidation = Validation.extend({
+    methods: {
+      isNested: function isNested(key) {
+        return typeof this.validations[key]() !== 'undefined';
+      },
+      getRef: function getRef(key) {
+        var vm = this;
+        return {
+          get proxy() {
+            return vm.validations[key]() || false;
+          }
+
+        };
+      }
+    }
+  });
+  var EachValidation = Validation.extend({
+    computed: {
+      keys: function keys() {
+        var model = this.getModel();
+
+        if (isObject(model)) {
+          return Object.keys(model);
+        } else {
+          return [];
+        }
+      },
+      tracker: function tracker() {
+        var _this10 = this;
+
+        var trackBy = this.validations.$trackBy;
+        return trackBy ? function (key) {
+          return "".concat(getPath(_this10.rootModel, _this10.getModelKey(key), trackBy));
+        } : function (x) {
+          return "".concat(x);
+        };
+      },
+      getModelLazy: function getModelLazy() {
+        var _this11 = this;
+
+        return function () {
+          return _this11.getModel();
+        };
+      },
+      children: function children() {
+        var _this12 = this;
+
+        var def = this.validations;
+        var model = this.getModel();
+
+        var validations = _objectSpread({}, def);
+
+        delete validations['$trackBy'];
+        var usedTracks = {};
+        return this.keys.map(function (key) {
+          var track = _this12.tracker(key);
+
+          if (usedTracks.hasOwnProperty(track)) {
+            return null;
+          }
+
+          usedTracks[track] = true;
+          return (0, _vval.h)(Validation, track, {
+            validations: validations,
+            prop: key,
+            lazyParentModel: _this12.getModelLazy,
+            model: model[key],
+            rootModel: _this12.rootModel
+          });
+        }).filter(Boolean);
+      }
+    },
+    methods: {
+      isNested: function isNested() {
+        return true;
+      },
+      getRef: function getRef(key) {
+        return this.refs[this.tracker(key)];
+      },
+      hasIter: function hasIter() {
+        return true;
+      }
+    }
+  });
+
+  var renderNested = function renderNested(vm, key) {
+    if (key === '$each') {
+      return (0, _vval.h)(EachValidation, key, {
+        validations: vm.validations[key],
+        lazyParentModel: vm.lazyParentModel,
+        prop: key,
+        lazyModel: vm.getModel,
+        rootModel: vm.rootModel
+      });
+    }
+
+    var validations = vm.validations[key];
+
+    if (Array.isArray(validations)) {
+      var root = vm.rootModel;
+      var refVals = buildFromKeys(validations, function (path) {
+        return function () {
+          return getPath(root, root.$v, path);
+        };
+      }, function (v) {
+        return Array.isArray(v) ? v.join('.') : v;
+      });
+      return (0, _vval.h)(GroupValidation, key, {
+        validations: refVals,
+        lazyParentModel: NIL,
+        prop: key,
+        lazyModel: NIL,
+        rootModel: root
+      });
+    }
+
+    return (0, _vval.h)(Validation, key, {
+      validations: validations,
+      lazyParentModel: vm.getModel,
+      prop: key,
+      lazyModel: vm.getModelKey,
+      rootModel: vm.rootModel
+    });
+  };
+
+  var renderRule = function renderRule(vm, key) {
+    return (0, _vval.h)(ValidationRule, key, {
+      rule: vm.validations[key],
+      lazyParentModel: vm.lazyParentModel,
+      lazyModel: vm.getModel,
+      rootModel: vm.rootModel
+    });
+  };
+
+  _cachedComponent = {
+    VBase: VBase,
+    Validation: Validation
+  };
+  return _cachedComponent;
+};
+
+var _cachedVue = null;
+
+function getVue(rootVm) {
+  if (_cachedVue) return _cachedVue;
+  var Vue = rootVm.constructor;
+
+  while (Vue.super) {
+    Vue = Vue.super;
+  }
+
+  _cachedVue = Vue;
+  return Vue;
+}
+
+var validateModel = function validateModel(model, validations) {
+  var Vue = getVue(model);
+
+  var _getComponent = getComponent(Vue),
+      Validation = _getComponent.Validation,
+      VBase = _getComponent.VBase;
+
+  var root = new VBase({
+    computed: {
+      children: function children() {
+        var vals = typeof validations === 'function' ? validations.call(model) : validations;
+        return [(0, _vval.h)(Validation, '$v', {
+          validations: vals,
+          lazyParentModel: NIL,
+          prop: '$v',
+          model: model,
+          rootModel: model
+        })];
+      }
+    }
+  });
+  return root;
+};
+
+var validationMixin = {
+  data: function data() {
+    var vals = this.$options.validations;
+
+    if (vals) {
+      this._vuelidate = validateModel(this, vals);
+    }
+
+    return {};
+  },
+  beforeCreate: function beforeCreate() {
+    var options = this.$options;
+    var vals = options.validations;
+    if (!vals) return;
+    if (!options.computed) options.computed = {};
+    if (options.computed.$v) return;
+
+    options.computed.$v = function () {
+      return this._vuelidate ? this._vuelidate.refs.$v.proxy : null;
+    };
+  },
+  beforeDestroy: function beforeDestroy() {
+    if (this._vuelidate) {
+      this._vuelidate.$destroy();
+
+      this._vuelidate = null;
+    }
+  }
+};
+exports.validationMixin = validationMixin;
+
+function Vuelidate(Vue) {
+  Vue.mixin(validationMixin);
+}
+
+var _default = Vuelidate;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/params.js":
+/*!**********************************************!*\
+  !*** ./node_modules/vuelidate/lib/params.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.pushParams = pushParams;
+exports.popParams = popParams;
+exports.withParams = withParams;
+exports._setTarget = exports.target = void 0;
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var stack = [];
+var target = null;
+exports.target = target;
+
+var _setTarget = function _setTarget(x) {
+  exports.target = target = x;
+};
+
+exports._setTarget = _setTarget;
+
+function pushParams() {
+  if (target !== null) {
+    stack.push(target);
+  }
+
+  exports.target = target = {};
+}
+
+function popParams() {
+  var lastTarget = target;
+  var newTarget = exports.target = target = stack.pop() || null;
+
+  if (newTarget) {
+    if (!Array.isArray(newTarget.$sub)) {
+      newTarget.$sub = [];
+    }
+
+    newTarget.$sub.push(lastTarget);
+  }
+
+  return lastTarget;
+}
+
+function addParams(params) {
+  if (_typeof(params) === 'object' && !Array.isArray(params)) {
+    exports.target = target = _objectSpread({}, target, params);
+  } else {
+    throw new Error('params must be an object');
+  }
+}
+
+function withParamsDirect(params, validator) {
+  return withParamsClosure(function (add) {
+    return function () {
+      add(params);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return validator.apply(this, args);
+    };
+  });
+}
+
+function withParamsClosure(closure) {
+  var validator = closure(addParams);
+  return function () {
+    pushParams();
+
+    try {
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return validator.apply(this, args);
+    } finally {
+      popParams();
+    }
+  };
+}
+
+function withParams(paramsOrClosure, maybeValidator) {
+  if (_typeof(paramsOrClosure) === 'object' && maybeValidator !== undefined) {
+    return withParamsDirect(paramsOrClosure, maybeValidator);
+  }
+
+  return withParamsClosure(paramsOrClosure);
+}
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/alpha.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/alpha.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.regex)('alpha', /^[a-zA-Z]*$/);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/alphaNum.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/alphaNum.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.regex)('alphaNum', /^[a-zA-Z0-9]*$/);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/and.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/and.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default() {
+  for (var _len = arguments.length, validators = new Array(_len), _key = 0; _key < _len; _key++) {
+    validators[_key] = arguments[_key];
+  }
+
+  return (0, _common.withParams)({
+    type: 'and'
+  }, function () {
+    var _this = this;
+
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    return validators.length > 0 && validators.reduce(function (valid, fn) {
+      return valid && fn.apply(_this, args);
+    }, true);
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/between.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/between.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(min, max) {
+  return (0, _common.withParams)({
+    type: 'between',
+    min: min,
+    max: max
+  }, function (value) {
+    return !(0, _common.req)(value) || (!/\s/.test(value) || value instanceof Date) && +min <= +value && +max >= +value;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/common.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/common.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "withParams", {
+  enumerable: true,
+  get: function get() {
+    return _withParams.default;
+  }
+});
+exports.regex = exports.ref = exports.len = exports.req = void 0;
+
+var _withParams = _interopRequireDefault(__webpack_require__(/*! ../withParams */ "./node_modules/vuelidate/lib/withParams.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var req = function req(value) {
+  if (Array.isArray(value)) return !!value.length;
+
+  if (value === undefined || value === null) {
+    return false;
+  }
+
+  if (value === false) {
+    return true;
+  }
+
+  if (value instanceof Date) {
+    return !isNaN(value.getTime());
+  }
+
+  if (_typeof(value) === 'object') {
+    for (var _ in value) {
+      return true;
+    }
+
+    return false;
+  }
+
+  return !!String(value).length;
+};
+
+exports.req = req;
+
+var len = function len(value) {
+  if (Array.isArray(value)) return value.length;
+
+  if (_typeof(value) === 'object') {
+    return Object.keys(value).length;
+  }
+
+  return String(value).length;
+};
+
+exports.len = len;
+
+var ref = function ref(reference, vm, parentVm) {
+  return typeof reference === 'function' ? reference.call(vm, parentVm) : parentVm[reference];
+};
+
+exports.ref = ref;
+
+var regex = function regex(type, expr) {
+  return (0, _withParams.default)({
+    type: type
+  }, function (value) {
+    return !req(value) || expr.test(value);
+  });
+};
+
+exports.regex = regex;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/decimal.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/decimal.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.regex)('decimal', /^[-]?\d*(\.\d+)?$/);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/email.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/email.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var emailRegex = /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/;
+
+var _default = (0, _common.regex)('email', emailRegex);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "alpha", {
+  enumerable: true,
+  get: function get() {
+    return _alpha.default;
+  }
+});
+Object.defineProperty(exports, "alphaNum", {
+  enumerable: true,
+  get: function get() {
+    return _alphaNum.default;
+  }
+});
+Object.defineProperty(exports, "numeric", {
+  enumerable: true,
+  get: function get() {
+    return _numeric.default;
+  }
+});
+Object.defineProperty(exports, "between", {
+  enumerable: true,
+  get: function get() {
+    return _between.default;
+  }
+});
+Object.defineProperty(exports, "email", {
+  enumerable: true,
+  get: function get() {
+    return _email.default;
+  }
+});
+Object.defineProperty(exports, "ipAddress", {
+  enumerable: true,
+  get: function get() {
+    return _ipAddress.default;
+  }
+});
+Object.defineProperty(exports, "macAddress", {
+  enumerable: true,
+  get: function get() {
+    return _macAddress.default;
+  }
+});
+Object.defineProperty(exports, "maxLength", {
+  enumerable: true,
+  get: function get() {
+    return _maxLength.default;
+  }
+});
+Object.defineProperty(exports, "minLength", {
+  enumerable: true,
+  get: function get() {
+    return _minLength.default;
+  }
+});
+Object.defineProperty(exports, "required", {
+  enumerable: true,
+  get: function get() {
+    return _required.default;
+  }
+});
+Object.defineProperty(exports, "requiredIf", {
+  enumerable: true,
+  get: function get() {
+    return _requiredIf.default;
+  }
+});
+Object.defineProperty(exports, "requiredUnless", {
+  enumerable: true,
+  get: function get() {
+    return _requiredUnless.default;
+  }
+});
+Object.defineProperty(exports, "sameAs", {
+  enumerable: true,
+  get: function get() {
+    return _sameAs.default;
+  }
+});
+Object.defineProperty(exports, "url", {
+  enumerable: true,
+  get: function get() {
+    return _url.default;
+  }
+});
+Object.defineProperty(exports, "or", {
+  enumerable: true,
+  get: function get() {
+    return _or.default;
+  }
+});
+Object.defineProperty(exports, "and", {
+  enumerable: true,
+  get: function get() {
+    return _and.default;
+  }
+});
+Object.defineProperty(exports, "not", {
+  enumerable: true,
+  get: function get() {
+    return _not.default;
+  }
+});
+Object.defineProperty(exports, "minValue", {
+  enumerable: true,
+  get: function get() {
+    return _minValue.default;
+  }
+});
+Object.defineProperty(exports, "maxValue", {
+  enumerable: true,
+  get: function get() {
+    return _maxValue.default;
+  }
+});
+Object.defineProperty(exports, "integer", {
+  enumerable: true,
+  get: function get() {
+    return _integer.default;
+  }
+});
+Object.defineProperty(exports, "decimal", {
+  enumerable: true,
+  get: function get() {
+    return _decimal.default;
+  }
+});
+exports.helpers = void 0;
+
+var _alpha = _interopRequireDefault(__webpack_require__(/*! ./alpha */ "./node_modules/vuelidate/lib/validators/alpha.js"));
+
+var _alphaNum = _interopRequireDefault(__webpack_require__(/*! ./alphaNum */ "./node_modules/vuelidate/lib/validators/alphaNum.js"));
+
+var _numeric = _interopRequireDefault(__webpack_require__(/*! ./numeric */ "./node_modules/vuelidate/lib/validators/numeric.js"));
+
+var _between = _interopRequireDefault(__webpack_require__(/*! ./between */ "./node_modules/vuelidate/lib/validators/between.js"));
+
+var _email = _interopRequireDefault(__webpack_require__(/*! ./email */ "./node_modules/vuelidate/lib/validators/email.js"));
+
+var _ipAddress = _interopRequireDefault(__webpack_require__(/*! ./ipAddress */ "./node_modules/vuelidate/lib/validators/ipAddress.js"));
+
+var _macAddress = _interopRequireDefault(__webpack_require__(/*! ./macAddress */ "./node_modules/vuelidate/lib/validators/macAddress.js"));
+
+var _maxLength = _interopRequireDefault(__webpack_require__(/*! ./maxLength */ "./node_modules/vuelidate/lib/validators/maxLength.js"));
+
+var _minLength = _interopRequireDefault(__webpack_require__(/*! ./minLength */ "./node_modules/vuelidate/lib/validators/minLength.js"));
+
+var _required = _interopRequireDefault(__webpack_require__(/*! ./required */ "./node_modules/vuelidate/lib/validators/required.js"));
+
+var _requiredIf = _interopRequireDefault(__webpack_require__(/*! ./requiredIf */ "./node_modules/vuelidate/lib/validators/requiredIf.js"));
+
+var _requiredUnless = _interopRequireDefault(__webpack_require__(/*! ./requiredUnless */ "./node_modules/vuelidate/lib/validators/requiredUnless.js"));
+
+var _sameAs = _interopRequireDefault(__webpack_require__(/*! ./sameAs */ "./node_modules/vuelidate/lib/validators/sameAs.js"));
+
+var _url = _interopRequireDefault(__webpack_require__(/*! ./url */ "./node_modules/vuelidate/lib/validators/url.js"));
+
+var _or = _interopRequireDefault(__webpack_require__(/*! ./or */ "./node_modules/vuelidate/lib/validators/or.js"));
+
+var _and = _interopRequireDefault(__webpack_require__(/*! ./and */ "./node_modules/vuelidate/lib/validators/and.js"));
+
+var _not = _interopRequireDefault(__webpack_require__(/*! ./not */ "./node_modules/vuelidate/lib/validators/not.js"));
+
+var _minValue = _interopRequireDefault(__webpack_require__(/*! ./minValue */ "./node_modules/vuelidate/lib/validators/minValue.js"));
+
+var _maxValue = _interopRequireDefault(__webpack_require__(/*! ./maxValue */ "./node_modules/vuelidate/lib/validators/maxValue.js"));
+
+var _integer = _interopRequireDefault(__webpack_require__(/*! ./integer */ "./node_modules/vuelidate/lib/validators/integer.js"));
+
+var _decimal = _interopRequireDefault(__webpack_require__(/*! ./decimal */ "./node_modules/vuelidate/lib/validators/decimal.js"));
+
+var helpers = _interopRequireWildcard(__webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js"));
+
+exports.helpers = helpers;
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/integer.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/integer.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.regex)('integer', /^-?[0-9]*$/);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/ipAddress.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/ipAddress.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.withParams)({
+  type: 'ipAddress'
+}, function (value) {
+  if (!(0, _common.req)(value)) {
+    return true;
+  }
+
+  if (typeof value !== 'string') {
+    return false;
+  }
+
+  var nibbles = value.split('.');
+  return nibbles.length === 4 && nibbles.every(nibbleValid);
+});
+
+exports.default = _default;
+
+var nibbleValid = function nibbleValid(nibble) {
+  if (nibble.length > 3 || nibble.length === 0) {
+    return false;
+  }
+
+  if (nibble[0] === '0' && nibble !== '0') {
+    return false;
+  }
+
+  if (!nibble.match(/^\d+$/)) {
+    return false;
+  }
+
+  var numeric = +nibble | 0;
+  return numeric >= 0 && numeric <= 255;
+};
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/macAddress.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/macAddress.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default() {
+  var separator = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ':';
+  return (0, _common.withParams)({
+    type: 'macAddress'
+  }, function (value) {
+    if (!(0, _common.req)(value)) {
+      return true;
+    }
+
+    if (typeof value !== 'string') {
+      return false;
+    }
+
+    var parts = typeof separator === 'string' && separator !== '' ? value.split(separator) : value.length === 12 || value.length === 16 ? value.match(/.{2}/g) : null;
+    return parts !== null && (parts.length === 6 || parts.length === 8) && parts.every(hexValid);
+  });
+};
+
+exports.default = _default;
+
+var hexValid = function hexValid(hex) {
+  return hex.toLowerCase().match(/^[0-9a-f]{2}$/);
+};
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/maxLength.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/maxLength.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(length) {
+  return (0, _common.withParams)({
+    type: 'maxLength',
+    max: length
+  }, function (value) {
+    return !(0, _common.req)(value) || (0, _common.len)(value) <= length;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/maxValue.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/maxValue.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(max) {
+  return (0, _common.withParams)({
+    type: 'maxValue',
+    max: max
+  }, function (value) {
+    return !(0, _common.req)(value) || (!/\s/.test(value) || value instanceof Date) && +value <= +max;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/minLength.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/minLength.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(length) {
+  return (0, _common.withParams)({
+    type: 'minLength',
+    min: length
+  }, function (value) {
+    return !(0, _common.req)(value) || (0, _common.len)(value) >= length;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/minValue.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/minValue.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(min) {
+  return (0, _common.withParams)({
+    type: 'minValue',
+    min: min
+  }, function (value) {
+    return !(0, _common.req)(value) || (!/\s/.test(value) || value instanceof Date) && +value >= +min;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/not.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/not.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(validator) {
+  return (0, _common.withParams)({
+    type: 'not'
+  }, function (value, vm) {
+    return !(0, _common.req)(value) || !validator.call(this, value, vm);
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/numeric.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/numeric.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.regex)('numeric', /^[0-9]*$/);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/or.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/or.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default() {
+  for (var _len = arguments.length, validators = new Array(_len), _key = 0; _key < _len; _key++) {
+    validators[_key] = arguments[_key];
+  }
+
+  return (0, _common.withParams)({
+    type: 'or'
+  }, function () {
+    var _this = this;
+
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    return validators.length > 0 && validators.reduce(function (valid, fn) {
+      return valid || fn.apply(_this, args);
+    }, false);
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/required.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/required.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = (0, _common.withParams)({
+  type: 'required'
+}, _common.req);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/requiredIf.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/requiredIf.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(prop) {
+  return (0, _common.withParams)({
+    type: 'requiredIf',
+    prop: prop
+  }, function (value, parentVm) {
+    return (0, _common.ref)(prop, this, parentVm) ? (0, _common.req)(value) : true;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/requiredUnless.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/requiredUnless.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(prop) {
+  return (0, _common.withParams)({
+    type: 'requiredUnless',
+    prop: prop
+  }, function (value, parentVm) {
+    return !(0, _common.ref)(prop, this, parentVm) ? (0, _common.req)(value) : true;
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/sameAs.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/sameAs.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var _default = function _default(equalTo) {
+  return (0, _common.withParams)({
+    type: 'sameAs',
+    eq: equalTo
+  }, function (value, parentVm) {
+    return value === (0, _common.ref)(equalTo, this, parentVm);
+  });
+};
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/validators/url.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vuelidate/lib/validators/url.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _common = __webpack_require__(/*! ./common */ "./node_modules/vuelidate/lib/validators/common.js");
+
+var urlRegex = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+
+var _default = (0, _common.regex)('url', urlRegex);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/vval.js":
+/*!********************************************!*\
+  !*** ./node_modules/vuelidate/lib/vval.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.patchChildren = patchChildren;
+exports.h = h;
+
+function isUndef(v) {
+  return v === null || v === undefined;
+}
+
+function isDef(v) {
+  return v !== null && v !== undefined;
+}
+
+function sameVval(oldVval, vval) {
+  return vval.tag === oldVval.tag && vval.key === oldVval.key;
+}
+
+function createVm(vval) {
+  var Vm = vval.tag;
+  vval.vm = new Vm({
+    data: vval.args
+  });
+}
+
+function updateVval(vval) {
+  var keys = Object.keys(vval.args);
+
+  for (var i = 0; i < keys.length; i++) {
+    keys.forEach(function (k) {
+      vval.vm[k] = vval.args[k];
+    });
+  }
+}
+
+function createKeyToOldIdx(children, beginIdx, endIdx) {
+  var i, key;
+  var map = {};
+
+  for (i = beginIdx; i <= endIdx; ++i) {
+    key = children[i].key;
+    if (isDef(key)) map[key] = i;
+  }
+
+  return map;
+}
+
+function updateChildren(oldCh, newCh) {
+  var oldStartIdx = 0;
+  var newStartIdx = 0;
+  var oldEndIdx = oldCh.length - 1;
+  var oldStartVval = oldCh[0];
+  var oldEndVval = oldCh[oldEndIdx];
+  var newEndIdx = newCh.length - 1;
+  var newStartVval = newCh[0];
+  var newEndVval = newCh[newEndIdx];
+  var oldKeyToIdx, idxInOld, elmToMove;
+
+  while (oldStartIdx <= oldEndIdx && newStartIdx <= newEndIdx) {
+    if (isUndef(oldStartVval)) {
+      oldStartVval = oldCh[++oldStartIdx];
+    } else if (isUndef(oldEndVval)) {
+      oldEndVval = oldCh[--oldEndIdx];
+    } else if (sameVval(oldStartVval, newStartVval)) {
+      patchVval(oldStartVval, newStartVval);
+      oldStartVval = oldCh[++oldStartIdx];
+      newStartVval = newCh[++newStartIdx];
+    } else if (sameVval(oldEndVval, newEndVval)) {
+      patchVval(oldEndVval, newEndVval);
+      oldEndVval = oldCh[--oldEndIdx];
+      newEndVval = newCh[--newEndIdx];
+    } else if (sameVval(oldStartVval, newEndVval)) {
+      patchVval(oldStartVval, newEndVval);
+      oldStartVval = oldCh[++oldStartIdx];
+      newEndVval = newCh[--newEndIdx];
+    } else if (sameVval(oldEndVval, newStartVval)) {
+      patchVval(oldEndVval, newStartVval);
+      oldEndVval = oldCh[--oldEndIdx];
+      newStartVval = newCh[++newStartIdx];
+    } else {
+      if (isUndef(oldKeyToIdx)) oldKeyToIdx = createKeyToOldIdx(oldCh, oldStartIdx, oldEndIdx);
+      idxInOld = isDef(newStartVval.key) ? oldKeyToIdx[newStartVval.key] : null;
+
+      if (isUndef(idxInOld)) {
+        createVm(newStartVval);
+        newStartVval = newCh[++newStartIdx];
+      } else {
+        elmToMove = oldCh[idxInOld];
+
+        if (sameVval(elmToMove, newStartVval)) {
+          patchVval(elmToMove, newStartVval);
+          oldCh[idxInOld] = undefined;
+          newStartVval = newCh[++newStartIdx];
+        } else {
+          createVm(newStartVval);
+          newStartVval = newCh[++newStartIdx];
+        }
+      }
+    }
+  }
+
+  if (oldStartIdx > oldEndIdx) {
+    addVvals(newCh, newStartIdx, newEndIdx);
+  } else if (newStartIdx > newEndIdx) {
+    removeVvals(oldCh, oldStartIdx, oldEndIdx);
+  }
+}
+
+function addVvals(vvals, startIdx, endIdx) {
+  for (; startIdx <= endIdx; ++startIdx) {
+    createVm(vvals[startIdx]);
+  }
+}
+
+function removeVvals(vvals, startIdx, endIdx) {
+  for (; startIdx <= endIdx; ++startIdx) {
+    var ch = vvals[startIdx];
+
+    if (isDef(ch)) {
+      ch.vm.$destroy();
+      ch.vm = null;
+    }
+  }
+}
+
+function patchVval(oldVval, vval) {
+  if (oldVval === vval) {
+    return;
+  }
+
+  vval.vm = oldVval.vm;
+  updateVval(vval);
+}
+
+function patchChildren(oldCh, ch) {
+  if (isDef(oldCh) && isDef(ch)) {
+    if (oldCh !== ch) updateChildren(oldCh, ch);
+  } else if (isDef(ch)) {
+    addVvals(ch, 0, ch.length - 1);
+  } else if (isDef(oldCh)) {
+    removeVvals(oldCh, 0, oldCh.length - 1);
+  }
+}
+
+function h(tag, key, args) {
+  return {
+    tag: tag,
+    key: key,
+    args: args
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/withParams.js":
+/*!**************************************************!*\
+  !*** ./node_modules/vuelidate/lib/withParams.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var withParams = process.env.BUILD === 'web' ? __webpack_require__(/*! ./withParamsBrowser */ "./node_modules/vuelidate/lib/withParamsBrowser.js").withParams : __webpack_require__(/*! ./params */ "./node_modules/vuelidate/lib/params.js").withParams;
+var _default = withParams;
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/vuelidate/lib/withParamsBrowser.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/vuelidate/lib/withParamsBrowser.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withParams = void 0;
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var root = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : {};
+
+var fakeWithParams = function fakeWithParams(paramsOrClosure, maybeValidator) {
+  if (_typeof(paramsOrClosure) === 'object' && maybeValidator !== undefined) {
+    return maybeValidator;
+  }
+
+  return paramsOrClosure(function () {});
+};
+
+var withParams = root.vuelidate ? root.vuelidate.withParams : fakeWithParams;
+exports.withParams = withParams;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -86890,7 +95688,9 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuelidate__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -86903,7 +95703,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.use(bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+Vue.use(vuelidate__WEBPACK_IMPORTED_MODULE_1___default.a);
+
+Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var routes = [{
   path: '/home',
   component: __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]
@@ -86917,8 +95719,19 @@ var routes = [{
 {
   path: '/student-list',
   component: __webpack_require__(/*! ./components/student/StudentList.vue */ "./resources/js/components/student/StudentList.vue")["default"]
+}, // Faculty
+{
+  path: '/new-faculty',
+  component: __webpack_require__(/*! ./components/faculty/NewFaculty.vue */ "./resources/js/components/faculty/NewFaculty.vue")["default"]
+}, {
+  path: '/faculty-list',
+  component: __webpack_require__(/*! ./components/faculty/FacultyList.vue */ "./resources/js/components/faculty/FacultyList.vue")["default"]
+}, {
+  path: '/faculty-profile/:id',
+  name: 'faculty-profile',
+  component: __webpack_require__(/*! ./components/faculty/FacultyProfile.vue */ "./resources/js/components/faculty/FacultyProfile.vue")["default"]
 }];
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
   mode: 'history',
   routes: routes // short for `routes: routes`
 
@@ -86935,7 +95748,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('contactus-component', __webpack_require__(/*! ./components/ui/pre/ContactusComponent.vue */ "./resources/js/components/ui/pre/ContactusComponent.vue")["default"]);
-Vue.component('overlay-component', __webpack_require__(/*! ./components/ui/common/OverlayComponent.vue */ "./resources/js/components/ui/common/OverlayComponent.vue")["default"]); // Student
+Vue.component('overlay-component', __webpack_require__(/*! ./components/ui/common/OverlayComponent.vue */ "./resources/js/components/ui/common/OverlayComponent.vue")["default"]);
+Vue.component('user-count', __webpack_require__(/*! ./components/ui/post/UserCount.vue */ "./resources/js/components/ui/post/UserCount.vue")["default"]); // Student
 
 var app = new Vue({
   el: '#app',
@@ -87198,6 +96012,213 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/faculty/FacultyList.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/faculty/FacultyList.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FacultyList_vue_vue_type_template_id_1344d85c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FacultyList.vue?vue&type=template&id=1344d85c& */ "./resources/js/components/faculty/FacultyList.vue?vue&type=template&id=1344d85c&");
+/* harmony import */ var _FacultyList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FacultyList.vue?vue&type=script&lang=js& */ "./resources/js/components/faculty/FacultyList.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FacultyList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FacultyList_vue_vue_type_template_id_1344d85c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FacultyList_vue_vue_type_template_id_1344d85c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/faculty/FacultyList.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/FacultyList.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/faculty/FacultyList.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./FacultyList.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyList.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/FacultyList.vue?vue&type=template&id=1344d85c&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/faculty/FacultyList.vue?vue&type=template&id=1344d85c& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyList_vue_vue_type_template_id_1344d85c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./FacultyList.vue?vue&type=template&id=1344d85c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyList.vue?vue&type=template&id=1344d85c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyList_vue_vue_type_template_id_1344d85c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyList_vue_vue_type_template_id_1344d85c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/FacultyProfile.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/components/faculty/FacultyProfile.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FacultyProfile_vue_vue_type_template_id_626211db___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FacultyProfile.vue?vue&type=template&id=626211db& */ "./resources/js/components/faculty/FacultyProfile.vue?vue&type=template&id=626211db&");
+/* harmony import */ var _FacultyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FacultyProfile.vue?vue&type=script&lang=js& */ "./resources/js/components/faculty/FacultyProfile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FacultyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FacultyProfile_vue_vue_type_template_id_626211db___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FacultyProfile_vue_vue_type_template_id_626211db___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/faculty/FacultyProfile.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/FacultyProfile.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/faculty/FacultyProfile.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./FacultyProfile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyProfile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/FacultyProfile.vue?vue&type=template&id=626211db&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/faculty/FacultyProfile.vue?vue&type=template&id=626211db& ***!
+  \*******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyProfile_vue_vue_type_template_id_626211db___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./FacultyProfile.vue?vue&type=template&id=626211db& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/FacultyProfile.vue?vue&type=template&id=626211db&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyProfile_vue_vue_type_template_id_626211db___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FacultyProfile_vue_vue_type_template_id_626211db___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/NewFaculty.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/faculty/NewFaculty.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NewFaculty_vue_vue_type_template_id_c684414c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NewFaculty.vue?vue&type=template&id=c684414c& */ "./resources/js/components/faculty/NewFaculty.vue?vue&type=template&id=c684414c&");
+/* harmony import */ var _NewFaculty_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewFaculty.vue?vue&type=script&lang=js& */ "./resources/js/components/faculty/NewFaculty.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NewFaculty_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NewFaculty_vue_vue_type_template_id_c684414c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NewFaculty_vue_vue_type_template_id_c684414c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/faculty/NewFaculty.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/NewFaculty.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/faculty/NewFaculty.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewFaculty_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./NewFaculty.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/NewFaculty.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewFaculty_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/faculty/NewFaculty.vue?vue&type=template&id=c684414c&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/faculty/NewFaculty.vue?vue&type=template&id=c684414c& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewFaculty_vue_vue_type_template_id_c684414c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./NewFaculty.vue?vue&type=template&id=c684414c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/faculty/NewFaculty.vue?vue&type=template&id=c684414c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewFaculty_vue_vue_type_template_id_c684414c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewFaculty_vue_vue_type_template_id_c684414c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/student/StudentList.vue":
 /*!*********************************************************!*\
   !*** ./resources/js/components/student/StudentList.vue ***!
@@ -87349,6 +96370,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OverlayComponent_vue_vue_type_template_id_770def61___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OverlayComponent_vue_vue_type_template_id_770def61___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/ui/post/UserCount.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/ui/post/UserCount.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserCount_vue_vue_type_template_id_6e9b3f55___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserCount.vue?vue&type=template&id=6e9b3f55& */ "./resources/js/components/ui/post/UserCount.vue?vue&type=template&id=6e9b3f55&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _UserCount_vue_vue_type_template_id_6e9b3f55___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserCount_vue_vue_type_template_id_6e9b3f55___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ui/post/UserCount.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ui/post/UserCount.vue?vue&type=template&id=6e9b3f55&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/ui/post/UserCount.vue?vue&type=template&id=6e9b3f55& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserCount_vue_vue_type_template_id_6e9b3f55___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./UserCount.vue?vue&type=template&id=6e9b3f55& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ui/post/UserCount.vue?vue&type=template&id=6e9b3f55&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserCount_vue_vue_type_template_id_6e9b3f55___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserCount_vue_vue_type_template_id_6e9b3f55___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -59,6 +59,33 @@
               </li>
             </ul>
           </li>
+
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-pie-chart"></i>
+              <p>
+                Faculty
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/new-faculty" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>New</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/faculty-list" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>List</p>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-pie-chart"></i>

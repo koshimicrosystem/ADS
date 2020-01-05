@@ -52,13 +52,15 @@
                   <div class="card card-primary card-outline">
                     <div class="card-body box-profile">
                       <div class="text-center">
-                        <img
-                          class="profile-user-img img-fluid img-circle"
-                          :src="'/media/profile/boy.png'"
+                        <div class="containerob text-cente">
+                          <img 
+                          class="imageob profile-user-img img-fluid"
+                          :src="'/media/profile/'+user.profile_pic"
                           alt="User profile picture"
                         />
+                          <div class="overlayob" @click="$" ><i class="fas fa-lg fa-camera"></i></div>
+                        </div>
                       </div>
-
                       <h3
                         class="profile-username text-center"
                       >{{user.f_name}} {{user.m_name}} {{user.l_name}}</h3>
@@ -168,6 +170,11 @@
                           <!-- Post -->
                           <div class="post clearfix">
                             <div class="user-block">
+
+
+                              
+
+
                               <img
                                 class="img-circle img-bordered-sm"
                                 :src="'/media/profile/boy.png'"
@@ -721,3 +728,39 @@ export default {
   }
 };
 </script>
+<style>
+
+.containerob {
+  position: relative;
+  margin: 10px;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.imageob {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlayob {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #a18b8b;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  height: 25%;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.containerob:hover .overlayob {
+  opacity: 1;
+}
+  
+</style>

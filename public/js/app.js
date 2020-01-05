@@ -2086,6 +2086,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = (_mounted$data$compute = {
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -2094,6 +2104,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return {
       items: [],
       fields: [{
+        key: 'profile_pic',
+        label: ''
+      }, {
         key: 'name',
         label: 'Name'
       }, {
@@ -2113,6 +2126,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "userable",
         label: "Date of Joining",
+        sortable: true,
         formatter: 'doj'
       }, {
         key: "id",
@@ -72765,6 +72779,21 @@ var render = function() {
                                 _vm._s(data.value) +
                                 "\n            "
                             )
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(profile_pic)",
+                        fn: function(data) {
+                          return [
+                            _c("img", {
+                              staticClass: "img-circle img-bordered-sm m-0 p-0",
+                              attrs: {
+                                src: "/media/profile/" + data.value,
+                                alt: "User Image",
+                                height: "35px"
+                              }
+                            })
                           ]
                         }
                       },

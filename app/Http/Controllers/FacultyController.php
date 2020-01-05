@@ -18,7 +18,7 @@ class FacultyController extends Controller
      */
     public function index()
     {
-        $users = User::role('Faculty')->with('contacts','userable')->get();
+        $users = User::role('Faculty')->orderby('updated_at','desc')->with('contacts','userable')->get();
         return $users;
     }
 

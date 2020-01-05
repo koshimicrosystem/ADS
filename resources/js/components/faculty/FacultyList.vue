@@ -97,6 +97,16 @@
                 {{ data.value }}
               </template>
 
+              <template v-slot:cell(profile_pic)="data">
+                <img
+                    class="img-circle img-bordered-sm m-0 p-0"
+                    :src="`/media/profile/${data.value}`"
+                    
+                    alt="User Image"
+                    height="35px"
+                  />
+              </template>
+
               <template v-slot:cell(userable)="data">
                 {{ data.value }}
               </template>
@@ -136,6 +146,10 @@ export default {
       items: [],
       fields: [
         {
+            key: 'profile_pic',
+            label: '',
+        },
+        {
             key: 'name',
             label: 'Name',
         },
@@ -160,6 +174,7 @@ export default {
         {
           key: "userable",
           label: "Date of Joining",
+          sortable: true,
           formatter: 'doj'
         },
         {

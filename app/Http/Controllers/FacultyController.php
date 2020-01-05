@@ -18,7 +18,8 @@ class FacultyController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::role('Faculty')->with('contacts','userable')->get();
+        return $users;
     }
 
     /**

@@ -13,10 +13,17 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RoleSeeder::class);
         $this->call(userseeder::class);
-        $users = factory(App\User::class, 350)
-           ->create()
-           ->each(function ($user) {
+        $users = factory(App\User::class, 150)
+            ->create()
+            ->each(function ($user) {
                 $user->assignRole('Student');
+            });
+
+        $faculty = factory(App\Faculty::class, 50)
+            ->create()
+            ->each(function ($faculty) {
+                $user=$faculty->user()->save(factory(App\User::class)->make());
+                $user->assignRole('Faculty');   
             });
     }
 }

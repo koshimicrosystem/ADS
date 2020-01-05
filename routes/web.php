@@ -17,6 +17,8 @@ Route::post('/contactus/store', 'ContactusController@store')->name('contactus.st
 // faculty
 Route::post('/faculty/store', 'FacultyController@store')->name('faculty.store');
 Route::get('/faculty/show/{id}', 'FacultyController@show')->name('faculty.show');
+Route::get('/faculty/index', 'FacultyController@index')->name('faculty.index');
+
 
 // contact
 Route::post('/contact/store', 'ContactController@store')->name('contact.store');

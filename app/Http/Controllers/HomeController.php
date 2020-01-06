@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,11 @@ class HomeController extends Controller
     public function index()
     {
         return view('home.home');
+    }
+    public function store_image(Request $request,$id){
+        $user = User::find($id);
+        $user->profile_pic = Storage::put('avatars', $request->file);
+        $user->save();
+        return $user->profile_pic;
     }
 }

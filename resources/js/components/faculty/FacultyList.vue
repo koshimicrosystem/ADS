@@ -100,8 +100,7 @@
               <template v-slot:cell(profile_pic)="data">
                 <img
                     class="img-circle img-bordered-sm m-0 p-0"
-                    :src="`/media/profile/${data.value}`"
-                    
+                    :src="`/storage/${data.value}`"
                     alt="User Image"
                     height="35px"
                   />

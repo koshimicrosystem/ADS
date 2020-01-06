@@ -2095,7 +2095,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = (_mounted$data$compute = {
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -2776,6 +2775,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2791,6 +2794,7 @@ __webpack_require__.r(__webpack_exports__);
       status: "not_default",
       contacttype: "",
       // contact end
+      file: "",
       loading: false,
       modelcontact: false,
       contacterrored: false,
@@ -2798,15 +2802,46 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    get_user: function get_user() {
+    triggerimage: function triggerimage() {
+      this.$refs.fileInput.click();
+    },
+    uploadprofile: function uploadprofile(e) {
       var _this = this;
 
+      this.file = e.target.files[0]; //console.log(this.file);
+
+      var currentObj = this;
+      var config = {
+        headers: {
+          "content-type": "multipart/form-data"
+        }
+      };
+      var formData = new FormData();
+      formData.append("file", this.file);
+      this.loading = true;
+      axios.post("/home/store/image/" + this.user.id, formData, config).then(function (response) {
+        console.log(response.data);
+        _this.user.profile_pic = response.data;
+
+        _this.$bvToast.toast("Profile updated successfully.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this.errormessage("Image upload failed. Try Again !");
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    },
+    get_user: function get_user() {
+      var _this2 = this;
+
       axios.get("/faculty/show/" + this.$route.params.id).then(function (response) {
-        return _this.user = response.data;
+        return _this2.user = response.data;
       })["catch"]();
     },
     contactOk: function contactOk(bvModalEvt) {
-      var _this2 = this;
+      var _this3 = this;
 
       bvModalEvt.preventDefault();
       this.contacterrored = false;
@@ -2822,54 +2857,54 @@ __webpack_require__.r(__webpack_exports__);
           user_id: this.user.id,
           contacttype: this.contacttype
         }).then(function (response) {
-          _this2.user.contacts = response.data;
-          _this2.loading = false;
+          _this3.user.contacts = response.data;
+          _this3.loading = false;
 
-          _this2.$bvToast.toast("Contact added successfully.", {
+          _this3.$bvToast.toast("Contact added successfully.", {
             title: "Success !",
             variant: "success"
           });
 
-          _this2.reset_contact();
+          _this3.reset_contact();
 
-          _this2.$bvModal.hide("modelcontact");
+          _this3.$bvModal.hide("modelcontact");
         })["catch"](function (error) {
-          _this2.errormessage("Email id already exists. Try again !");
+          _this3.errormessage("Email id already exists. Try again !");
         })["finally"](function () {
-          return _this2.loading = false;
+          return _this3.loading = false;
         });
       }
     },
     contactdestroy: function contactdestroy($id) {
-      var _this3 = this;
-
-      this.loading = true;
-      axios.get("/contact/destroy/" + this.user.id + "/" + $id).then(function (response) {
-        _this3.user.contacts = response.data;
-        _this3.loading = false;
-
-        _this3.$bvToast.toast("Contact Deleted successfully.", {
-          title: "Success !",
-          variant: "success"
-        });
-      })["catch"](function (error) {
-        _this3.errormessage("Something went wrong. Try again !");
-      });
-    },
-    contactdefault: function contactdefault($id) {
       var _this4 = this;
 
       this.loading = true;
-      axios.get("/contact/default/" + this.user.id + "/" + $id).then(function (response) {
+      axios.get("/contact/destroy/" + this.user.id + "/" + $id).then(function (response) {
         _this4.user.contacts = response.data;
         _this4.loading = false;
 
-        _this4.$bvToast.toast("Successful.", {
+        _this4.$bvToast.toast("Contact Deleted successfully.", {
           title: "Success !",
           variant: "success"
         });
       })["catch"](function (error) {
         _this4.errormessage("Something went wrong. Try again !");
+      });
+    },
+    contactdefault: function contactdefault($id) {
+      var _this5 = this;
+
+      this.loading = true;
+      axios.get("/contact/default/" + this.user.id + "/" + $id).then(function (response) {
+        _this5.user.contacts = response.data;
+        _this5.loading = false;
+
+        _this5.$bvToast.toast("Successful.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this5.errormessage("Something went wrong. Try again !");
       });
     },
     addressOk: function addressOk(bvModalEvt) {
@@ -40295,7 +40330,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.containerob {\r\n  position: relative;\r\n  margin: 10px;\r\n  max-width: 300px;\n}\r\n\r\n/* Make the image to responsive */\n.imageob {\r\n  display: block;\r\n  width: 100%;\r\n  height: auto;\n}\r\n\r\n/* The overlay effect - lays on top of the container and over the image */\n.overlayob {\r\n  position: absolute;\r\n  bottom: 0;\r\n  background: rgb(0, 0, 0);\r\n  background: rgba(0, 0, 0, 0.5); /* Black see-through */\r\n  color: #a18b8b;\r\n  width: 100%;\r\n  -webkit-transition: .5s ease;\r\n  transition: .5s ease;\r\n  opacity:0;\r\n  color: white;\r\n  height: 25%;\r\n  text-align: center;\n}\r\n\r\n/* When you mouse over the container, fade in the overlay title */\n.containerob:hover .overlayob {\r\n  opacity: 1;\n}\r\n  \r\n", ""]);
+exports.push([module.i, "\n.containerob {\r\n  position: relative;\r\n  margin: 10px;\r\n  max-width: 300px;\n}\r\n\r\n/* Make the image to responsive */\n.imageob {\r\n  display: block;\r\n  width: 100%;\r\n  height: auto;\n}\r\n\r\n/* The overlay effect - lays on top of the container and over the image */\n.overlayob {\r\n  position: absolute;\r\n  bottom: 0;\r\n  background: rgb(0, 0, 0);\r\n  background: rgba(0, 0, 0, 0.5); /* Black see-through */\r\n  color: #a18b8b;\r\n  width: 100%;\r\n  -webkit-transition: 0.5s ease;\r\n  transition: 0.5s ease;\r\n  opacity: 0;\r\n  color: white;\r\n  height: 25%;\r\n  text-align: center;\n}\r\n\r\n/* When you mouse over the container, fade in the overlay title */\n.containerob:hover .overlayob {\r\n  opacity: 1;\n}\r\n", ""]);
 
 // exports
 
@@ -72845,7 +72880,7 @@ var render = function() {
                             _c("img", {
                               staticClass: "img-circle img-bordered-sm m-0 p-0",
                               attrs: {
-                                src: "/media/profile/" + data.value,
+                                src: "/storage/" + data.value,
                                 alt: "User Image",
                                 height: "35px"
                               }
@@ -73096,13 +73131,21 @@ var render = function() {
                                 "div",
                                 { staticClass: "containerob text-cente" },
                                 [
+                                  _c("input", {
+                                    ref: "fileInput",
+                                    attrs: {
+                                      type: "file",
+                                      id: "uploadFile",
+                                      hidden: ""
+                                    },
+                                    on: { change: _vm.uploadprofile }
+                                  }),
+                                  _vm._v(" "),
                                   _c("img", {
                                     staticClass:
                                       "imageob profile-user-img img-fluid",
                                     attrs: {
-                                      src:
-                                        "/media/profile/" +
-                                        _vm.user.profile_pic,
+                                      src: "/storage/" + _vm.user.profile_pic,
                                       alt: "User profile picture"
                                     }
                                   }),
@@ -73111,7 +73154,7 @@ var render = function() {
                                     "div",
                                     {
                                       staticClass: "overlayob",
-                                      on: { click: _vm.$ }
+                                      on: { click: _vm.triggerimage }
                                     },
                                     [
                                       _c("i", {

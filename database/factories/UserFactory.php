@@ -23,6 +23,7 @@ $factory->define(User::class, function (Faker $faker) {
         'm_name' => $faker->lastName($gender),
         'l_name' => $faker->lastName($gender),
         'email' => $faker->unique()->safeEmail,
+        'profile_pic' => 'avatars/profile.png',
         'gender' => $gender,
         'dob' => $faker->dateTimeBetween($startDate = '-20 years', $endDate = '-2 years'),
         'email_verified_at' => now(),

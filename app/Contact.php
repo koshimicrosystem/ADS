@@ -9,8 +9,13 @@ class Contact extends Model
 {
     use SoftDeletes;
     protected $guarded = [];
-    public function user()
+
+    public function users()
     {
-        return $this->belongsTo('App\User');
+        return $this->morphedByMany('App\User', 'contactable');
+    }
+    public function guardians()
+    {
+        return $this->morphedByMany('App\User', 'contactable');
     }
 }

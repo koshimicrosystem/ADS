@@ -53,12 +53,21 @@
                     <div class="card-body box-profile">
                       <div class="text-center">
                         <div class="containerob text-cente">
-                          <img 
-                          class="imageob profile-user-img img-fluid"
-                          :src="'/media/profile/'+user.profile_pic"
-                          alt="User profile picture"
-                        />
-                          <div class="overlayob" @click="$" ><i class="fas fa-lg fa-camera"></i></div>
+                          <input
+                            type="file"
+                            ref="fileInput"
+                            id="uploadFile"
+                            @change="uploadprofile"
+                            hidden
+                          />
+                          <img
+                            class="imageob profile-user-img img-fluid"
+                            :src="'/storage/'+user.profile_pic"
+                            alt="User profile picture"
+                          />
+                          <div class="overlayob" @click="triggerimage">
+                            <i class="fas fa-lg fa-camera"></i>
+                          </div>
                         </div>
                       </div>
                       <h3
@@ -170,11 +179,6 @@
                           <!-- Post -->
                           <div class="post clearfix">
                             <div class="user-block">
-
-
-                              
-
-
                               <img
                                 class="img-circle img-bordered-sm"
                                 :src="'/media/profile/boy.png'"
@@ -506,7 +510,7 @@
                                   </a>
                                   <!-- <a @click="contactupdate(item)">
                                     <i class="fas fa-edit text-info"></i>
-                                  </a> -->
+                                  </a>-->
                                   <a @click.prevent="contactdestroy(item.id)">
                                     <i class="fas fa-trash-alt text-danger"></i>
                                   </a>
@@ -584,6 +588,7 @@ export default {
       status: "not_default",
       contacttype: "",
       // contact end
+      file: "",
       loading: false,
       modelcontact: false,
       contacterrored: false,
@@ -591,13 +596,46 @@ export default {
     };
   },
   methods: {
+    triggerimage() {
+      this.$refs.fileInput.click();
+    },
+
+    uploadprofile(e) {
+      this.file = e.target.files[0];
+      //console.log(this.file);
+
+      let currentObj = this;
+
+      const config = {
+        headers: { "content-type": "multipart/form-data" }
+      };
+
+      let formData = new FormData();
+      formData.append("file", this.file);
+      this.loading = true;
+      axios
+        .post("/home/store/image/" + this.user.id, formData, config)
+        .then(response => {
+          console.log(response.data);
+          this.user.profile_pic = response.data;
+          this.$bvToast.toast("Profile updated successfully.", {
+            title: "Success !",
+            variant: "success"
+          });
+        })
+        .catch(error => {
+          this.errormessage("Image upload failed. Try Again !");
+        })
+        .finally(() => (this.loading = false));
+    },
+
     get_user() {
       axios
         .get("/faculty/show/" + this.$route.params.id)
         .then(response => (this.user = response.data))
         .catch();
     },
-    
+
     contactOk(bvModalEvt) {
       bvModalEvt.preventDefault();
       this.contacterrored = false;
@@ -729,7 +767,6 @@ export default {
 };
 </script>
 <style>
-
 .containerob {
   position: relative;
   margin: 10px;
@@ -751,8 +788,8 @@ export default {
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   color: #a18b8b;
   width: 100%;
-  transition: .5s ease;
-  opacity:0;
+  transition: 0.5s ease;
+  opacity: 0;
   color: white;
   height: 25%;
   text-align: center;
@@ -762,5 +799,4 @@ export default {
 .containerob:hover .overlayob {
   opacity: 1;
 }
-  
 </style>

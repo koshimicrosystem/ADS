@@ -28,5 +28,6 @@ Route::get('/contact/default/{user_id}/{contact_id}', 'ContactController@default
 
 // default
 Auth::routes();
+Route::post('/home/store/image/{id}', 'HomeController@store_image')->name('home.store.image');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get("{any}", 'HomeController@index')->where("any", ".*");

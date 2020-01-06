@@ -17,6 +17,7 @@ class CreateAddressesTable extends Migration
             $table->bigIncrements('id');
             $table->string('state');
             $table->string('distric');
+            $table->string('city_village');
             $table->integer('pin');
             $table->string('address');
             $table->boolean('default')->default(false);

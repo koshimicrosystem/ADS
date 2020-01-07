@@ -1,5 +1,6 @@
 <?php
 
+use App\Stdmaster;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,14 +13,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(RoleSeeder::class);
-        $this->call(userseeder::class);
-        $users = factory(App\User::class, 150)
-            ->create()
-            ->each(function ($user) {
-                $user->assignRole('Student');
-            });
+        $this->call(StdmasterSeeder::class);
 
-        $faculty = factory(App\Faculty::class, 50)
+        $faculty = factory(App\Faculty::class, 10)
             ->create()
             ->each(function ($faculty) {
                 $user=$faculty->user()->save(factory(App\User::class)->make());

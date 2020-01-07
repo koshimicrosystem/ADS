@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGuardiansTable extends Migration
+class FeeStdmaster extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateGuardiansTable extends Migration
      */
     public function up()
     {
-        Schema::create('guardians', function (Blueprint $table) {
+        Schema::create('fee_stdmaster', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('fee_id');
+            $table->unsignedBigInteger('stdmaster_id');
             $table->timestamps();
-            $table->softDeletes();	
         });
     }
 
@@ -27,6 +28,6 @@ class CreateGuardiansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guardians');
+        Schema::dropIfExists('fee_stdmaster');
     }
 }

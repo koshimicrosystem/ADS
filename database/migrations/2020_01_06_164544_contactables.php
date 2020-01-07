@@ -18,7 +18,6 @@ class Contactables extends Migration
             $table->unsignedBigInteger('contact_id');
             $table->unsignedBigInteger('contactable_id');
             $table->string('contactable_type');
-
             // tag_id - integer
             // taggable_id - integer
             // taggable_type - string

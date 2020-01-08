@@ -12,4 +12,8 @@ class Fee extends Model
     {
         return $this->belongsToMany('App\Stdmaster');
     }
+    public function dues()
+    {
+        return $this->hasToMany('App\Due');
+    }
 }

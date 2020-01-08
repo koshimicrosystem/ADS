@@ -23,5 +23,12 @@ class Student extends Model
     {
         return $this->belongsToMany('App\Guardian');
     }
-
+    public function dues()
+    {
+        return $this->hasMany('App\Due');
+    }
+    public function advance()
+    {
+        return $this->hasMany('App\Advance');
+    }
 }

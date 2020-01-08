@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFeesTable extends Migration
+class CreateDuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateFeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('fees', function (Blueprint $table) {
+        Schema::create('dues', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->float('amount');
-            $table->string('type'); // monthly anual quarterly monthname
-            $table->integer('periority')->default(0);
+            $table->unsignedBigInteger('transection_id')->nullable();
+            $table->unsignedBigInteger('fee_id');
+            $table->unsignedBigInteger('student_id');
+            $table->date('due_date');
+            $table->string('last_date');
+            $table->string('status')->default('due');
             $table->timestamps();
             $table->softDeletes();	
         });
@@ -31,6 +33,6 @@ class CreateFeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fees');
+        Schema::dropIfExists('dues');
     }
 }

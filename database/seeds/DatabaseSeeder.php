@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
                 $user=$faculty->user()->save(factory(App\User::class)->make());
                 $user->assignRole('Faculty');   
             });
+        $this->call(DueSeeder::class);
     }
 }

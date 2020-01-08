@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Std;
 use App\Student;
+use App\User;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -14,7 +16,13 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        // $student = Student::with('user','std')->get();
+        // return $student;
+
+        $student = Student::with(['user' => function ($query) {
+            $query->with('contacts');
+        },'std'])->get();
+        return $student;
     }
 
     /**
@@ -35,7 +43,19 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $std =Std::find($request->std);
+        $student = new Student();
+        $std->students()->save($student);
+        $user = new User();
+        $user->f_name=$request->f_name;
+        $user->m_name=$request->m_name;
+        $user->l_name=$request->l_name;
+        $user->dob=$request->dob;
+        $user->email=$request->email;
+        $user->gender=$request->gender;
+        $user->password='$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi';
+        $student->user()->save($user);
+
     }
 
     /**

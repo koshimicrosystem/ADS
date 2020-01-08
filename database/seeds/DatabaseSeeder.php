@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RoleSeeder::class);
         $this->call(StdmasterSeeder::class);
-
+        $this->call(userseeder::class);
         $faculty = factory(App\Faculty::class, 10)
             ->create()
             ->each(function ($faculty) {

@@ -73,33 +73,26 @@
                           required
                         />
                       </div>
-
                       <div class="col-md-6 mb-3">
-                        <label for="phone_number">Phone Number</label>
+                        <label for="l_name">Adhar Number</label>
+                        <span class="text-muted">(Optional)</span>
                         <input
-                          type="number"
-                          id="phone_number"
-                          v-model="phone_number"
+                          type="text"
+                          id="adhar_number"
+                          v-model="adhar_number"
                           class="form-control"
-                          placeholder
-                          value
-                          required
                         />
                       </div>
 
                       <div class="col-md-6 mb-3">
-                        <label for="doj">Date of Joining</label>
-                        <input
-                          type="date"
-                          id="doj"
-                          v-model="doj"
-                          class="form-control"
-                          placeholder
-                          value
-                          required
-                        />
+                        <label for="country">STD</label>
+                        <select class="custom-select d-block w-100" v-model="std" id="std" required>
+                          <option value>Choose...</option>
+                          <option v-for="(item, index) in stds" :key="index" :value="item.id">{{item.name}}</option>
+                        </select>
                       </div>
                     </div>
+
                     <div class="mb-3">
                       <label for="email">Email</label>
                       <input
@@ -109,6 +102,9 @@
                         v-model="email"
                         placeholder="you@example.com"
                       />
+                      <div
+                        class="invalid-feedback"
+                      >Please enter a valid email address for shipping updates.</div>
                     </div>
 
                     <h4 class="mb-3">Gender</h4>
@@ -161,6 +157,9 @@ import OverlayComponent from "../ui/common/OverlayComponent";
 import { required, minLength, between, email } from "vuelidate/lib/validators";
 
 export default {
+  mounted() {
+    this.get_stds();
+  },
   data() {
     return {
       f_name: "",
@@ -169,11 +168,12 @@ export default {
       dob: "",
       gender: "",
       email: "",
-      phone_number: "",
-      doj: "",
+      std: "",
+      adhar_number: "",
       loading: false,
       errored: false,
-      user: {}
+      user: {},
+      stds: []
     };
   },
   methods: {
@@ -184,11 +184,12 @@ export default {
       this.dob = "";
       this.gender = "";
       this.email = "";
-      this.phone_number = "";
+      this.std = "";
       this.loading = false;
       this.errored = false;
-      this.doj = "";
+      this.adhar_number = "";
     },
+    
     submit() {
       this.errored = false;
       this.validation();
@@ -196,15 +197,15 @@ export default {
       if (!this.errored) {
         this.loading = true;
         axios
-          .post("/faculty/store", {
+          .post("/student/store", {
             f_name: this.f_name,
             m_name: this.m_name,
             l_name: this.l_name,
             dob: this.dob,
-            doj: this.doj,
+            std: this.std,
             gender: this.gender,
             email: this.email,
-            phone_number: this.phone_number
+            adhar_number: this.adhar_number
           })
           .then(response => {
             this.user = response.data;
@@ -227,6 +228,9 @@ export default {
         variant: "danger"
       });
     },
+    get_stds() {
+      axios.get("/std/index").then(response => (this.stds = response.data));
+    },
     validation() {
       this.$v.$touch();
       if (!this.$v.f_name.required) {
@@ -238,14 +242,10 @@ export default {
           this.errored = true;
         }
       }
-      if (!this.$v.phone_number.required) {
-        this.errormessage("Phone Number : required.");
+
+      if (!this.$v.adhar_number.between) {
+        this.errormessage("Not a valid Adhar number.");
         this.errored = true;
-      } else {
-        if (!this.$v.phone_number.between) {
-          this.errormessage("Not a valid phone number.");
-          this.errored = true;
-        }
       }
       if (!this.$v.m_name.minLength) {
         this.errormessage("Middle Name : Minimum 3 char is required.");
@@ -256,8 +256,8 @@ export default {
         this.errored = true;
       }
 
-      if (!this.$v.doj.required) {
-        this.errormessage("Date of Joining : Required.");
+      if (!this.$v.std.required) {
+        this.errormessage("Std : Required.");
         this.errored = true;
       }
 
@@ -291,9 +291,8 @@ export default {
     l_name: {
       minLength: minLength(3)
     },
-    phone_number: {
-      required,
-      between: between(6000000000, 9999999999)
+    std: {
+      required
     },
     dob: {
       required
@@ -305,8 +304,8 @@ export default {
     gender: {
       required
     },
-    doj: {
-      required
+    adhar_number: {
+      between: between(10000000000000, 99999999999999)
     }
   },
   components: {

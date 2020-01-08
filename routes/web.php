@@ -20,12 +20,18 @@ Route::get('/faculty/show/{id}', 'FacultyController@show')->name('faculty.show')
 Route::get('/faculty/index', 'FacultyController@index')->name('faculty.index');
 
 // student 
-
+Route::post('/student/store', 'StudentController@store')->name('student.store');
+Route::get('/student/show/{id}', 'StudentController@show')->name('student.show');
+Route::get('/student/index', 'StudentController@index')->name('student.index');
 
 // contact
 Route::post('/contact/store', 'ContactController@store')->name('contact.store');
 Route::get('/contact/destroy/{user_id}/{contact_id}', 'ContactController@destroy')->name('contact.destroy');
 Route::get('/contact/default/{user_id}/{contact_id}', 'ContactController@default')->name('contact.default');
+
+
+//STD
+Route::get('/std/index', 'StdController@index')->name('std.index');
 
 
 // default

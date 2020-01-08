@@ -14,7 +14,7 @@ class StdmasterController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

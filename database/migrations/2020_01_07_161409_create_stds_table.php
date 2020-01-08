@@ -16,6 +16,7 @@ class CreateStdsTable extends Migration
         Schema::create('stds', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('stdmaster_id')->nullable();
+            $table->string('name');
             $table->timestamps();
             $table->softDeletes();	
         });

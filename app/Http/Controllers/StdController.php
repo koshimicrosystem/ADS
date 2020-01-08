@@ -14,7 +14,8 @@ class StdController extends Controller
      */
     public function index()
     {
-        //
+        $stds=Std::all();
+        return $stds;
     }
 
     /**

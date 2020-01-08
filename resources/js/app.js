@@ -30,6 +30,11 @@ const routes = [
     { path: '/new-faculty', component: require('./components/faculty/NewFaculty.vue').default },
     { path: '/faculty-list', component: require('./components/faculty/FacultyList.vue').default },
     { path: '/faculty-profile/:id', name: 'faculty-profile', component: require('./components/faculty/FacultyProfile.vue').default },
+
+    // Student
+    { path: '/new-student', component: require('./components/student/NewStudent.vue').default },
+    { path: '/student-list', component: require('./components/student/StudentList.vue').default },
+    { path: '/student-profile/:id', name: 'student-profile', component: require('./components/student/StudentProfile.vue').default },
 ]
 
 const router = new VueRouter({

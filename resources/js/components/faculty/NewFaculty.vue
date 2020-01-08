@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header bg-secondary">
-            <h4>New Faculty</h4>
+            <h4>New Student</h4>
           </div>
           <div class="card-body">
             <div class="container">

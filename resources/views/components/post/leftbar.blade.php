@@ -46,16 +46,10 @@
                 </router-link>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <router-link to="/new-student" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Flot</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Inline</p>
-                </a>
+                  <p>New</p>
+                </router-link>
               </li>
             </ul>
           </li>

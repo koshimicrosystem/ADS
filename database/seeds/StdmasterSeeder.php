@@ -55,7 +55,9 @@ class StdmasterSeeder extends Seeder
             'name' => 'X',
         ]) ->each(function ($stdmaster) {
             $stdmaster->fees()->saveMany(factory(App\Fee::class,5)->create());
-            $stdmaster->stds()->saveMany(factory(App\Std::class,2)->create()
+            $stdmaster->stds()->saveMany(factory(App\Std::class,1)->create([
+                'name' => $stdmaster->name,
+            ])
             ->each(function ($std) {
                 $std->students()->saveMany(factory(App\Student::class,5)->create()
                 ->each(function ($student) {

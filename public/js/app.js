@@ -3309,6 +3309,343 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/NewStudent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/NewStudent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/common/OverlayComponent */ "./resources/js/components/ui/common/OverlayComponent.vue");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.get_stds();
+  },
+  data: function data() {
+    return {
+      f_name: "",
+      m_name: "",
+      l_name: "",
+      dob: "",
+      gender: "",
+      email: "",
+      std: "",
+      adhar_number: "",
+      loading: false,
+      errored: false,
+      user: {},
+      stds: []
+    };
+  },
+  methods: {
+    reset_form: function reset_form() {
+      this.f_name = "";
+      this.m_name = "";
+      this.l_name = "";
+      this.dob = "";
+      this.gender = "";
+      this.email = "";
+      this.std = "";
+      this.loading = false;
+      this.errored = false;
+      this.adhar_number = "";
+    },
+    submit: function submit() {
+      var _this = this;
+
+      this.errored = false;
+      this.validation();
+
+      if (!this.errored) {
+        this.loading = true;
+        axios.post("/student/store", {
+          f_name: this.f_name,
+          m_name: this.m_name,
+          l_name: this.l_name,
+          dob: this.dob,
+          std: this.std,
+          gender: this.gender,
+          email: this.email,
+          adhar_number: this.adhar_number
+        }).then(function (response) {
+          _this.user = response.data;
+          _this.loading = false;
+
+          _this.$bvToast.toast("Your request is submitted successfully.", {
+            title: "Success !",
+            variant: "success"
+          });
+
+          _this.reset_form();
+        })["catch"](function (error) {
+          _this.errormessage("Email id already exists. Try again !");
+        })["finally"](function () {
+          return _this.loading = false;
+        });
+      }
+    },
+    errormessage: function errormessage($msg) {
+      this.$bvToast.toast($msg, {
+        title: "Error !",
+        variant: "danger"
+      });
+    },
+    get_stds: function get_stds() {
+      var _this2 = this;
+
+      axios.get("/std/index").then(function (response) {
+        return _this2.stds = response.data;
+      });
+    },
+    validation: function validation() {
+      this.$v.$touch();
+
+      if (!this.$v.f_name.required) {
+        this.errormessage("First Name: required.");
+        this.errored = true;
+      } else {
+        if (!this.$v.f_name.minLength) {
+          this.errormessage("First Name: Minimum 3 char is required.");
+          this.errored = true;
+        }
+      }
+
+      if (!this.$v.adhar_number.between) {
+        this.errormessage("Not a valid Adhar number.");
+        this.errored = true;
+      }
+
+      if (!this.$v.m_name.minLength) {
+        this.errormessage("Middle Name : Minimum 3 char is required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.l_name.minLength) {
+        this.errormessage("Last Name : Minimum 3 char is required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.std.required) {
+        this.errormessage("Std : Required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.gender.required) {
+        this.errormessage("Gender : Required.");
+        this.errored = true;
+      }
+
+      if (!this.$v.dob.required) {
+        this.errormessage("Date of Birth : Required");
+        this.errored = true;
+      }
+
+      if (!this.$v.email.required) {
+        this.errormessage("Email : required.");
+        this.errored = true;
+      } else {
+        if (!this.$v.email.email) {
+          this.errormessage("Not a valid mail");
+          this.errored = true;
+        }
+      }
+    }
+  },
+  validations: {
+    f_name: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"],
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
+    },
+    m_name: {
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
+    },
+    l_name: {
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
+    },
+    std: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    dob: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    email: {
+      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["email"],
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    gender: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
+    },
+    adhar_number: {
+      between: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["between"])(10000000000000, 99999999999999)
+    }
+  },
+  components: {
+    OverlayComponent: _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentList.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentList.vue?vue&type=script&lang=js& ***!
@@ -3456,3456 +3793,65 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = (_mounted$data$compute = {
   mounted: function mounted() {
     console.log("Component mounted.");
   },
   data: function data() {
     return {
-      items: [{
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Dickerson",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 21,
-        name: {
-          first: "Larsen",
-          last: "Shaw"
-        }
-      }, {
-        isActive: false,
-        age: 9,
-        name: {
-          first: "Mini",
-          last: "Navarro"
-        },
-        _rowVariant: "success"
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: false,
-        age: 89,
-        name: {
-          first: "Geneva",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "Jami",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 27,
-        name: {
-          first: "Essie",
-          last: "Dunlap"
-        }
-      }, {
-        isActive: true,
-        age: 40,
-        name: {
-          first: "Thor",
-          last: "Macdonald"
-        }
-      }, {
-        isActive: true,
-        age: 87,
-        name: {
-          first: "Larsen",
-          last: "Shaw"
-        },
-        _cellVariants: {
-          age: "danger",
-          isActive: "warning"
-        }
-      }, {
-        isActive: false,
-        age: 26,
-        name: {
-          first: "Mitzi",
-          last: "Navarro"
-        }
-      }, {
-        isActive: false,
-        age: 22,
-        name: {
-          first: "Genevieve",
-          last: "Wilson"
-        }
-      }, {
-        isActive: true,
-        age: 38,
-        name: {
-          first: "John",
-          last: "Carney"
-        }
-      }, {
-        isActive: false,
-        age: 29,
-        name: {
-          first: "Dick",
-          last: "Dunlap"
-        }
-      }],
+      items: [],
       fields: [{
-        key: "name",
-        label: "Person Full name",
-        sortable: true,
-        sortDirection: "desc"
+        key: 'profile_pic',
+        label: ''
       }, {
-        key: "age",
-        label: "Person age",
-        sortable: true,
-        "class": "text-center"
-      }, {
-        key: "isActive",
-        label: "is Active",
-        formatter: function formatter(value, key, item) {
-          return value ? "Yes" : "No";
-        },
+        key: 'user',
+        label: 'Name',
+        formatter: 'user',
         sortable: true,
         sortByFormatted: true,
         filterByFormatted: true
       }, {
-        key: "actions",
-        label: "Actions"
+        key: "id",
+        sortable: true,
+        label: 'Adm No'
+      }, {
+        key: "user.dob",
+        label: "DOB",
+        formatter: 'dob',
+        sortable: true,
+        sortByFormatted: true,
+        filterByFormatted: true
+      }, {
+        key: "user.gender",
+        label: "Gender",
+        formatter: 'gender',
+        sortable: true,
+        sortByFormatted: true,
+        filterByFormatted: true
+      }, {
+        key: "user.contacts",
+        label: "Contact",
+        formatter: 'contacts'
+      }, {
+        key: "std",
+        label: "Std",
+        formatter: 'std',
+        sortable: true,
+        sortByFormatted: true,
+        filterByFormatted: true
+      }, {
+        key: "action",
+        label: "Action",
+        "class": "text-center"
       }],
       totalRows: 1,
       currentPage: 1,
@@ -6938,16 +3884,40 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 }, _defineProperty(_mounted$data$compute, "mounted", function mounted() {
   // Set the initial number of items
-  this.totalRows = this.items.length;
+  this.get_items();
 }), _defineProperty(_mounted$data$compute, "methods", {
-  info: function info(item, index, button) {
-    this.infoModal.title = "Row index: ".concat(index);
-    this.infoModal.content = JSON.stringify(item, null, 2);
-    this.$root.$emit("bv::show::modal", this.infoModal.id, button);
+  get_items: function get_items() {
+    var _this = this;
+
+    axios.get('/student/index').then(function (response) {
+      return _this.items = response.data, _this.totalRows = _this.items.length;
+    });
   },
-  resetInfoModal: function resetInfoModal() {
-    this.infoModal.title = "";
-    this.infoModal.content = "";
+  contacts: function contacts(value) {
+    var contacts = '';
+
+    for (var index = 0; index < value.length; index++) {
+      var element = value[index];
+      if (element.type == "Number") contacts = contacts + element.email_number + ', ';
+    }
+
+    return contacts;
+  },
+  user: function user(value) {
+    var name = '';
+    if (value.f_name) name += value.f_name + ' ';
+    if (value.m_name) name += value.f_name + ' ';
+    if (value.l_name) name += value.f_name + ' ';
+    return name;
+  },
+  gender: function gender(value) {
+    return value; // console.log(value);
+  },
+  dob: function dob(value) {
+    return value; // console.log(value);
+  },
+  std: function std(value) {
+    return value.name;
   },
   onFiltered: function onFiltered(filteredItems) {
     // Trigger pagination to update the number of buttons/pages due to filtering
@@ -6955,6 +3925,785 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     this.currentPage = 1;
   }
 }), _mounted$data$compute);
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentProfile.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/common/OverlayComponent */ "./resources/js/components/ui/common/OverlayComponent.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.get_user();
+  },
+  data: function data() {
+    return {
+      user: {},
+      // contact
+      name: "",
+      email_number: "",
+      status: "not_default",
+      contacttype: "",
+      // contact end
+      file: "",
+      loading: false,
+      modelcontact: false,
+      contacterrored: false,
+      modeladdress: false
+    };
+  },
+  methods: {
+    triggerimage: function triggerimage() {
+      this.$refs.fileInput.click();
+    },
+    uploadprofile: function uploadprofile(e) {
+      var _this = this;
+
+      this.file = e.target.files[0]; //console.log(this.file);
+
+      var currentObj = this;
+      var config = {
+        headers: {
+          "content-type": "multipart/form-data"
+        }
+      };
+      var formData = new FormData();
+      formData.append("file", this.file);
+      this.loading = true;
+      axios.post("/home/store/image/" + this.user.id, formData, config).then(function (response) {
+        console.log(response.data);
+        _this.user.profile_pic = response.data;
+
+        _this.$bvToast.toast("Profile updated successfully.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this.errormessage("Image upload failed. Try Again !");
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    },
+    get_user: function get_user() {
+      var _this2 = this;
+
+      axios.get("/faculty/show/" + this.$route.params.id).then(function (response) {
+        return _this2.user = response.data;
+      })["catch"]();
+    },
+    contactOk: function contactOk(bvModalEvt) {
+      var _this3 = this;
+
+      bvModalEvt.preventDefault();
+      this.contacterrored = false;
+      this.loading = false;
+      this.contactvalidation();
+
+      if (!this.contacterrored) {
+        this.loading = true;
+        axios.post("/contact/store", {
+          name: this.name,
+          email_number: this.email_number,
+          status: this.status,
+          user_id: this.user.id,
+          contacttype: this.contacttype
+        }).then(function (response) {
+          _this3.user.contacts = response.data;
+          _this3.loading = false;
+
+          _this3.$bvToast.toast("Contact added successfully.", {
+            title: "Success !",
+            variant: "success"
+          });
+
+          _this3.reset_contact();
+
+          _this3.$bvModal.hide("modelcontact");
+        })["catch"](function (error) {
+          _this3.errormessage("Email id already exists. Try again !");
+        })["finally"](function () {
+          return _this3.loading = false;
+        });
+      }
+    },
+    contactdestroy: function contactdestroy($id) {
+      var _this4 = this;
+
+      this.loading = true;
+      axios.get("/contact/destroy/" + this.user.id + "/" + $id).then(function (response) {
+        _this4.user.contacts = response.data;
+        _this4.loading = false;
+
+        _this4.$bvToast.toast("Contact Deleted successfully.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this4.errormessage("Something went wrong. Try again !");
+      });
+    },
+    contactdefault: function contactdefault($id) {
+      var _this5 = this;
+
+      this.loading = true;
+      axios.get("/contact/default/" + this.user.id + "/" + $id).then(function (response) {
+        _this5.user.contacts = response.data;
+        _this5.loading = false;
+
+        _this5.$bvToast.toast("Successful.", {
+          title: "Success !",
+          variant: "success"
+        });
+      })["catch"](function (error) {
+        _this5.errormessage("Something went wrong. Try again !");
+      });
+    },
+    addressOk: function addressOk(bvModalEvt) {
+      // Prevent modal from closing
+      bvModalEvt.preventDefault(); // Trigger submit handler
+    },
+    errormessage: function errormessage($msg) {
+      this.$bvToast.toast($msg, {
+        title: "Error !",
+        variant: "danger"
+      });
+    },
+    reset_contact: function reset_contact() {
+      this.name = "";
+      this.email_number = "";
+      this.status = "not_default";
+      this.loading = false;
+      this.errored = false;
+      this.contacttype = "";
+    },
+    contactvalidation: function contactvalidation() {
+      this.$v.$touch();
+
+      if (!this.$v.name.required) {
+        this.errormessage("Name: required.");
+        this.contacterrored = true;
+      } else {
+        if (!this.$v.name.minLength) {
+          this.errormessage("Name: Minimum 3 char is required.");
+          this.contacterrored = true;
+        }
+      }
+
+      if (!this.$v.email_number.required) {
+        this.errormessage("Email / Number: required.");
+        this.contacterrored = true;
+      } else {
+        if (!this.$v.email_number.email) {
+          if (!this.$v.email_number.between) {
+            this.errormessage("Email / Number: Email / Number is not valid.");
+            this.contacterrored = true;
+          } else {
+            this.contacttype = "Number";
+          }
+        } else {
+          this.contacttype = "Email";
+        }
+      }
+    }
+  },
+  validations: {
+    name: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["minLength"])(3)
+    },
+    email_number: {
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"],
+      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["email"],
+      between: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["between"])(6000000000, 9999999999)
+    }
+  },
+  components: {
+    OverlayComponent: _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
 
 /***/ }),
 
@@ -40337,6 +38086,25 @@ exports.push([module.i, "\n.containerob {\r\n  position: relative;\r\n  margin: 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.containerob {\r\n  position: relative;\r\n  margin: 10px;\r\n  max-width: 300px;\n}\r\n\r\n/* Make the image to responsive */\n.imageob {\r\n  display: block;\r\n  width: 100%;\r\n  height: auto;\n}\r\n\r\n/* The overlay effect - lays on top of the container and over the image */\n.overlayob {\r\n  position: absolute;\r\n  bottom: 0;\r\n  background: rgb(0, 0, 0);\r\n  background: rgba(0, 0, 0, 0.5); /* Black see-through */\r\n  color: #a18b8b;\r\n  width: 100%;\r\n  -webkit-transition: 0.5s ease;\r\n  transition: 0.5s ease;\r\n  opacity: 0;\r\n  color: white;\r\n  height: 25%;\r\n  text-align: center;\n}\r\n\r\n/* When you mouse over the container, fade in the overlay title */\n.containerob:hover .overlayob {\r\n  opacity: 1;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ui/common/OverlayComponent.vue?vue&type=style&index=0&lang=css&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ui/common/OverlayComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -71872,6 +69640,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./StudentProfile.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ui/common/OverlayComponent.vue?vue&type=style&index=0&lang=css&":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ui/common/OverlayComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -74606,6 +72404,490 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header bg-secondary" }, [
+      _c("h4", [_vm._v("New Student")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/NewStudent.vue?vue&type=template&id=113e92fa&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/NewStudent.vue?vue&type=template&id=113e92fa& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container mt-2" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "container" }, [
+              _c(
+                "div",
+                { staticClass: "row" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4 order-md-2 mb-4" },
+                    [
+                      _vm.user.id
+                        ? _c(
+                            "b-alert",
+                            {
+                              attrs: {
+                                show: "",
+                                dismissible: "",
+                                variant: "success"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                  New Faculty added with username : " +
+                                  _vm._s(_vm.user.email) +
+                                  ", Password : Phone Number. Click\n                  "
+                              ),
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "alert-link",
+                                  attrs: {
+                                    to: {
+                                      name: "faculty-profile",
+                                      params: { id: _vm.user.id }
+                                    }
+                                  }
+                                },
+                                [_vm._v("here")]
+                              ),
+                              _vm._v("to see details.\n                ")
+                            ],
+                            1
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("user-count")
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-8 order-md-1" }, [
+                    _c(
+                      "form",
+                      {
+                        staticClass: "needs-validation",
+                        attrs: { novalidate: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "f_name" } }, [
+                              _vm._v("First name")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.f_name,
+                                  expression: "f_name"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                id: "f_name",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.f_name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.f_name = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "m_name" } }, [
+                              _vm._v("Middle name")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "text-muted" }, [
+                              _vm._v("(Optional)")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.m_name,
+                                  expression: "m_name"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                id: "m_name",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.m_name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.m_name = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "l_name" } }, [
+                              _vm._v("Last name")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "text-muted" }, [
+                              _vm._v("(Optional)")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.l_name,
+                                  expression: "l_name"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                id: "l_name",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.l_name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.l_name = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "dob" } }, [
+                              _vm._v("Date of Birth")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.dob,
+                                  expression: "dob"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "date",
+                                id: "dob",
+                                placeholder: "",
+                                value: "",
+                                required: ""
+                              },
+                              domProps: { value: _vm.dob },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.dob = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "l_name" } }, [
+                              _vm._v("Adhar Number")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "text-muted" }, [
+                              _vm._v("(Optional)")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.adhar_number,
+                                  expression: "adhar_number"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", id: "adhar_number" },
+                              domProps: { value: _vm.adhar_number },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.adhar_number = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mb-3" }, [
+                            _c("label", { attrs: { for: "country" } }, [
+                              _vm._v("STD")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "select",
+                              {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.std,
+                                    expression: "std"
+                                  }
+                                ],
+                                staticClass: "custom-select d-block w-100",
+                                attrs: { id: "std", required: "" },
+                                on: {
+                                  change: function($event) {
+                                    var $$selectedVal = Array.prototype.filter
+                                      .call($event.target.options, function(o) {
+                                        return o.selected
+                                      })
+                                      .map(function(o) {
+                                        var val =
+                                          "_value" in o ? o._value : o.value
+                                        return val
+                                      })
+                                    _vm.std = $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  }
+                                }
+                              },
+                              [
+                                _c("option", { attrs: { value: "" } }, [
+                                  _vm._v("Choose...")
+                                ]),
+                                _vm._v(" "),
+                                _vm._l(_vm.stds, function(item, index) {
+                                  return _c(
+                                    "option",
+                                    {
+                                      key: index,
+                                      domProps: { value: item.id }
+                                    },
+                                    [_vm._v(_vm._s(item.name))]
+                                  )
+                                })
+                              ],
+                              2
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mb-3" }, [
+                          _c("label", { attrs: { for: "email" } }, [
+                            _vm._v("Email")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.email,
+                                expression: "email"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "email",
+                              id: "email",
+                              placeholder: "you@example.com"
+                            },
+                            domProps: { value: _vm.email },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.email = $event.target.value
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "invalid-feedback" }, [
+                            _vm._v(
+                              "Please enter a valid email address for shipping updates."
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("h4", { staticClass: "mb-3" }, [_vm._v("Gender")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "d-block my-3" }, [
+                          _c(
+                            "div",
+                            { staticClass: "custom-control custom-radio" },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.gender,
+                                    expression: "gender"
+                                  }
+                                ],
+                                staticClass: "custom-control-input",
+                                attrs: {
+                                  id: "credit",
+                                  name: "paymentMethod",
+                                  type: "radio",
+                                  value: "Male",
+                                  required: ""
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.gender, "Male")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    _vm.gender = "Male"
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "custom-control-label",
+                                  attrs: { for: "credit" }
+                                },
+                                [_vm._v("Male")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "custom-control custom-radio" },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.gender,
+                                    expression: "gender"
+                                  }
+                                ],
+                                staticClass: "custom-control-input",
+                                attrs: {
+                                  id: "debit",
+                                  name: "paymentMethod",
+                                  type: "radio",
+                                  value: "Female",
+                                  required: ""
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.gender, "Female")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    _vm.gender = "Female"
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "custom-control-label",
+                                  attrs: { for: "debit" }
+                                },
+                                [_vm._v("Female")]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "mb-4" }),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary btn-lg btn-block",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.submit()
+                              }
+                            }
+                          },
+                          [_vm._v("Continue to Save")]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("overlay-component", { attrs: { loading: this.loading } })
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-secondary" }, [
       _c("h4", [_vm._v("New Faculty")])
     ])
   }
@@ -74631,13 +72913,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container mt-2" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-12 mt-2" }, [
+      _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "card-header" },
+            { staticClass: "card-header " },
             [
               _c(
                 "b-row",
@@ -74656,57 +72940,16 @@ var render = function() {
                           }
                         },
                         [
-                          _c(
-                            "b-form-checkbox-group",
-                            {
-                              staticClass: "mt-1",
-                              model: {
-                                value: _vm.filterOn,
-                                callback: function($$v) {
-                                  _vm.filterOn = $$v
-                                },
-                                expression: "filterOn"
-                              }
-                            },
-                            [
-                              _c(
-                                "b-form-checkbox",
-                                { attrs: { value: "name" } },
-                                [_vm._v("Name")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-form-checkbox",
-                                { attrs: { value: "age" } },
-                                [_vm._v("Age")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-form-checkbox",
-                                { attrs: { value: "isActive" } },
-                                [_vm._v("Active")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-form-checkbox",
-                                { attrs: { value: "name" } },
-                                [_vm._v("Name")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-form-checkbox",
-                                { attrs: { value: "age" } },
-                                [_vm._v("Age")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-form-checkbox",
-                                { attrs: { value: "isActive" } },
-                                [_vm._v("Active")]
-                              )
-                            ],
-                            1
-                          )
+                          _c("b-form-checkbox-group", {
+                            staticClass: "mt-1",
+                            model: {
+                              value: _vm.filterOn,
+                              callback: function($$v) {
+                                _vm.filterOn = $$v
+                              },
+                              expression: "filterOn"
+                            }
+                          })
                         ],
                         1
                       )
@@ -74862,70 +73105,94 @@ var render = function() {
                     },
                     scopedSlots: _vm._u([
                       {
-                        key: "cell(name)",
-                        fn: function(row) {
+                        key: "cell(profile_pic)",
+                        fn: function(data) {
+                          return [
+                            _c("img", {
+                              staticClass: "img-circle img-bordered-sm m-0 p-0",
+                              attrs: {
+                                src: "/storage/" + data.item.user.profile_pic,
+                                alt: "User Image",
+                                height: "35px"
+                              }
+                            })
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(user)",
+                        fn: function(data) {
                           return [
                             _vm._v(
-                              _vm._s(row.value.first) +
-                                " " +
-                                _vm._s(row.value.last)
+                              "\n              " +
+                                _vm._s(data.value) +
+                                "\n            "
                             )
                           ]
                         }
                       },
                       {
-                        key: "cell(actions)",
-                        fn: function(row) {
+                        key: "cell(user.contacts)",
+                        fn: function(data) {
+                          return [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(data.value) +
+                                "\n            "
+                            )
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(user.dob)",
+                        fn: function(data) {
+                          return [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(data.value) +
+                                "\n            "
+                            )
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(user.gender)",
+                        fn: function(data) {
+                          return [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(data.value) +
+                                "\n            "
+                            )
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(std)",
+                        fn: function(data) {
+                          return [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(data.value) +
+                                "\n            "
+                            )
+                          ]
+                        }
+                      },
+                      {
+                        key: "cell(action)",
+                        fn: function(data) {
                           return [
                             _c(
-                              "b-button",
+                              "router-link",
                               {
-                                staticClass: "mr-1",
-                                attrs: { size: "sm" },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.info(
-                                      row.item,
-                                      row.index,
-                                      $event.target
-                                    )
-                                  }
+                                staticClass: "btn btn-outline-secondary btn-sm",
+                                attrs: {
+                                  to: "/student-profile/" + data.item.user.id
                                 }
                               },
-                              [_vm._v("Info modal")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "b-button",
-                              {
-                                attrs: { size: "sm" },
-                                on: { click: row.toggleDetails }
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(row.detailsShowing ? "Hide" : "Show") +
-                                    " Details"
-                                )
-                              ]
+                              [_vm._v("View Details")]
                             )
-                          ]
-                        }
-                      },
-                      {
-                        key: "row-details",
-                        fn: function(row) {
-                          return [
-                            _c("b-card", [
-                              _c(
-                                "ul",
-                                _vm._l(row.item, function(value, key) {
-                                  return _c("li", { key: key }, [
-                                    _vm._v(_vm._s(key) + ": " + _vm._s(value))
-                                  ])
-                                }),
-                                0
-                              )
-                            ])
                           ]
                         }
                       }
@@ -74959,19 +73226,6 @@ var render = function() {
                       )
                     ],
                     1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-modal",
-                    {
-                      attrs: {
-                        id: _vm.infoModal.id,
-                        title: _vm.infoModal.title,
-                        "ok-only": ""
-                      },
-                      on: { hide: _vm.resetInfoModal }
-                    },
-                    [_c("pre", [_vm._v(_vm._s(_vm.infoModal.content))])]
                   )
                 ],
                 1
@@ -74984,7 +73238,1200 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-secondary" }, [
+      _c("h4", [_vm._v("Faculty List")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=template&id=f0f91f26&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/StudentProfile.vue?vue&type=template&id=f0f91f26& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container mt-2" }, [
+    _c(
+      "div",
+      { staticClass: "row justify-content-center" },
+      [
+        _c("overlay-component", { attrs: { loading: this.loading } }),
+        _vm._v(" "),
+        _c(
+          "b-modal",
+          {
+            attrs: { id: "modeladdress" },
+            on: { ok: _vm.addressOk },
+            model: {
+              value: _vm.modeladdress,
+              callback: function($$v) {
+                _vm.modeladdress = $$v
+              },
+              expression: "modeladdress"
+            }
+          },
+          [_vm._v("Hello From Modal!")]
+        ),
+        _vm._v(" "),
+        _c(
+          "b-modal",
+          {
+            attrs: {
+              id: "modelcontact",
+              title: "Contact",
+              "header-bg-variant": "dark",
+              "header-text-variant": "light"
+            },
+            on: { ok: _vm.contactOk },
+            model: {
+              value: _vm.modelcontact,
+              callback: function($$v) {
+                _vm.modelcontact = $$v
+              },
+              expression: "modelcontact"
+            }
+          },
+          [
+            _c(
+              "b-form",
+              { on: { submit: _vm.contactOk } },
+              [
+                _c(
+                  "b-form-group",
+                  { attrs: { label: "Name :", "label-for": "name" } },
+                  [
+                    _c("b-form-input", {
+                      attrs: {
+                        id: "name",
+                        type: "text",
+                        placeholder: "Enter name"
+                      },
+                      model: {
+                        value: _vm.name,
+                        callback: function($$v) {
+                          _vm.name = $$v
+                        },
+                        expression: "name"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-form-group",
+                  {
+                    attrs: {
+                      label: "Email / Number:",
+                      "label-for": "email_phone"
+                    }
+                  },
+                  [
+                    _c("b-form-input", {
+                      attrs: {
+                        id: "email_phone",
+                        type: "text",
+                        required: "",
+                        placeholder: "Enter email / number"
+                      },
+                      model: {
+                        value: _vm.email_number,
+                        callback: function($$v) {
+                          _vm.email_number = $$v
+                        },
+                        expression: "email_number"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-form-checkbox",
+                  {
+                    attrs: {
+                      id: "checkbox-1",
+                      name: "checkbox-1",
+                      value: "default",
+                      "unchecked-value": "not_default"
+                    },
+                    model: {
+                      value: _vm.status,
+                      callback: function($$v) {
+                        _vm.status = $$v
+                      },
+                      expression: "status"
+                    }
+                  },
+                  [_vm._v("Make it default.")]
+                )
+              ],
+              1
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c(
+                      "div",
+                      { staticClass: "card card-primary card-outline" },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "card-body box-profile" },
+                          [
+                            _c("div", { staticClass: "text-center" }, [
+                              _c(
+                                "div",
+                                { staticClass: "containerob text-cente" },
+                                [
+                                  _c("input", {
+                                    ref: "fileInput",
+                                    attrs: {
+                                      type: "file",
+                                      id: "uploadFile",
+                                      hidden: ""
+                                    },
+                                    on: { change: _vm.uploadprofile }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    staticClass:
+                                      "imageob profile-user-img img-fluid",
+                                    attrs: {
+                                      src: "/storage/" + _vm.user.profile_pic,
+                                      alt: "User profile picture"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "overlayob",
+                                      on: { click: _vm.triggerimage }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fas fa-lg fa-camera"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "h3",
+                              { staticClass: "profile-username text-center" },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.user.f_name) +
+                                    " " +
+                                    _vm._s(_vm.user.m_name) +
+                                    " " +
+                                    _vm._s(_vm.user.l_name)
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._l(_vm.user.roles, function(item, index) {
+                              return _c(
+                                "p",
+                                {
+                                  key: index,
+                                  staticClass: "text-muted text-center"
+                                },
+                                [_vm._v(_vm._s(item.name))]
+                              )
+                            }),
+                            _vm._v(" "),
+                            _vm._m(1),
+                            _vm._v(" "),
+                            _vm._m(2)
+                          ],
+                          2
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-9" }, [
+                    _c("div", { staticClass: "card" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("div", { staticClass: "tab-content" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "active tab-pane",
+                              attrs: { id: "activity" }
+                            },
+                            [
+                              _c("div", { staticClass: "post" }, [
+                                _c("div", { staticClass: "user-block" }, [
+                                  _c("img", {
+                                    staticClass: "img-circle img-bordered-sm",
+                                    attrs: {
+                                      src: "/media/profile/boy.png",
+                                      alt: "user image"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(4),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "description" }, [
+                                    _vm._v("Shared publicly - 7:30 PM today")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                            Lorem ipsum represents a long-held tradition for designers,\n                            typographers and the like. Some people hate it and argue for\n                            its demise, but others ignore the hate as they create awesome\n                            tools to help create filler text for everyone from bacon lovers\n                            to Charlie Sheen fans.\n                          "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(5),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control form-control-sm",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Type a comment"
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "post clearfix" }, [
+                                _c("div", { staticClass: "user-block" }, [
+                                  _c("img", {
+                                    staticClass: "img-circle img-bordered-sm",
+                                    attrs: {
+                                      src: "/media/profile/boy.png",
+                                      alt: "User Image"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(6),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "description" }, [
+                                    _vm._v("Sent you a message - 3 days ago")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                            Lorem ipsum represents a long-held tradition for designers,\n                            typographers and the like. Some people hate it and argue for\n                            its demise, but others ignore the hate as they create awesome\n                            tools to help create filler text for everyone from bacon lovers\n                            to Charlie Sheen fans.\n                          "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(7)
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "post" }, [
+                                _c("div", { staticClass: "user-block" }, [
+                                  _c("img", {
+                                    staticClass: "img-circle img-bordered-sm",
+                                    attrs: {
+                                      src: "/media/profile/boy.png",
+                                      alt: "User Image"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(8),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "description" }, [
+                                    _vm._v("Posted 5 photos - 5 days ago")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "row mb-3" }, [
+                                  _c("div", { staticClass: "col-sm-6" }, [
+                                    _c("img", {
+                                      staticClass: "img-fluid",
+                                      attrs: {
+                                        src: "/media/profile/boy.png",
+                                        alt: "Photo"
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-sm-6" }, [
+                                    _c("div", { staticClass: "row" }, [
+                                      _c("div", { staticClass: "col-sm-6" }, [
+                                        _c("img", {
+                                          staticClass: "img-fluid mb-3",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "img-fluid",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        })
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-sm-6" }, [
+                                        _c("img", {
+                                          staticClass: "img-fluid mb-3",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "img-fluid",
+                                          attrs: {
+                                            src: "/media/profile/boy.png",
+                                            alt: "Photo"
+                                          }
+                                        })
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(9),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control form-control-sm",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Type a comment"
+                                  }
+                                })
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "tab-pane",
+                              attrs: { id: "timeline" }
+                            },
+                            [
+                              _c(
+                                "ul",
+                                { staticClass: "timeline timeline-inverse" },
+                                [
+                                  _vm._m(10),
+                                  _vm._v(" "),
+                                  _vm._m(11),
+                                  _vm._v(" "),
+                                  _vm._m(12),
+                                  _vm._v(" "),
+                                  _vm._m(13),
+                                  _vm._v(" "),
+                                  _vm._m(14),
+                                  _vm._v(" "),
+                                  _c("li", [
+                                    _c("i", {
+                                      staticClass: "fa fa-camera bg-purple"
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "timeline-item" },
+                                      [
+                                        _vm._m(15),
+                                        _vm._v(" "),
+                                        _vm._m(16),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "timeline-body" },
+                                          [
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("img", {
+                                              staticClass: "margin",
+                                              attrs: {
+                                                src: "/media/profile/boy.png",
+                                                alt: "..."
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm._m(17)
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm._m(18),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "tab-pane",
+                              attrs: { id: "contact" }
+                            },
+                            [
+                              _c("table", { staticClass: "table" }, [
+                                _c("thead", [
+                                  _c("tr", [
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Name")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Email/Number")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Updated")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "th",
+                                      { attrs: { scope: "col" } },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            staticClass: "btn btn-primary",
+                                            on: {
+                                              click: function($event) {
+                                                _vm.modelcontact = !_vm.modelcontact
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                  ADD\n                                  "
+                                            ),
+                                            _c("i", {
+                                              staticClass: "fas fa-plus"
+                                            })
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "tbody",
+                                  _vm._l(_vm.user.contacts, function(
+                                    item,
+                                    index
+                                  ) {
+                                    return _c("tr", { key: index }, [
+                                      _c("th", { attrs: { scope: "row" } }, [
+                                        _vm._v(_vm._s(item.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _vm._v(_vm._s(item.email_number))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _vm._v(_vm._s(item.updated_at))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _c(
+                                          "a",
+                                          {
+                                            on: {
+                                              click: function($event) {
+                                                $event.preventDefault()
+                                                return _vm.contactdefault(
+                                                  item.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            item.default
+                                              ? _c("i", {
+                                                  staticClass:
+                                                    "fas fa-star text-success"
+                                                })
+                                              : _c("i", {
+                                                  staticClass:
+                                                    "fas fa-star text-secondary"
+                                                })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            on: {
+                                              click: function($event) {
+                                                $event.preventDefault()
+                                                return _vm.contactdestroy(
+                                                  item.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass:
+                                                "fas fa-trash-alt text-danger"
+                                            })
+                                          ]
+                                        )
+                                      ])
+                                    ])
+                                  }),
+                                  0
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "tab-pane",
+                              attrs: { id: "address" }
+                            },
+                            [
+                              _c("table", { staticClass: "table" }, [
+                                _c("thead", [
+                                  _c("tr", [
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("State")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Distric")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Pin")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { scope: "col" } }, [
+                                      _vm._v("Address")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "th",
+                                      { attrs: { scope: "col" } },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            staticClass: "btn btn-primary",
+                                            on: {
+                                              click: function($event) {
+                                                _vm.modeladdress = !_vm.modeladdress
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                  ADD\n                                  "
+                                            ),
+                                            _c("i", {
+                                              staticClass: "fas fa-plus"
+                                            })
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "tbody",
+                                  _vm._l(_vm.user.addresses, function(
+                                    item,
+                                    index
+                                  ) {
+                                    return _c("tr", { key: index }, [
+                                      _c("th", { attrs: { scope: "row" } }, [
+                                        _vm._v(_vm._s(item.state))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [_vm._v(_vm._s(item.distric))]),
+                                      _vm._v(" "),
+                                      _c("td", [_vm._v(_vm._s(item.pin))]),
+                                      _vm._v(" "),
+                                      _c("td", [_vm._v(_vm._s(item.address))]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        item.default
+                                          ? _c("i", {
+                                              staticClass:
+                                                "fas fa-star text-success"
+                                            })
+                                          : _c("i", {
+                                              staticClass:
+                                                "fas fa-star text-secondary"
+                                            }),
+                                        _vm._v(" "),
+                                        _c("i", {
+                                          staticClass:
+                                            "fas fa-trash-alt text-danger"
+                                        })
+                                      ])
+                                    ])
+                                  }),
+                                  0
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header bg-secondary" }, [
+      _c("h4", [_vm._v("Faculty Profile")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "list-group list-group-unbordered mb-3" }, [
+      _c("li", { staticClass: "list-group-item" }, [
+        _c("b", [_vm._v("Followers")]),
+        _vm._v(" "),
+        _c("a", { staticClass: "float-right" }, [_vm._v("1,322")])
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "list-group-item" }, [
+        _c("b", [_vm._v("Following")]),
+        _vm._v(" "),
+        _c("a", { staticClass: "float-right" }, [_vm._v("543")])
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "list-group-item" }, [
+        _c("b", [_vm._v("Friends")]),
+        _vm._v(" "),
+        _c("a", { staticClass: "float-right" }, [_vm._v("13,287")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "btn btn-primary btn-block", attrs: { href: "#" } },
+      [_c("b", [_vm._v("Follow")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header p-2" }, [
+      _c("ul", { staticClass: "nav nav-pills" }, [
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link active",
+              attrs: { href: "#activity", "data-toggle": "tab" }
+            },
+            [_vm._v("Activity")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#timeline", "data-toggle": "tab" }
+            },
+            [_vm._v("Timeline")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#settings", "data-toggle": "tab" }
+            },
+            [_vm._v("Settings")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#contact", "data-toggle": "tab" }
+            },
+            [_vm._v("Contact")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { href: "#address", "data-toggle": "tab" }
+            },
+            [_vm._v("Address")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "username" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Jonathan Burke Jr.")]),
+      _vm._v(" "),
+      _c("a", { staticClass: "float-right btn-tool", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-times" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c(
+        "a",
+        { staticClass: "link-black text-sm mr-2", attrs: { href: "#" } },
+        [
+          _c("i", { staticClass: "fa fa-share mr-1" }),
+          _vm._v(" Share\n                            ")
+        ]
+      ),
+      _vm._v(" "),
+      _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-thumbs-o-up mr-1" }),
+        _vm._v(" Like\n                            ")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "float-right" }, [
+        _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-comments-o mr-1" }),
+          _vm._v(" Comments (5)\n                              ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "username" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Sarah Ross")]),
+      _vm._v(" "),
+      _c("a", { staticClass: "float-right btn-tool", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-times" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { staticClass: "form-horizontal" }, [
+      _c("div", { staticClass: "input-group input-group-sm mb-0" }, [
+        _c("input", {
+          staticClass: "form-control form-control-sm",
+          attrs: { placeholder: "Response" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group-append" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-danger", attrs: { type: "submit" } },
+            [_vm._v("Send")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "username" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Adam Jones")]),
+      _vm._v(" "),
+      _c("a", { staticClass: "float-right btn-tool", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-times" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c(
+        "a",
+        { staticClass: "link-black text-sm mr-2", attrs: { href: "#" } },
+        [
+          _c("i", { staticClass: "fa fa-share mr-1" }),
+          _vm._v(" Share\n                            ")
+        ]
+      ),
+      _vm._v(" "),
+      _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-thumbs-o-up mr-1" }),
+        _vm._v(" Like\n                            ")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "float-right" }, [
+        _c("a", { staticClass: "link-black text-sm", attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-comments-o mr-1" }),
+          _vm._v(" Comments (5)\n                              ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "time-label" }, [
+      _c("span", { staticClass: "bg-danger" }, [_vm._v("10 Feb. 2014")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("i", { staticClass: "fa fa-envelope bg-primary" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-item" }, [
+        _c("span", { staticClass: "time" }, [
+          _c("i", { staticClass: "fa fa-clock-o" }),
+          _vm._v(" 12:05\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("h3", { staticClass: "timeline-header" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Support Team")]),
+          _vm._v(" sent you an email\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-body" }, [
+          _vm._v(
+            "\n                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,\n                                weebly ning heekya handango imeem plugg dopplr jibjab, movity\n                                jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle\n                                quora plaxo ideeli hulu weebly balihoo...\n                              "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-footer" }, [
+          _c(
+            "a",
+            { staticClass: "btn btn-primary btn-sm", attrs: { href: "#" } },
+            [_vm._v("Read more")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "btn btn-danger btn-sm", attrs: { href: "#" } },
+            [_vm._v("Delete")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("i", { staticClass: "fa fa-user bg-info" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-item" }, [
+        _c("span", { staticClass: "time" }, [
+          _c("i", { staticClass: "fa fa-clock-o" }),
+          _vm._v(" 5 mins ago\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("h3", { staticClass: "timeline-header no-border" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Sarah Young")]),
+          _vm._v(
+            " accepted your friend request\n                              "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("i", { staticClass: "fa fa-comments bg-warning" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-item" }, [
+        _c("span", { staticClass: "time" }, [
+          _c("i", { staticClass: "fa fa-clock-o" }),
+          _vm._v(" 27 mins ago\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("h3", { staticClass: "timeline-header" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Jay White")]),
+          _vm._v(" commented on your post\n                              ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-body" }, [
+          _vm._v(
+            "\n                                Take me to your leader!\n                                Switzerland is small and neutral!\n                                We are more like Germany, ambitious and misunderstood!\n                              "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "timeline-footer" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-warning btn-flat btn-sm",
+              attrs: { href: "#" }
+            },
+            [_vm._v("View comment")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "time-label" }, [
+      _c("span", { staticClass: "bg-success" }, [_vm._v("3 Jan. 2014")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "time" }, [
+      _c("i", { staticClass: "fa fa-clock-o" }),
+      _vm._v(" 2 days ago\n                              ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", { staticClass: "timeline-header" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Mina Lee")]),
+      _vm._v(" uploaded new photos\n                              ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("i", { staticClass: "fa fa-clock-o bg-gray" })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tab-pane", attrs: { id: "settings" } }, [
+      _c("form", { staticClass: "form-horizontal" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputName" }
+            },
+            [_vm._v("Name")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "email", id: "inputName", placeholder: "Name" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputEmail" }
+            },
+            [_vm._v("Email")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "email", id: "inputEmail", placeholder: "Email" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputName2" }
+            },
+            [_vm._v("Name")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", id: "inputName2", placeholder: "Name" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputExperience" }
+            },
+            [_vm._v("Experience")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("textarea", {
+              staticClass: "form-control",
+              attrs: { id: "inputExperience", placeholder: "Experience" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "col-sm-2 control-label",
+              attrs: { for: "inputSkills" }
+            },
+            [_vm._v("Skills")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-10" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", id: "inputSkills", placeholder: "Skills" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
+            _c("div", { staticClass: "checkbox" }, [
+              _c("label", [
+                _c("input", { attrs: { type: "checkbox" } }),
+                _vm._v(" I agree to the\n                                  "),
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v("terms and conditions")
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "col-sm-offset-2 col-sm-10" }, [
+            _c(
+              "button",
+              { staticClass: "btn btn-danger", attrs: { type: "submit" } },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -92396,6 +91843,17 @@ var routes = [{
   path: '/faculty-profile/:id',
   name: 'faculty-profile',
   component: __webpack_require__(/*! ./components/faculty/FacultyProfile.vue */ "./resources/js/components/faculty/FacultyProfile.vue")["default"]
+}, // Student
+{
+  path: '/new-student',
+  component: __webpack_require__(/*! ./components/student/NewStudent.vue */ "./resources/js/components/student/NewStudent.vue")["default"]
+}, {
+  path: '/student-list',
+  component: __webpack_require__(/*! ./components/student/StudentList.vue */ "./resources/js/components/student/StudentList.vue")["default"]
+}, {
+  path: '/student-profile/:id',
+  name: 'student-profile',
+  component: __webpack_require__(/*! ./components/student/StudentProfile.vue */ "./resources/js/components/student/StudentProfile.vue")["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
   mode: 'history',
@@ -92903,6 +92361,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/student/NewStudent.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/student/NewStudent.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NewStudent_vue_vue_type_template_id_113e92fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NewStudent.vue?vue&type=template&id=113e92fa& */ "./resources/js/components/student/NewStudent.vue?vue&type=template&id=113e92fa&");
+/* harmony import */ var _NewStudent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewStudent.vue?vue&type=script&lang=js& */ "./resources/js/components/student/NewStudent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NewStudent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NewStudent_vue_vue_type_template_id_113e92fa___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NewStudent_vue_vue_type_template_id_113e92fa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/student/NewStudent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/student/NewStudent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/student/NewStudent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewStudent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./NewStudent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/NewStudent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewStudent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/NewStudent.vue?vue&type=template&id=113e92fa&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/student/NewStudent.vue?vue&type=template&id=113e92fa& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewStudent_vue_vue_type_template_id_113e92fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./NewStudent.vue?vue&type=template&id=113e92fa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/NewStudent.vue?vue&type=template&id=113e92fa&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewStudent_vue_vue_type_template_id_113e92fa___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewStudent_vue_vue_type_template_id_113e92fa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/student/StudentList.vue":
 /*!*********************************************************!*\
   !*** ./resources/js/components/student/StudentList.vue ***!
@@ -92967,6 +92494,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentList_vue_vue_type_template_id_6b08530a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentList_vue_vue_type_template_id_6b08530a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/student/StudentProfile.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/components/student/StudentProfile.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _StudentProfile_vue_vue_type_template_id_f0f91f26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./StudentProfile.vue?vue&type=template&id=f0f91f26& */ "./resources/js/components/student/StudentProfile.vue?vue&type=template&id=f0f91f26&");
+/* harmony import */ var _StudentProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./StudentProfile.vue?vue&type=script&lang=js& */ "./resources/js/components/student/StudentProfile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./StudentProfile.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _StudentProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _StudentProfile_vue_vue_type_template_id_f0f91f26___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _StudentProfile_vue_vue_type_template_id_f0f91f26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/student/StudentProfile.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/student/StudentProfile.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/student/StudentProfile.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./StudentProfile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./StudentProfile.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/StudentProfile.vue?vue&type=template&id=f0f91f26&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/student/StudentProfile.vue?vue&type=template&id=f0f91f26& ***!
+  \*******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_template_id_f0f91f26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./StudentProfile.vue?vue&type=template&id=f0f91f26& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/StudentProfile.vue?vue&type=template&id=f0f91f26&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_template_id_f0f91f26___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StudentProfile_vue_vue_type_template_id_f0f91f26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -15,8 +15,12 @@ class CreateTransectionsTable extends Migration
     {
         Schema::create('transections', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('student_id');
             $table->float('amount');
+            $table->string('paid_by')->nullable();
+            $table->string('paid_by_number')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

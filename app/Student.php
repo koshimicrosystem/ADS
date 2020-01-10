@@ -27,7 +27,7 @@ class Student extends Model
     {
         return $this->hasMany('App\Due');
     }
-    public function advance()
+    public function advances()
     {
         return $this->hasMany('App\Advance');
     }

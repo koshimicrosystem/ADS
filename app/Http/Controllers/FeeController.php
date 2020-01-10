@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fee;
+use App\Student;
 use Illuminate\Http\Request;
 
 class FeeController extends Controller
@@ -17,14 +18,25 @@ class FeeController extends Controller
         //
     }
 
+    public function defaulters(){
+        // return Deal::with(["redeem" => function($q){
+        //     $q->where('user_id', '=', 1);
+        // }])->get();
+        return Student::with(["std","advances","user" => function($contacts){
+            $contacts->with('contacts');
+        },"dues" => function($q){
+            $q->where('status', '=', 'due')->with('fee');
+        }])->get();
+    }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function dataset($search = null)
     {
-        //
+        return array("Volvo", "VVolvo", "VVolvoVVolvo");
     }
 
     /**

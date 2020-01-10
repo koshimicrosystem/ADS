@@ -33,6 +33,10 @@ Route::get('/contact/default/{user_id}/{contact_id}', 'ContactController@default
 //STD
 Route::get('/std/index', 'StdController@index')->name('std.index');
 
+//Fee
+Route::get('/fee/defaulters', 'FeeController@defaulters')->name('fee.defaulters');
+Route::get('/fee/dataset/{search?}', 'FeeController@dataset')->name('fee.dataset');
+
 
 // default
 Auth::routes();

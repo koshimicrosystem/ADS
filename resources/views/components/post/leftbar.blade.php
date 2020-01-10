@@ -55,6 +55,33 @@
           </li>
 
 
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-pie-chart"></i>
+              <p>
+                Fee
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/fee-defaulters" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Defaulters List</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/fee-submit" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Fee Submit</p>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+
+
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-pie-chart"></i>

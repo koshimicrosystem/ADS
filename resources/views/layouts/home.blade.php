@@ -9,6 +9,7 @@
   @yield('meta')
   @yield('style1')
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('css/custom.css')}}">
   <script src="https://kit.fontawesome.com/ce564b7b65.js" crossorigin="anonymous"></script>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   @yield('style2')

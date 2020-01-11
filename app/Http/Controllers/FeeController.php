@@ -37,12 +37,23 @@ class FeeController extends Controller
      */
     public function dataset($search = null)
     {
-        $name = User::where('email','like','%'.$search.'%')
+        $name =  User::role('Student')->with(['contacts','userable' => function ($query) {
+            $query->with('std');
+        }])
+        ->where('email','like','%'.$search.'%')
         ->orWhere('f_name','like','%'.$search.'%')
         ->orWhere('m_name','like','%'.$search.'%')
         ->orWhere('l_name','like','%'.$search.'%')
-        ->take(10)->get();
+        ->orWhere('userable_id','like','%'.$search.'%')
+        ->take(15)->get();
         return $name;
+    }
+
+    public function getfee($id){
+        $student = Student::find($id);
+        $student->dues->where('status','=','due');
+        $student->advances->where('status','=','advance');
+        return ($student);
     }
 
     /**
@@ -51,9 +62,9 @@ class FeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function submit(Request $request)
     {
-        //
+        return $request;
     }
 
     /**

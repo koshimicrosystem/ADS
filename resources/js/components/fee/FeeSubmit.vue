@@ -10,7 +10,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4 order-md-2 mb-4">
-                                    <b-alert
+                                    <!-- <b-alert
                                         v-if="user.id"
                                         show
                                         dismissible
@@ -27,7 +27,7 @@
                                             class="alert-link"
                                             >here</router-link
                                         >to see details.
-                                    </b-alert>
+                  </b-alert>-->
                                     <user-count></user-count>
                                 </div>
                                 <div class="col-md-8 order-md-1">
@@ -48,8 +48,43 @@
                                                             index) in dataset"
                                                             :key="index"
                                                         >
-                                                            <a href="#">
-                                                                {{item.f_name}} {{item.m_name}} {{item.l_name}}
+                                                            <a
+                                                                href="#"
+                                                                @click.prevent="
+                                                                    select_user(
+                                                                        item
+                                                                    )
+                                                                "
+                                                            >
+                                                                <img
+                                                                    id="#profile"
+                                                                    class="img-circle img-bordered-sm m-0 p-0"
+                                                                    :src="
+                                                                        `/storage/${item.profile_pic}`
+                                                                    "
+                                                                    alt="User Image"
+                                                                    height="35px"
+                                                                />
+                                                                {{
+                                                                    item.userable_id
+                                                                }}
+                                                                :
+                                                                {{
+                                                                    item.f_name
+                                                                }}
+                                                                {{
+                                                                    item.m_name
+                                                                }}
+                                                                {{
+                                                                    item.l_name
+                                                                }}
+                                                                ({{
+                                                                    item
+                                                                        .userable
+                                                                        .std
+                                                                        .name
+                                                                }}) -
+                                                                {{ item.email }}
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -124,26 +159,174 @@
                                                             }}</option
                                                         >
                                                     </select>
-                                                </div> -->
+                        </div>-->
                                             </div>
                                         </fieldset>
                                         <br />
 
-                                        <fieldset>
+                                        <fieldset v-if="user.id">
                                             <legend>Payment</legend>
 
                                             <div class="row">
-                                                <div class="col-md-12 mb-3">
-                                                    <label
-                                                        for="phone_number"
-                                                        class="badge-pill badge-danger m-2"
-                                                        >Dues : Rs 5000</label
+                                                <div class="col-md-12">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-md-4">
+                                                            <img
+                                                                :src="
+                                                                    `/storage/${user.profile_pic}`
+                                                                "
+                                                                class="card-img"
+                                                                alt="..."
+                                                            />
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div
+                                                                class="card-body"
+                                                            >
+                                                                <h5
+                                                                    class="card-title"
+                                                                >
+                                                                    {{
+                                                                        user.f_name
+                                                                    }}
+                                                                    {{
+                                                                        user.m_name
+                                                                    }}
+                                                                    {{
+                                                                        user.l_name
+                                                                    }}
+                                                                </h5>
+                                                                <p
+                                                                    class="card-text"
+                                                                >
+                                                                    Admission
+                                                                    Number :
+                                                                    {{
+                                                                        user.userable_id
+                                                                    }}
+                                                                </p>
+                                                                <p
+                                                                    class="card-text"
+                                                                >
+                                                                    STD :
+                                                                    {{
+                                                                        user
+                                                                            .userable
+                                                                            .std
+                                                                            .name
+                                                                    }}
+                                                                </p>
+                                                                <p
+                                                                    class="card-text"
+                                                                >
+                                                                    User Id :
+                                                                    {{
+                                                                        user.email
+                                                                    }}
+                                                                </p>
+                                                                <p
+                                                                    class="card-text"
+                                                                >
+                                                                    Contacts :
+                                                                    <span
+                                                                        v-for="(item,
+                                                                        index) in user.contacts"
+                                                                        :key="
+                                                                            index
+                                                                        "
+                                                                    >
+                                                                        {{
+                                                                            item.email_number
+                                                                        }}
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <li
+                                                        class="list-group-item d-flex justify-content-between align-items-center bg-danger"
                                                     >
-                                                    <label
-                                                        for="phone_number"
-                                                        class="badge-pill badge-success m-2"
-                                                        >Advance : Rs 10</label
+                                                        Dues
+                                                    </li>
+
+                                                    <li
+                                                        v-for="(item,
+                                                        index) in user.userable
+                                                            .dues"
+                                                        :key="index"
+                                                        class="list-group-item d-flex justify-content-between align-items-center"
                                                     >
+                                                        {{ item.name }}
+                                                        <span
+                                                            class="badge badge-primary badge-pill"
+                                                        >
+                                                            ₹
+                                                            {{ item.amount }}
+                                                        </span>
+                                                    </li>
+
+                                                    <li
+                                                        class="list-group-item d-flex justify-content-between align-items-center"
+                                                    >
+                                                        Total
+                                                        <span
+                                                            class="badge badge-primary badge-pill"
+                                                        >
+                                                            ₹
+                                                            {{
+                                                                calculate(
+                                                                    user
+                                                                        .userable
+                                                                        .dues
+                                                                )
+                                                            }}
+                                                        </span>
+                                                    </li>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <li
+                                                        class="list-group-item d-flex justify-content-between align-items-center bg-success"
+                                                    >
+                                                        Advance
+                                                    </li>
+
+                                                    <li
+                                                        v-for="(item,
+                                                        index) in user.userable
+                                                            .advances"
+                                                        :key="index"
+                                                        v-if="user.userable.advances"
+                                                        class="list-group-item d-flex justify-content-between align-items-center"
+                                                    >
+                                                        {{ item.name }}
+                                                        <span
+                                                            class="badge badge-primary badge-pill"
+                                                        >
+                                                            ₹
+                                                            {{ item.amount }}
+                                                        </span>
+                                                    </li>
+                                                    <li
+                                                        class="list-group-item d-flex justify-content-between align-items-center"
+                                                    >
+                                                        Total
+                                                        <span
+                                                            class="badge badge-primary badge-pill"
+                                                        >
+                                                            ₹
+                                                            {{
+                                                                calculate(
+                                                                    user
+                                                                        .userable
+                                                                        .advances
+                                                                )
+                                                            }}
+                                                        </span>
+                                                    </li>
                                                 </div>
 
                                                 <div class="col-md-6 mb-3">
@@ -152,8 +335,8 @@
                                                     >
                                                     <input
                                                         type="number"
-                                                        id="phone_number"
-                                                        v-model="phone_number"
+                                                        id="pay_amount"
+                                                        v-model="pay_amount"
                                                         class="form-control"
                                                         placeholder
                                                         value
@@ -168,15 +351,7 @@
                                                     <span class="text-muted"
                                                         >(Optional)</span
                                                     >
-                                                    <textarea
-                                                        type="number"
-                                                        id="phone_number"
-                                                        v-model="phone_number"
-                                                        class="form-control"
-                                                        placeholder
-                                                        value
-                                                        required
-                                                    />
+                                                    <textarea v-model="pay_remark" class="form-control" />
                                                 </div>
                                             </div>
                                             <!-- <hr class="mb-4" /> -->
@@ -210,7 +385,8 @@ export default {
     },
     data() {
         return {
-            phone_number: "",
+            pay_amount: "",
+            pay_remark: "",
             search: "",
             loading: false,
             errored: false,
@@ -228,27 +404,45 @@ export default {
         this.debouncedsearch_apicall = _.debounce(this.search_apicall, 600);
     },
     methods: {
-        search_apicall() {
+        select_user(item) {
+            this.user = item;
+            this.loading = true;
             axios
-                .get("/fee/dataset/" + this.search)
-                .then(response => (this.dataset = response.data))
-                .catch(error => (this.dataset = null));
+                .get("/fee/getfee/" + this.user.userable_id)
+                .then(
+                    response => (
+                        (this.user.userable.dues = response.data.dues),
+                        (this.user.userable.advances = response.data.advances)
+                    )
+                );
+            //.catch(error => (this.dataset = null));
+            this.loading = false;
+            this.search = "";
+        },
+        search_apicall() {
+            if (this.search) {
+                axios
+                    .get("/fee/dataset/" + this.search)
+                    .then(response => (this.dataset = response.data))
+                    .catch(error => (this.dataset = null));
+            } else {
+                this.dataset = null;
+            }
+        },
+
+        validation() {
+            this.$v.$touch();
+            if (!this.$v.pay_amount.required) {
+                this.errormessage("Pay Amount : required.");
+                this.errored = true;
+            }
         },
         reset_form() {
-            this.f_name = "";
-            this.m_name = "";
-            this.l_name = "";
-            this.dob = "";
-            this.gender = "";
-            this.email = "";
-            this.phone_number = "";
-            this.loading = false;
-            this.errored = false;
-            this.doj = "";
+            (this.pay_amount = ""),
+                (this.pay_remark = ""),
+                (this.errored = false);
         },
-        alert($a) {
-            console.log($a);
-        },
+
         submit() {
             this.errored = false;
             this.validation();
@@ -256,15 +450,11 @@ export default {
             if (!this.errored) {
                 this.loading = true;
                 axios
-                    .post("/faculty/store", {
-                        f_name: this.f_name,
-                        m_name: this.m_name,
-                        l_name: this.l_name,
-                        dob: this.dob,
-                        doj: this.doj,
-                        gender: this.gender,
-                        email: this.email,
-                        phone_number: this.phone_number
+                    .post("/fee/submit", {
+                        pay_amount: this.pay_amount,
+                        pay_remark: this.pay_remark,
+                        user_id: this.user.id,
+                        student_id: this.user.userable_id
                     })
                     .then(response => {
                         this.user = response.data;
@@ -296,37 +486,24 @@ export default {
             axios
                 .get("/std/index")
                 .then(response => (this.stds = response.data));
+        },
+        calculate(data) {
+            if (data) {
+                var this_ = this;
+                var total = 0.0;
+                data.forEach(element => {
+                    total += element.amount;
+                });
+            }
+            return total;
         }
     },
     validations: {
-        f_name: {
-            required,
-            minLength: minLength(3)
-        },
-        m_name: {
-            minLength: minLength(3)
-        },
-        l_name: {
-            minLength: minLength(3)
-        },
-        phone_number: {
-            required,
-            between: between(6000000000, 9999999999)
-        },
-        dob: {
-            required
-        },
-        email: {
-            email,
-            required
-        },
-        gender: {
-            required
-        },
-        doj: {
+        pay_amount: {
             required
         }
     },
+    computed: {},
     components: {
         OverlayComponent
     }
@@ -354,5 +531,8 @@ export default {
     background-color: rgba(59, 58, 58, 0.5);
     font-size: 20px;
     padding: 10px;
+}
+#myUL li a img:hover {
+    height: 120px;
 }
 </style>

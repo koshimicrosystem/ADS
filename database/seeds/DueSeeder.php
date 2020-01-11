@@ -19,6 +19,8 @@ class DueSeeder extends Seeder
                 factory(App\Due::class)->create([
                     'fee_id' => $fee->id,
                     'student_id' => $student->id,
+                    'name'=> $fee->name,
+                    'amount'=>$fee->amount
                 ]);
             }
         }

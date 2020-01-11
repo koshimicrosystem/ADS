@@ -3842,6 +3842,181 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3849,7 +4024,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      phone_number: "",
+      pay_amount: "",
+      pay_remark: "",
       search: "",
       loading: false,
       errored: false,
@@ -3867,61 +4043,69 @@ __webpack_require__.r(__webpack_exports__);
     this.debouncedsearch_apicall = _.debounce(this.search_apicall, 600);
   },
   methods: {
-    search_apicall: function search_apicall() {
+    select_user: function select_user(item) {
       var _this = this;
 
-      axios.get("/fee/dataset/" + this.search).then(function (response) {
-        return _this.dataset = response.data;
-      })["catch"](function (error) {
-        return _this.dataset = null;
-      });
+      this.user = item;
+      this.loading = true;
+      axios.get("/fee/getfee/" + this.user.userable_id).then(function (response) {
+        return _this.user.userable.dues = response.data.dues, _this.user.userable.advances = response.data.advances;
+      }); //.catch(error => (this.dataset = null));
+
+      this.loading = false;
+      this.search = "";
+    },
+    search_apicall: function search_apicall() {
+      var _this2 = this;
+
+      if (this.search) {
+        axios.get("/fee/dataset/" + this.search).then(function (response) {
+          return _this2.dataset = response.data;
+        })["catch"](function (error) {
+          return _this2.dataset = null;
+        });
+      } else {
+        this.dataset = null;
+      }
+    },
+    validation: function validation() {
+      this.$v.$touch();
+
+      if (!this.$v.pay_amount.required) {
+        this.errormessage("Pay Amount : required.");
+        this.errored = true;
+      }
     },
     reset_form: function reset_form() {
-      this.f_name = "";
-      this.m_name = "";
-      this.l_name = "";
-      this.dob = "";
-      this.gender = "";
-      this.email = "";
-      this.phone_number = "";
-      this.loading = false;
-      this.errored = false;
-      this.doj = "";
-    },
-    alert: function alert($a) {
-      console.log($a);
+      this.pay_amount = "", this.pay_remark = "", this.errored = false;
     },
     submit: function submit() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.errored = false;
       this.validation();
 
       if (!this.errored) {
         this.loading = true;
-        axios.post("/faculty/store", {
-          f_name: this.f_name,
-          m_name: this.m_name,
-          l_name: this.l_name,
-          dob: this.dob,
-          doj: this.doj,
-          gender: this.gender,
-          email: this.email,
-          phone_number: this.phone_number
+        axios.post("/fee/submit", {
+          pay_amount: this.pay_amount,
+          pay_remark: this.pay_remark,
+          user_id: this.user.id,
+          student_id: this.user.userable_id
         }).then(function (response) {
-          _this2.user = response.data;
-          _this2.loading = false;
+          _this3.user = response.data;
+          _this3.loading = false;
 
-          _this2.$bvToast.toast("Your request is submitted successfully.", {
+          _this3.$bvToast.toast("Your request is submitted successfully.", {
             title: "Success !",
             variant: "success"
           });
 
-          _this2.reset_form();
+          _this3.reset_form();
         })["catch"](function (error) {
-          _this2.errormessage("Email id already exists. Try again !");
+          _this3.errormessage("Email id already exists. Try again !");
         })["finally"](function () {
-          return _this2.loading = false;
+          return _this3.loading = false;
         });
       }
     },
@@ -3932,42 +4116,30 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     get_stds: function get_stds() {
-      var _this3 = this;
+      var _this4 = this;
 
       axios.get("/std/index").then(function (response) {
-        return _this3.stds = response.data;
+        return _this4.stds = response.data;
       });
+    },
+    calculate: function calculate(data) {
+      if (data) {
+        var this_ = this;
+        var total = 0.0;
+        data.forEach(function (element) {
+          total += element.amount;
+        });
+      }
+
+      return total;
     }
   },
   validations: {
-    f_name: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"],
-      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
-    },
-    m_name: {
-      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
-    },
-    l_name: {
-      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["minLength"])(3)
-    },
-    phone_number: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"],
-      between: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["between"])(6000000000, 9999999999)
-    },
-    dob: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
-    },
-    email: {
-      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["email"],
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
-    },
-    gender: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
-    },
-    doj: {
+    pay_amount: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__["required"]
     }
   },
+  computed: {},
   components: {
     OverlayComponent: _ui_common_OverlayComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -38764,7 +38936,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n#myUL {\r\n    list-style-type: none;\r\n    padding: 0;\r\n    margin: 0;\n}\n#myUL li a {\r\n    border: 1px solid #ddd;\r\n    margin-top: -1px; /* Prevent double borders */\r\n    background-color: #f6f6f6;\r\n    padding: 5px;\r\n    text-decoration: none;\r\n    font-size: 15px;\r\n    color: black;\r\n    display: block;\n}\n#myUL li a:hover:not(.header) {\r\n    background-color: rgba(59, 58, 58, 0.5);\r\n    font-size: 20px;\r\n    padding: 10px;\n}\r\n", ""]);
+exports.push([module.i, "\n#myUL {\r\n    list-style-type: none;\r\n    padding: 0;\r\n    margin: 0;\n}\n#myUL li a {\r\n    border: 1px solid #ddd;\r\n    margin-top: -1px; /* Prevent double borders */\r\n    background-color: #f6f6f6;\r\n    padding: 5px;\r\n    text-decoration: none;\r\n    font-size: 15px;\r\n    color: black;\r\n    display: block;\n}\n#myUL li a:hover:not(.header) {\r\n    background-color: rgba(59, 58, 58, 0.5);\r\n    font-size: 20px;\r\n    padding: 10px;\n}\n#myUL li a img:hover {\r\n    height: 120px;\n}\r\n", ""]);
 
 // exports
 
@@ -73541,46 +73713,7 @@ var render = function() {
                   _c(
                     "div",
                     { staticClass: "col-md-4 order-md-2 mb-4" },
-                    [
-                      _vm.user.id
-                        ? _c(
-                            "b-alert",
-                            {
-                              attrs: {
-                                show: "",
-                                dismissible: "",
-                                variant: "success"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    New Faculty added with username :\n                                    " +
-                                  _vm._s(_vm.user.email) +
-                                  ", Password : Phone\n                                    Number. Click\n                                    "
-                              ),
-                              _c(
-                                "router-link",
-                                {
-                                  staticClass: "alert-link",
-                                  attrs: {
-                                    to: {
-                                      name: "faculty-profile",
-                                      params: { id: _vm.user.id }
-                                    }
-                                  }
-                                },
-                                [_vm._v("here")]
-                              ),
-                              _vm._v(
-                                "to see details.\n                                "
-                              )
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c("user-count")
-                    ],
+                    [_c("user-count")],
                     1
                   ),
                   _vm._v(" "),
@@ -73619,17 +73752,45 @@ var render = function() {
                                 { attrs: { id: "myUL" } },
                                 _vm._l(_vm.dataset, function(item, index) {
                                   return _c("li", { key: index }, [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v(
-                                        "\n                                                            " +
-                                          _vm._s(item.f_name) +
-                                          " " +
-                                          _vm._s(item.m_name) +
-                                          " " +
-                                          _vm._s(item.l_name) +
-                                          "\n                                                        "
-                                      )
-                                    ])
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "#" },
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            return _vm.select_user(item)
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass:
+                                            "img-circle img-bordered-sm m-0 p-0",
+                                          attrs: {
+                                            id: "#profile",
+                                            src: "/storage/" + item.profile_pic,
+                                            alt: "User Image",
+                                            height: "35px"
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "\n                                                            " +
+                                            _vm._s(item.userable_id) +
+                                            "\n                                                            :\n                                                            " +
+                                            _vm._s(item.f_name) +
+                                            "\n                                                            " +
+                                            _vm._s(item.m_name) +
+                                            "\n                                                            " +
+                                            _vm._s(item.l_name) +
+                                            "\n                                                            (" +
+                                            _vm._s(item.userable.std.name) +
+                                            ") -\n                                                            " +
+                                            _vm._s(item.email) +
+                                            "\n                                                        "
+                                        )
+                                      ]
+                                    )
                                   ])
                                 }),
                                 0
@@ -73640,103 +73801,365 @@ var render = function() {
                         _vm._v(" "),
                         _c("br"),
                         _vm._v(" "),
-                        _c("fieldset", [
-                          _c("legend", [_vm._v("Payment")]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _vm._m(1),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col-md-6 mb-3" }, [
-                              _c("label", { attrs: { for: "phone_number" } }, [
-                                _vm._v("Pay")
-                              ]),
+                        _vm.user.id
+                          ? _c("fieldset", [
+                              _c("legend", [_vm._v("Payment")]),
                               _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.phone_number,
-                                    expression: "phone_number"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "number",
-                                  id: "phone_number",
-                                  placeholder: "",
-                                  value: "",
-                                  required: ""
-                                },
-                                domProps: { value: _vm.phone_number },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("div", { staticClass: "row no-gutters" }, [
+                                    _c("div", { staticClass: "col-md-4" }, [
+                                      _c("img", {
+                                        staticClass: "card-img",
+                                        attrs: {
+                                          src:
+                                            "/storage/" + _vm.user.profile_pic,
+                                          alt: "..."
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "col-md-8" }, [
+                                      _c("div", { staticClass: "card-body" }, [
+                                        _c(
+                                          "h5",
+                                          { staticClass: "card-title" },
+                                          [
+                                            _vm._v(
+                                              "\n                                                                " +
+                                                _vm._s(_vm.user.f_name) +
+                                                "\n                                                                " +
+                                                _vm._s(_vm.user.m_name) +
+                                                "\n                                                                " +
+                                                _vm._s(_vm.user.l_name) +
+                                                "\n                                                            "
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("p", { staticClass: "card-text" }, [
+                                          _vm._v(
+                                            "\n                                                                Admission\n                                                                Number :\n                                                                " +
+                                              _vm._s(_vm.user.userable_id) +
+                                              "\n                                                            "
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("p", { staticClass: "card-text" }, [
+                                          _vm._v(
+                                            "\n                                                                STD :\n                                                                " +
+                                              _vm._s(
+                                                _vm.user.userable.std.name
+                                              ) +
+                                              "\n                                                            "
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("p", { staticClass: "card-text" }, [
+                                          _vm._v(
+                                            "\n                                                                User Id :\n                                                                " +
+                                              _vm._s(_vm.user.email) +
+                                              "\n                                                            "
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          { staticClass: "card-text" },
+                                          [
+                                            _vm._v(
+                                              "\n                                                                Contacts :\n                                                                "
+                                            ),
+                                            _vm._l(_vm.user.contacts, function(
+                                              item,
+                                              index
+                                            ) {
+                                              return _c(
+                                                "span",
+                                                { key: index },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                                                    " +
+                                                      _vm._s(
+                                                        item.email_number
+                                                      ) +
+                                                      "\n                                                                "
+                                                  )
+                                                ]
+                                              )
+                                            })
+                                          ],
+                                          2
+                                        )
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-md-6" },
+                                  [
+                                    _c(
+                                      "li",
+                                      {
+                                        staticClass:
+                                          "list-group-item d-flex justify-content-between align-items-center bg-danger"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    Dues\n                                                "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.user.userable.dues, function(
+                                      item,
+                                      index
+                                    ) {
+                                      return _c(
+                                        "li",
+                                        {
+                                          key: index,
+                                          staticClass:
+                                            "list-group-item d-flex justify-content-between align-items-center"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    " +
+                                              _vm._s(item.name) +
+                                              "\n                                                    "
+                                          ),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "badge badge-primary badge-pill"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        ₹\n                                                        " +
+                                                  _vm._s(item.amount) +
+                                                  "\n                                                    "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "li",
+                                      {
+                                        staticClass:
+                                          "list-group-item d-flex justify-content-between align-items-center"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    Total\n                                                    "
+                                        ),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass:
+                                              "badge badge-primary badge-pill"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                                        ₹\n                                                        " +
+                                                _vm._s(
+                                                  _vm.calculate(
+                                                    _vm.user.userable.dues
+                                                  )
+                                                ) +
+                                                "\n                                                    "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  2
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-md-6" },
+                                  [
+                                    _c(
+                                      "li",
+                                      {
+                                        staticClass:
+                                          "list-group-item d-flex justify-content-between align-items-center bg-success"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    Advance\n                                                "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.user.userable.advances, function(
+                                      item,
+                                      index
+                                    ) {
+                                      return _vm.user.userable.advances
+                                        ? _c(
+                                            "li",
+                                            {
+                                              key: index,
+                                              staticClass:
+                                                "list-group-item d-flex justify-content-between align-items-center"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                                                    " +
+                                                  _vm._s(item.name) +
+                                                  "\n                                                    "
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass:
+                                                    "badge badge-primary badge-pill"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                                        ₹\n                                                        " +
+                                                      _vm._s(item.amount) +
+                                                      "\n                                                    "
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        : _vm._e()
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "li",
+                                      {
+                                        staticClass:
+                                          "list-group-item d-flex justify-content-between align-items-center"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    Total\n                                                    "
+                                        ),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass:
+                                              "badge badge-primary badge-pill"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                                        ₹\n                                                        " +
+                                                _vm._s(
+                                                  _vm.calculate(
+                                                    _vm.user.userable.advances
+                                                  )
+                                                ) +
+                                                "\n                                                    "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  2
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-6 mb-3" }, [
+                                  _c(
+                                    "label",
+                                    { attrs: { for: "phone_number" } },
+                                    [_vm._v("Pay")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.pay_amount,
+                                        expression: "pay_amount"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      type: "number",
+                                      id: "pay_amount",
+                                      placeholder: "",
+                                      value: "",
+                                      required: ""
+                                    },
+                                    domProps: { value: _vm.pay_amount },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.pay_amount = $event.target.value
+                                      }
                                     }
-                                    _vm.phone_number = $event.target.value
-                                  }
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col-md-12 mb-3" }, [
-                              _c("label", { attrs: { for: "phone_number" } }, [
-                                _vm._v("Remark")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "text-muted" }, [
-                                _vm._v("(Optional)")
-                              ]),
-                              _vm._v(" "),
-                              _c("textarea", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.phone_number,
-                                    expression: "phone_number"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "number",
-                                  id: "phone_number",
-                                  placeholder: "",
-                                  value: "",
-                                  required: ""
-                                },
-                                domProps: { value: _vm.phone_number },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-12 mb-3" }, [
+                                  _c(
+                                    "label",
+                                    { attrs: { for: "phone_number" } },
+                                    [_vm._v("Remark")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "text-muted" }, [
+                                    _vm._v("(Optional)")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.pay_remark,
+                                        expression: "pay_remark"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    domProps: { value: _vm.pay_remark },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.pay_remark = $event.target.value
+                                      }
                                     }
-                                    _vm.phone_number = $event.target.value
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "btn btn-primary btn-lg btn-block",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.submit()
+                                    }
                                   }
-                                }
-                              })
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-lg btn-block",
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  return _vm.submit()
-                                }
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Continue to Save\n                                        "
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                            Continue to Save\n                                        "
+                                  )
+                                ]
                               )
-                            ]
-                          )
-                        ])
+                            ])
+                          : _vm._e()
                       ]
                     )
                   ]),
@@ -73759,30 +74182,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header bg-secondary" }, [
       _c("h4", [_vm._v("New Student")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 mb-3" }, [
-      _c(
-        "label",
-        {
-          staticClass: "badge-pill badge-danger m-2",
-          attrs: { for: "phone_number" }
-        },
-        [_vm._v("Dues : Rs 5000")]
-      ),
-      _vm._v(" "),
-      _c(
-        "label",
-        {
-          staticClass: "badge-pill badge-success m-2",
-          attrs: { for: "phone_number" }
-        },
-        [_vm._v("Advance : Rs 10")]
-      )
     ])
   }
 ]

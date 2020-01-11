@@ -36,6 +36,8 @@ Route::get('/std/index', 'StdController@index')->name('std.index');
 //Fee
 Route::get('/fee/defaulters', 'FeeController@defaulters')->name('fee.defaulters');
 Route::get('/fee/dataset/{search?}', 'FeeController@dataset')->name('fee.dataset');
+Route::get('/fee/getfee/{id}', 'FeeController@getfee')->name('fee.getfee');
+Route::post('/fee/submit', 'FeeController@submit')->name('fee.submit');
 
 
 // default

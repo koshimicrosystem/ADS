@@ -21,6 +21,8 @@ class CreateDuesTable extends Migration
             $table->date('due_date');
             $table->string('last_date');
             $table->string('status')->default('due');
+            $table->string('name');
+            $table->float('amount');
             $table->timestamps();
             $table->softDeletes();	
         });

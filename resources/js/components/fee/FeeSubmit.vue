@@ -36,25 +36,23 @@
                                         <fieldset>
                                             <legend>Search</legend>
                                             <div class="row">
-                                                <div class="col-md-12 mb-3">
+                                                <div class="col-md-12">
                                                     <b-form-input
                                                         v-model="search"
-                                                        list="my-list-id"
                                                     ></b-form-input>
-
-                                                    <datalist id="my-list-id">
-                                                        <option
-                                                            >Manual
-                                                            Option</option
-                                                        >
-                                                        <option
-                                                            @click.prevent="alert($event.target.dataset.id)"
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <ul id="myUL">
+                                                        <li
                                                             v-for="(item,
                                                             index) in dataset"
                                                             :key="index"
-                                                            ><a @click.prevent="alert($event.target.dataset.id)">{{ item }}</a></option
                                                         >
-                                                    </datalist>
+                                                            <a href="#">
+                                                                {{item.f_name}} {{item.m_name}} {{item.l_name}}
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                                 <!-- <datalist id="my-dataset">
                                                     <option>Manual Option</option>
@@ -212,30 +210,29 @@ export default {
     },
     data() {
         return {
-            phone_number : '',
+            phone_number: "",
             search: "",
             loading: false,
             errored: false,
             user: {},
-            dataset: [],
+            dataset: []
         };
     },
     watch: {
         // whenever question changes, this function will run
         search() {
-             this.debouncedsearch_apicall()
-        },
+            this.debouncedsearch_apicall();
+        }
     },
-    created: function () {
-   
-    this.debouncedsearch_apicall = _.debounce(this.search_apicall, 600)
-  },
+    created: function() {
+        this.debouncedsearch_apicall = _.debounce(this.search_apicall, 600);
+    },
     methods: {
-        search_apicall(){
+        search_apicall() {
             axios
-                .get("/fee/dataset/"+this.search)
+                .get("/fee/dataset/" + this.search)
                 .then(response => (this.dataset = response.data))
-                .catch(error => (this.dataset = null))
+                .catch(error => (this.dataset = null));
         },
         reset_form() {
             this.f_name = "";
@@ -249,7 +246,7 @@ export default {
             this.errored = false;
             this.doj = "";
         },
-        alert($a){
+        alert($a) {
             console.log($a);
         },
         submit() {
@@ -335,3 +332,27 @@ export default {
     }
 };
 </script>
+<style>
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: rgba(59, 58, 58, 0.5);
+    font-size: 20px;
+    padding: 10px;
+}
+</style>

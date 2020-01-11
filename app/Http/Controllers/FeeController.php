@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Fee;
 use App\Student;
+use App\User;
 use Illuminate\Http\Request;
 
 class FeeController extends Controller
@@ -36,7 +37,12 @@ class FeeController extends Controller
      */
     public function dataset($search = null)
     {
-        return array("Volvo", "VVolvo", "VVolvoVVolvo");
+        $name = User::where('email','like','%'.$search.'%')
+        ->orWhere('f_name','like','%'.$search.'%')
+        ->orWhere('m_name','like','%'.$search.'%')
+        ->orWhere('l_name','like','%'.$search.'%')
+        ->take(10)->get();
+        return $name;
     }
 
     /**

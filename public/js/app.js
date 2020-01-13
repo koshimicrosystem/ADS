@@ -4017,6 +4017,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4098,10 +4104,13 @@ __webpack_require__.r(__webpack_exports__);
           _this3.user.userable.transection = response.data.transection;
           _this3.loading = false;
 
-          _this3.$bvToast.toast("Your request is submitted successfully.", {
+          _this3.$bvToast.toast("₹ " + _this3.pay_amount + " is submitted adainst " + _this3.user.f_name + " " + _this3.user.m_name + " " + _this3.user.l_name + '.' + 'Transection Id ' + _this3.user.userable.transection.id, {
+            href: '/fee-defaulters',
             title: "Success !",
             variant: "success"
           });
+
+          _this3.$bvToast.toast();
 
           _this3.reset_form();
         })["catch"](function (error) {

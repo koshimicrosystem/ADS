@@ -10,15 +10,21 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4 order-md-2 mb-4">
-                                    <!-- <b-alert
-                                        v-if="user.id"
+                                    <!--<b-alert
+                                       v-if="typeof user.userable.transection !== 'undefined'"
                                         show
                                         dismissible
                                         variant="success"
                                     >
-                                        New Faculty added with username :
-                                        {{ user.email }}, Password : Phone
-                                        Number. Click
+                                        ₹ {{pay_amount}} is submitted adainst  {{
+                                                                    user.f_name
+                                                                }}
+                                                                {{
+                                                                    user.m_name
+                                                                }}
+                                                                {{
+                                                                    user.l_name
+                                                                }} ({{user.userable.std.name}}). Transection Number : 
                                         <router-link
                                             :to="{
                                                 name: 'faculty-profile',
@@ -27,7 +33,7 @@
                                             class="alert-link"
                                             >here</router-link
                                         >to see details.
-                  </b-alert>-->
+                                    </b-alert>  -->
                                     <user-count></user-count>
                                 </div>
                                 <div class="col-md-8 order-md-1">
@@ -447,6 +453,7 @@ export default {
             this.errored = false;
             this.validation();
 
+
             if (!this.errored) {
                 this.loading = true;
                 axios
@@ -462,12 +469,16 @@ export default {
                         this.user.userable.transection = response.data.transection;
                         this.loading = false;
                         this.$bvToast.toast(
-                            "Your request is submitted successfully.",
+                            "₹ "+this.pay_amount+" is submitted adainst "  +this.user.f_name +" "+this.user.m_name+" "+this.user.l_name +'.'+'Transection Id '+this.user.userable.transection.id,
                             {
+                                href: '/fee-defaulters',
                                 title: "Success !",
                                 variant: "success"
                             }
                         );
+                         this.$bvToast.toast(
+
+                         );
                         this.reset_form();
                     })
                     .catch(error => {

@@ -4093,7 +4093,9 @@ __webpack_require__.r(__webpack_exports__);
           user_id: this.user.id,
           student_id: this.user.userable_id
         }).then(function (response) {
-          _this3.user = response.data;
+          _this3.user.userable.dues = response.data.duest;
+          _this3.user.userable.advances = response.data.advancest;
+          _this3.user.userable.transection = response.data.transection;
           _this3.loading = false;
 
           _this3.$bvToast.toast("Your request is submitted successfully.", {
@@ -74014,7 +74016,7 @@ var render = function() {
                                             [
                                               _vm._v(
                                                 "\n                                                    " +
-                                                  _vm._s(item.name) +
+                                                  _vm._s(item.updated_at) +
                                                   "\n                                                    "
                                               ),
                                               _c(

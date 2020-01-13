@@ -18,7 +18,6 @@ class CreateAdvancesTable extends Migration
             $table->unsignedBigInteger('transection_id');
             $table->unsignedBigInteger('student_id');
             $table->string('status')->default('advance');
-            $table->string('name');
             $table->float('amount');
             $table->timestamps();
         });

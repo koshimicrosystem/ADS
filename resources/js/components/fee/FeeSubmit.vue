@@ -302,7 +302,7 @@
                                                         v-if="user.userable.advances"
                                                         class="list-group-item d-flex justify-content-between align-items-center"
                                                     >
-                                                        {{ item.name }}
+                                                        {{ item.updated_at }}
                                                         <span
                                                             class="badge badge-primary badge-pill"
                                                         >
@@ -457,7 +457,9 @@ export default {
                         student_id: this.user.userable_id
                     })
                     .then(response => {
-                        this.user = response.data;
+                        this.user.userable.dues = response.data.duest;
+                        this.user.userable.advances = response.data.advancest;
+                        this.user.userable.transection = response.data.transection;
                         this.loading = false;
                         this.$bvToast.toast(
                             "Your request is submitted successfully.",

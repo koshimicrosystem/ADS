@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Advance;
+use App\Due;
 use App\Fee;
 use App\Student;
+use App\Transection;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -51,9 +54,9 @@ class FeeController extends Controller
 
     public function getfee($id){
         $student = Student::find($id);
-        $student->dues->where('status','=','due');
-        $student->advances->where('status','=','advance');
-        return ($student);
+        $dues=Due::where([['status','=','due'],['student_id','=',$student->id]])->get();
+        $advances=Advance::where([['status','=','advance'],['student_id','=',$student->id]])->get();
+        return compact('dues','advances');
     }
 
     /**
@@ -64,7 +67,46 @@ class FeeController extends Controller
      */
     public function submit(Request $request)
     {
-        return $request;
+        $student = Student::find($request->student_id);
+        $dues=Due::where([['status','=','due'],['student_id','=',$student->id]])->get();
+        $advances=Advance::where([['status','=','advance'],['student_id','=',$student->id]])->get();
+        $pay_amount = $request->pay_amount;
+
+        $transection = new Transection();
+        $transection->amount = $request->pay_amount;
+        $transection->student_id = $request->student_id;
+        $transection->user_id = $request->user_id;
+        $transection->save();
+
+        foreach ($advances as $key => $value) {
+            $pay_amount += $value->amount;
+            $value->status= $transection->id;
+            $value->save();
+        }
+
+        foreach ($dues as $key => $value) {
+            if($pay_amount >= $value->amount){
+                $value->status = 'paid';
+                $pay_amount =$pay_amount - $value->amount;
+                $value->transection_id = $transection->id;
+                $value->save();
+                continue;
+            }else{
+                continue;
+            }
+        }
+        if($pay_amount > 0){
+        $advance = new Advance();
+        $advance->student_id = $student->id;
+        $advance->amount = $pay_amount;
+        $advance->transection_id = $transection->id;
+        $advance->save();
+        }
+
+        $duest=Due::where([['status','=','due'],['student_id','=',$student->id]])->get();
+        $advancest=Advance::where([['status','=','advance'],['student_id','=',$student->id]])->get();
+        
+        return compact('duest','advancest','transection');
     }
 
     /**
